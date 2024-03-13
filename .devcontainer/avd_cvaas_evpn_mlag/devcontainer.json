@@ -8,6 +8,6 @@
         "CEOS_LAB_VERSION": "4.30.3M"
     },
     "postCreateCommand": "postCreate.sh",
-    "workspaceMount": "source=${localWorkspaceFolder}/demos/avd_cvaas_evpn_mlag,target=/workspace,type=bind",
-    "workspaceFolder": "/workspace"
+    "workspaceMount": "source=${localWorkspaceFolder}/demos/avd_cvaas_evpn_mlag,target=/avd_cvaas_evpn_mlag,type=bind",
+    "workspaceFolder": "/avd_cvaas_evpn_mlag"
 }
