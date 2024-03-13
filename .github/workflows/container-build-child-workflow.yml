@@ -1,0 +1,90 @@
+name: Reusable container build workflow
+
+env:
+  # BUILDX_NO_DEFAULT_ATTESTATIONS must be set to build only arm64 and amd64 images.
+  # The devcontainers/ci@v0.3 build will fail if this env variable is not set.
+  BUILDX_NO_DEFAULT_ATTESTATIONS: 1
+
+on:
+  workflow_call:
+    inputs:
+      container_name:
+        required: true
+        type: string
+      image_tags:
+        required: false
+        type: string
+        default: latest
+      platform:
+        required: false
+        type: string
+        default: linux/arm64/v8,linux/amd64
+      from_image:
+        required: true
+        type: string
+      from_variant:
+        required: true
+        type: string
+      username:
+        required: false
+        type: string
+        default: vscode
+      user_id:
+        required: false
+        type: string
+        default: 1000
+      group_id:
+        required: false
+        type: string
+        default: 1000
+      clab_version:
+        required: false
+        type: string
+      avd_github_repo:
+        required: false
+        type: string
+      avd_branch_name:
+        required: false
+        type: string
+
+jobs:
+  build_image:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Starting container build
+        run: echo "Starting container build. Be patient. 🐢"
+      - name: Checkout code ✅
+        uses: actions/checkout@v4
+
+      - name: Setup QEMU for multi-arch builds 🏗️
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: ${{ inputs.platform }}
+
+      - name: Setup Docker buildX for multi-arch builds 🏗️
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to the container registry 🗝️
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pre-build dev container image 🔨
+        uses: devcontainers/ci@v0.3
+        env:
+          FROM_IMAGE: ${{ inputs.from_image }}
+          FROM_VARIANT: ${{ inputs.from_variant }}
+          USERNAME: ${{ inputs.username }}
+          UID: ${{ inputs.user_id }}
+          GID: ${{ inputs.group_id }}
+          CLAB_VERSION: ${{ inputs.clab_version }}
+          AVD_GITHUB_REPO: ${{ inputs.avd_github_repo }}
+          AVD_BRANCH_NAME: ${{ inputs.avd_branch_name }}
+        with:
+          subFolder: containers/${{ inputs.container_name }}
+          imageName: ghcr.io/${{ github.repository }}/${{ inputs.container_name }}
+          imageTag: ${{ inputs.image_tags }}
+          platform: ${{ inputs.platform }}
+          push: always
