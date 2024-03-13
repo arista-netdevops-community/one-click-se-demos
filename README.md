@@ -14,8 +14,8 @@ Start demo:
 
 - EVPN AA (not yet working)  
 
-  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ankudinov/one-click-se-demos?quickstart=1&devcontainer_path=.devcontainer%2Favd_cvaas_evpn_aa%2Fdevcontainer.json)
+  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/arista-netdevops-community/one-click-se-demos?quickstart=1&devcontainer_path=.devcontainer%2Favd_cvaas_evpn_aa%2Fdevcontainer.json)
 
 - EVPN MLAG  
 
-  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ankudinov/one-click-se-demos?quickstart=1&devcontainer_path=.devcontainer%2Favd_cvaas_evpn_mlag%2Fdevcontainer.json)
+  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/arista-netdevops-community/one-click-se-demos?quickstart=1&devcontainer_path=.devcontainer%2Favd_cvaas_evpn_mlag%2Fdevcontainer.json)

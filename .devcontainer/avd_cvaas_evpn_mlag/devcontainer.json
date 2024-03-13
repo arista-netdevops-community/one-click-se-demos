@@ -1,5 +1,5 @@
 {
-    "image": "ghcr.io/ankudinov/one-click-se-demos/avd_cvaas_demos:latest",
+    "image": "ghcr.io/arista-netdevops-community/one-click-se-demos/avd_cvaas_demos:latest",
     // containerEnv set the variables applied to entire container
     "containerEnv": {
         "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
