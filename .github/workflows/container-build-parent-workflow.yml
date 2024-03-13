@@ -3,7 +3,7 @@ name: build multiple containers at once
 
 on:
   push:
-    branches: [main]
+    branches: [main, demos_init]
     paths:
       - .github/workflows/container-build-parent-workflow.yml
       - .github/workflows/container-build-child-workflow.yml
