@@ -107,7 +107,7 @@ clab-*
 *.bak
 
 # ignore cv onboarding token
-avd_inventory/clab/cv-onboarding-token
+clab/cv-onboarding-token
 
 # discard all config backups as we don't need them
 avd_inventory/config_backup/
