@@ -15,7 +15,7 @@ topology:
     startup-config: init-configs/ceos-init.cfg
     extras:
       ceos-copy-to-flash:
-        - avd_inventory/clab/cv-onboarding-token
+        - clab/cv-onboarding-token
     # an alternative to ceos-copy-to-flash could be bind
     # keeping the bind settings here just in case
     # binds:

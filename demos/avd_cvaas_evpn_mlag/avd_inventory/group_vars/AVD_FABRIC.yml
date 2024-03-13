@@ -21,8 +21,8 @@ l3leaf:
     loopback_ipv4_pool: 192.0.254.0/24
     loopback_ipv4_offset: 2
     vtep_loopback_ipv4_pool: 192.0.253.0/24
-    uplink_interfaces: ['Ethernet21', 'Ethernet22', 'Ethernet23', 'Ethernet24']
-    uplink_switches: ['S01', 'S02', 'S03', 'S04']
+    uplink_interfaces: ['Ethernet21', 'Ethernet22']
+    uplink_switches: ['S01', 'S02']
     uplink_ipv4_pool: 172.30.255.0/24
     mlag_interfaces: ['Ethernet31', 'Ethernet32']
     mlag_peer_ipv4_pool: 10.255.252.0/24
