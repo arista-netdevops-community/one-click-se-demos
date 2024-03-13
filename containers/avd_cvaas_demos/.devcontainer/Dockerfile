@@ -18,6 +18,10 @@ RUN apt-get update \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean
 
+# copy postCreate script
+COPY ./postCreate.sh /bin/postCreate.sh
+RUN chmod +x /bin/postCreate.sh
+
 USER ${USERNAME}
 
 # install the latest containerlab, yamllint, cook-and-cut and eos-downloader

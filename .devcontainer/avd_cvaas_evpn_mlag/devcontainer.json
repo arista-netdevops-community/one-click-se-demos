@@ -1,0 +1,15 @@
+{
+    "image": "ghcr.io/ankudinov/one-click-se-demos/avd_cvaas_demos:latest",
+    // containerEnv set the variables applied to entire container
+    "containerEnv": {
+        "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
+        "CV_API_TOKEN": "${localEnv:CV_API_TOKEN}"
+    },
+    // remoteEnv set variables that can be used by VSCode only
+    "remoteEnv": {
+        "CONTAINERWSF": "${containerWorkspaceFolder}"
+    },
+    "postCreateCommand": "postCreate.sh",
+    "workspaceMount": "source=${localWorkspaceFolder}/demos/avd_cvaas_evpn_mlag,target=/workspace,type=bind",
+    "workspaceFolder": "/workspace"
+}
