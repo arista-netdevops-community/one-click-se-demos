@@ -10,8 +10,8 @@ on:
       - containers/**
 
 jobs:
-  build_some_containers:
-    uses: .github/workflows/container-build-child-workflow.yml
+  build_demo_containers:
+    uses: ./.github/workflows/container-build-child-workflow.yml
     strategy:
       matrix:
         container_name: [avd_cvaas_demos]
