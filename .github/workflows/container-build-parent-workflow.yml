@@ -1,0 +1,31 @@
+---
+name: build multiple containers at once
+
+on:
+  push:
+    branches: [main, demos_init]
+    paths:
+      - .github/workflows/container-build-parent-workflow.yml
+      - .github/workflows/container-build-child-workflow.yml
+      - containers/**
+
+jobs:
+  build_demo_containers:
+    uses: ./.github/workflows/container-build-child-workflow.yml
+    strategy:
+      matrix:
+        container_name: [avd_cvaas_demos]
+        include:
+          - container_name: avd_cvaas_demos
+            from_image: ghcr.io/aristanetworks/avd/universal
+            from_variant: python3.11-avd-v4.6.0
+            username: avd
+            clab_version: "0.52.0"
+
+    with:
+      container_name: ${{ matrix.container_name }}
+      from_image: ${{ matrix.from_image }}
+      from_variant: ${{ matrix.from_variant }}
+      username: ${{ matrix.username }}
+      clab_version: ${{ matrix.clab_version }}
+      platform: ${{ matrix.platform }}

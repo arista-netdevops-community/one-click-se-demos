@@ -1,0 +1,13 @@
+{
+    "image": "ghcr.io/ankudinov/one-click-se-demos/avd_cvaas_demos:latest",
+    // containerEnv set the variables applied to entire container
+    "containerEnv": {
+        "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
+        "CV_API_TOKEN": "${localEnv:CV_API_TOKEN}",
+        "CONTAINERWSF": "${containerWorkspaceFolder}",
+        "CEOS_LAB_VERSION": "4.30.3M"
+    },
+    "postCreateCommand": "postCreate.sh",
+    "workspaceMount": "source=${localWorkspaceFolder}/demos/avd_cvaas_evpn_aa,target=/workspace,type=bind",
+    "workspaceFolder": "/workspace"
+}
