@@ -56,27 +56,6 @@ Petr Ankudinov
 
 ---
 
-# $ whoami
-
-<style scoped>section {font-size: 18px;}</style>
-
-<!-- Add footer starting from this slide -->
-<!--
-footer: '![h:20](https://www.arista.com/assets/images/logo/Arista_Logo.png)'
--->
-
-- Petr Ankudinov [github.com/ankudinov](https://github.com/ankudinov)
-
-  - Advanced Services Engineer at Arista Networks
-  - Over 20 years of experience in IT with a bit of everything
-  - ACE: L5, CCIE 37521
-  - Passionate DC and network automation engineer
-  - Daily (and nightly) VSCode user
-
-![bg right vertical w:200](img/pa-photo.jpg)
-
----
-
 # Agenda
 
 <style scoped>section {font-size: 22px;}</style>
@@ -93,7 +72,7 @@ footer: '![h:20](https://www.arista.com/assets/images/logo/Arista_Logo.png)'
 
 <style scoped>section {font-size: 20px;}</style>
 
-![bg right fit](excalidraw/provisioning-building-blocks.png)
+![bg right fit](img/provisioning-building-blocks.png)
 
 - [AVD](https://avd.arista.com/) stands for Arista Validated Design as it was based on the [EVPN Deployment Guide](https://www.arista.com/custom_data/downloads/?f=/support/download/DesignGuides/EVPN_Deployment_Guide.pdf)
 - A very successful community project used to deploy EVPN based Data Center fabrics
@@ -129,7 +108,7 @@ footer: '![h:20](https://www.arista.com/assets/images/logo/Arista_Logo.png)'
 
 <style scoped>section {font-size: 20px;}</style>
 
-![bg right fit](excalidraw/demo-setup.png)
+![bg right fit](img/demo-setup.png)
 
 - Start container as Github Codespace (or on any host with dev container supporting tool)
 - Start a simple leaf-spine topology in Containerlab
