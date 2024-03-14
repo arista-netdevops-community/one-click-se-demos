@@ -10,9 +10,19 @@ A pool of SE demos that can be started in Github Codespaces with one-click.
 
 Before you start:
 
-- go to the repository `Settings > Secrets and variables > Codespaces > New repository secret`
-- add ARTOKEN to auto-download EOS images from [arista.com](arista.com)
-- add CV_API_TOKEN if CVaaS is part of the demo. Keep in mind, this token has to be created under service account. Device onboarding token is not required as it will be generated automatically.
+> WARNING: Do NOT set your tokens under repository settings. In that case they will be visible for all contributors. You may not want contributors to download EOS images with your token. Also keep the token lifetime short enough and refresh it periodically.
+
+- Go to the account settings (right top corner)
+
+  ![account settings](img/account_settings.png)
+
+- Go to `Codespaces > Codespaces secrets > New secret`
+- add ARTOKEN to auto-download EOS images from [arista.com](arista.com). Under `Repository access` select `arista-netdevops-community/one-click-se-demos`
+- add CV_API_TOKEN if CVaaS is part of the demo. Keep in mind, this token has to be created under service account. Device onboarding token is not required as it will be generated automatically. Under `Repository access` select `arista-netdevops-community/one-click-se-demos`
+
+  ![codespaces secrets](img/codespaces-secrets.png)
+
+> WARNING: Do NOT forget to set `Repository access` for your secrets, otherwise they will be inactive.
 
 Start demo:
 
