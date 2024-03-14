@@ -22,7 +22,8 @@ Before you start:
 
   ![codespaces secrets](img/codespaces-secrets.png)
 
-> WARNING: Do NOT forget to set `Repository access` for your secrets, otherwise they will be inactive.
+> WARNING:  
+> Do NOT forget to set `Repository access` for your secrets, otherwise they will be inactive.
 
 Start demo:
 
@@ -46,6 +47,11 @@ To run the demo:
 - execute the change control on CVP after review
 - `make tags` - assign tags for CVP topology view. Currently there is a bug with disabling LLDP on Ma0, which prevents topology view from functioning correctly.
 - `make test` - validate the deployment with ANTA
+
+> WARNING:
+>
+> - Codespaces have 30 minutes inactivity timeout.
+> - Please do NOT forget to delete the Codespaces you started when you don't need them any more. You can find the full list of Codespaces here: [github.com/codespaces](https://github.com/codespaces)
 
 Credits:
 
