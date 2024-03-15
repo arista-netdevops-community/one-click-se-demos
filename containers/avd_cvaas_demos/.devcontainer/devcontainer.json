@@ -8,11 +8,6 @@
             "CLAB_VERSION": "${localEnv:CLAB_VERSION}"
         }
     },
-    "hostRequirements": {
-        "cpus": 4,
-        "memory": "16gb",
-        "storage": "32gb"
-    },
     "customizations": {
         "vscode": {
             "extensions": [

@@ -7,6 +7,21 @@
         "CONTAINERWSF": "${containerWorkspaceFolder}",
         "CEOS_LAB_VERSION": "4.30.3M"
     },
+    "secrets": {
+        "ARTOKEN": {
+          "description": "token to auto-download EOS images from arista.com."
+          // "documentationUrl": "https://example.com/link/to/info"
+        },
+        "CV_API_TOKEN": {
+          "description": "CVaaS service account token."
+          // "documentationUrl": "https://example.com/link/to/info"
+        }
+    },
+    "hostRequirements": {
+      "cpus": 4,
+      "memory": "16gb",
+      "storage": "32gb"
+    },
     "postCreateCommand": "postCreate.sh",
     "workspaceMount": "source=${localWorkspaceFolder}/demos/avd_cvaas_evpn_mlag,target=/avd_cvaas_evpn_mlag,type=bind",
     "workspaceFolder": "/avd_cvaas_evpn_mlag"
