@@ -1,0 +1,25 @@
+{
+  "build": {
+      "dockerfile": "./Dockerfile",
+      "context": ".",
+      "args": {
+          "FROM_IMAGE": "mcr.microsoft.com/devcontainers/base",
+          "FROM_VARIANT": "ubuntu-22.04",
+          "USERNAME": "vscode"
+      }
+  },
+"customizations": {
+      "vscode": {
+          "extensions": [
+              "ms-python.python",
+              "samuelcolvin.jinjahtml",
+              "yzhang.markdown-all-in-one",
+              "davidanson.vscode-markdownlint",
+              "oderwat.indent-rainbow",
+              "AykutSarac.jsoncrack-vscode",
+              "hilleer.yaml-plus-json"
+          ]
+      }
+  },
+  "forwardPorts": [8000]
+}
