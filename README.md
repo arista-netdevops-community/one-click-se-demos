@@ -1,5 +1,7 @@
 # One Click SE Demos
 
+[Check the Documentation First!](https://arista-netdevops-community.github.io/one-click-se-demos/)
+
 A pool of SE demos that can be started in Github Codespaces with one-click.  
 
 > WARNING:
