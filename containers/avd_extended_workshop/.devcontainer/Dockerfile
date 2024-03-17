@@ -19,6 +19,8 @@ RUN apt-get update \
     && apt-get clean
 
 # install yq
+ARG _YQ_VERSION
+ARG _YQ_BINARY
 RUN wget https://github.com/mikefarah/yq/releases/download/${_YQ_VERSION}/${_YQ_BINARY} -O /usr/bin/yq \
     && chmod +x /usr/bin/yq
 
