@@ -38,14 +38,14 @@ jobs:
       - name: Build HTML from Marp 🔨
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
-          args:  --html slides/avd_cvaas.md -o site/slides/avd_cvaas.html
+          args:  --html slides/*.md -o site/slides/
         env:
           MARP_USER: root:root
 
       - name: Build PDF from marp_slides.md 🔨
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
-          args:  --html --allow-local-files slides/avd_cvaas.md -o site/pdfs/avd_cvaas.pdf
+          args:  --html --allow-local-files slides/*.md -o site/pdfs/
         env:
           MARP_USER: root:root
 
