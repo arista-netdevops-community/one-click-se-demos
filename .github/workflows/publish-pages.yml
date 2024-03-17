@@ -35,6 +35,9 @@ jobs:
           && mkdir site/pdfs \
           && cp -R img site/slides/img
 
+      - name: upload artifacts
+        uses: actions/upload-artifact@v4
+
   build_marp:
     runs-on: ubuntu-22.04
     needs: build-mkdocs
@@ -44,6 +47,9 @@ jobs:
           - avd_cvaas
     
     steps:
+
+      - name: download artifacts
+        uses: actions/download-artifact@v4
 
       - name: Build HTML from Marp 🔨
         uses: docker://marpteam/marp-cli:v3.0.2
@@ -59,11 +65,17 @@ jobs:
         env:
           MARP_USER: root:root
 
+      - name: upload artifacts
+        uses: actions/upload-artifact@v4
+
   deploy_site:
     runs-on: ubuntu-22.04
     needs: build_marp
 
     steps:
+
+      - name: download artifacts
+        uses: actions/download-artifact@v4
 
       - name: Deploy production 🚀
         if: ${{ github.event_name == 'push' }}
