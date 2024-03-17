@@ -1,3 +1,8 @@
+---
+hide:
+    - feedback
+---
+
 # Credits
 
 - Arista cEOS-lab image is the core of every demo
