@@ -3,7 +3,7 @@
 ## Motivation
 
 Every good demo should only take one click to start!  
-This purpose of this repository is to provide a collection of demos and labs for Arista SEs and customers, that can be started in Github Codespaces by pressing a single button.
+The purpose of this repository is to provide a collection of demos and labs for Arista SEs and customers, that can be started in Github Codespaces by pressing a single button.
 
 !!! Warning "WARNING!"
 
@@ -39,7 +39,7 @@ To set the token:
     - add ARTOKEN to auto-download EOS images from [arista.com](arista.com). Under `Repository access` select `arista-netdevops-community/one-click-se-demos`
     - add CV_API_TOKEN if CVaaS is part of the demo. Keep in mind, this token has to be created under service account. Device onboarding token is not required as it will be generated automatically. Under `Repository access` select `arista-netdevops-community/one-click-se-demos`
 
-    ![codespaces secrets](../assets/images/codespaces-secrets.png){align=right}
+    ![codespaces secrets](../assets/images/codespaces-secrets.png)
 
     !!! Warning "WARNING!"
 
