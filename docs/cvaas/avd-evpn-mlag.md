@@ -1,5 +1,7 @@
 # AVD CVaaS EVPN MLAG Demo
 
+## Demo Details
+
 !!! Success "Container Requirements"
 
     CPUs: 4  
@@ -13,7 +15,11 @@
 [Slides](https://arista-netdevops-community.github.io/one-click-se-demos/slides/avd_cvaas.html)  
 [PDF Slides](https://arista-netdevops-community.github.io/one-click-se-demos/pdfs/avd_cvaas.pdf)  
 
-To run the demo:
+!!! Info "Last reviewed: 05.2024"
+
+    Demos and labs review over 6 month age may be outdated.
+
+## How To Run The Demo
 
 ???+ Tip "Wait until cEOS-lab image will be imported"
 
