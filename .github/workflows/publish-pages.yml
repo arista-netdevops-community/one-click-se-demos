@@ -33,7 +33,8 @@ jobs:
         run: |
           mkdir site/slides \
           && mkdir site/pdfs \
-          && cp -R img site/img
+          && cp -R img site/slides/img \
+          && cp -R img site/pdfs/img \
 
       - name: Build HTML from Marp 🔨
         uses: docker://marpteam/marp-cli:v3.0.2
