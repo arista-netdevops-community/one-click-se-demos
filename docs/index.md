@@ -32,14 +32,14 @@ To set the token:
 
 ??? "Step1: Go to the Account Settings (right top corner)"
 
-    ![account settings](../assets/images/account_settings.png)
+    ![account settings](assets/images/account_settings.png)
 
 ???+ "Step2: Go to `Codespaces > Codespaces secrets > New secret`"
 
     - add ARTOKEN to auto-download EOS images from [arista.com](arista.com). Under `Repository access` select `arista-netdevops-community/one-click-se-demos`
     - add CV_API_TOKEN if CVaaS is part of the demo. Keep in mind, this token has to be created under service account. Device onboarding token is not required as it will be generated automatically. Under `Repository access` select `arista-netdevops-community/one-click-se-demos`
 
-    ![codespaces secrets](../assets/images/codespaces-secrets.png)
+    ![codespaces secrets](assets/images/codespaces-secrets.png)
 
     !!! Warning "WARNING!"
 
