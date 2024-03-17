@@ -1,0 +1,66 @@
+---
+all:
+  children:
+    cv_servers:
+      hosts:
+        cv_atd1:
+          ansible_host: 192.168.0.5
+          cv_collection: v3
+    ATD_LAB:
+      children:
+        ATD_FABRIC:
+          children:
+            ATD_SPINES:
+              vars:
+                type: spine
+              hosts:
+                spine1:
+                  ansible_host: 192.168.0.10
+                spine2:
+                  ansible_host: 192.168.0.11
+            ATD_LEAFS:
+              vars:
+                type: l3leaf
+              children:
+                pod1:
+                  hosts:
+                    leaf1:
+                      ansible_host: 192.168.0.12
+                    leaf2:
+                      ansible_host: 192.168.0.13
+                # part of ATD lab topology is disabled
+                # to minimize resource requirements on gihub codespaces
+                # following devices are disabled:
+                #   leaf3, leaf4, host1, host2
+                # uncomment the lines below to enable them
+                # if the lab is running on a machine with enough resources or in ATD
+                # ---------------------------------------------------------------
+                # pod2:
+                #   hosts:
+                #     leaf3:
+                #       ansible_host: 192.168.0.14
+                #     leaf4:
+                #       ansible_host: 192.168.0.15
+        ATD_TENANTS_NETWORKS:
+          children:
+            ATD_LEAFS:
+        ATD_SERVERS:
+          children:
+            ATD_LEAFS:
+
+  vars:
+    ansible_user: arista
+    # Update password with lab credentials if running in ATD environment
+    ansible_password: arista
+    ansible_network_os: arista.eos.eos
+    # Configure privilege escalation
+    ansible_become: true
+    ansible_become_method: enable
+    # HTTPAPI configuration
+    ansible_connection: httpapi
+    ansible_httpapi_port: 443
+    ansible_httpapi_use_ssl: true
+    ansible_httpapi_validate_certs: false
+    ansible_python_interpreter: $(which python3)
+    avd_data_conversion_mode: error
+    avd_data_validation_mode: error

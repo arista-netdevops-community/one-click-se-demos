@@ -1,0 +1,40 @@
+---
+CVP_DEVICES_INIT:
+  - fqdn: spine1
+    parentContainerName: STAGING
+    configlets:
+      - BaseIPv4_Spine1
+  - fqdn: spine2
+    parentContainerName: STAGING
+    configlets:
+      - BaseIPv4_Spine2
+  - fqdn: leaf1
+    parentContainerName: STAGING
+    configlets:
+      - BaseIPv4_Leaf1
+  - fqdn: leaf2
+    parentContainerName: STAGING
+    configlets:
+      - BaseIPv4_Leaf2
+  - fqdn: leaf3
+    parentContainerName: STAGING
+    configlets:
+      - BaseIPv4_Leaf3
+  - fqdn: leaf4
+    parentContainerName: STAGING
+    configlets:
+      - BaseIPv4_Leaf4
+
+CVP_CONTAINERS_INIT:
+  STAGING:
+    parentContainerName: Tenant
+  Hosts:
+    parentContainerName: Tenant
+  CVX:
+    parentContainerName: Tenant
+
+CVP_CONTAINERS_DELETE:
+  Leaf:
+    parentContainerName: Tenant
+  Spine:
+    parentContainerName: Tenant

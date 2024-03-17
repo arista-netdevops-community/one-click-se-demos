@@ -1,0 +1,11 @@
+---
+- name: Provision ATD environment to prepare AVD Lab
+  hosts: cv_servers
+  connection: local
+  gather_facts: false
+  vars:
+    execute_tasks: true
+  tasks:
+    - name: Run AVD Provisioner
+      import_role:
+        name: 'atd_provisioner'

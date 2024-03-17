@@ -76,3 +76,5 @@ nav:
   - CVaaS Demos:
     - AVD EVPN MLAG: cvaas/avd-evpn-mlag.md
     - AVD EVPN Active-Active: cvaas/avd-evpn-aa.md
+  - AVD Demos:
+    - AVD Extended Workshop: avd/extended-workshop.md

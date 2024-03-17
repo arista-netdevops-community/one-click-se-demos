@@ -1,0 +1,4 @@
+---
+### group_vars/SPINES.yml
+
+type: spine
