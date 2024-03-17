@@ -18,7 +18,7 @@
     
     
       
-        <title>Active-Active - MKDOCs test</title>
+        <title>Active-Active - One-Click SE Demos</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#avd-cvaas-active-active-demo" class="md-skip">
+        <a href="#avd-cvaas-evpn-active-active-demo" class="md-skip">
           Skip to content
         </a>
       
@@ -84,7 +84,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="MKDOCs test" class="md-header__button md-logo" aria-label="MKDOCs test" data-md-component="logo">
+    <a href="../.." title="One-Click SE Demos" class="md-header__button md-logo" aria-label="One-Click SE Demos" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -103,7 +103,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            MKDOCs test
+            One-Click SE Demos
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -210,16 +210,19 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
   
     
   
   Home
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -267,7 +270,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="MKDOCs test" class="md-nav__button md-logo" aria-label="MKDOCs test" data-md-component="logo">
+    <a href="../.." title="One-Click SE Demos" class="md-nav__button md-logo" aria-label="One-Click SE Demos" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -278,7 +281,7 @@
 </svg>
 
     </a>
-    MKDOCs test
+    One-Click SE Demos
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -289,16 +292,82 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Home
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Credits
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -446,9 +515,50 @@
                   
 
 
-<h1 id="avd-cvaas-active-active-demo">AVD CVaaS Active-Active Demo</h1>
+<h1 id="avd-cvaas-evpn-active-active-demo">AVD CVaaS EVPN Active-Active Demo</h1>
+<div class="admonition success">
+<p class="admonition-title">Container Requirements</p>
+<p>CPUs: 4<br />
+Memory: 16 GB<br />
+Storage: 32 GB  </p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V5h10V3H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8h-2m-11.09-.92L6.5 11.5 11 16 21 6l-1.41-1.42L11 13.17l-3.09-3.09Z"/></svg></span> Works with default Codespaces sizing!</p>
+</div>
+<p><a class="md-button md-button--primary" href="https://codespaces.new/arista-netdevops-community/one-click-se-demos?quickstart=1&amp;devcontainer_path=.devcontainer%2Favd_cvaas_evpn_aa%2Fdevcontainer.json">Start The EVPN AA Demo</a></p>
 <p><a href="https://arista-netdevops-community.github.io/one-click-se-demos/slides/avd_cvaas.html">Slides</a><br />
 <a href="https://arista-netdevops-community.github.io/one-click-se-demos/pdfs/avd_cvaas.pdf">PDF Slides</a>  </p>
+<p>To run the demo:</p>
+<details class="tip" open="open">
+<summary>Wait until cEOS-lab image will be imported</summary>
+<p>You can confirm if image was imported correctly with <code>docker image ls</code></p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. start cLab</span>
+make<span class="w"> </span>start
+</code></pre></div>
+<details class="tip" open="open">
+<summary>Wait until all devices will start streaming to CVaaS.</summary>
+<p>This may take a while.</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1"># 2. build configs with AVD</span>
+make<span class="w"> </span>build
+<span class="c1"># 3. create CVP change control (1)</span>
+make<span class="w"> </span>deploy_cvp
+<span class="c1"># 4. assign tags for CVP topology view (2)</span>
+make<span class="w"> </span>tags
+<span class="c1"># 5. validate the deployment with ANTA preview</span>
+make<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+<ol>
+<li>
+<div class="admonition tip">
+<p class="admonition-title">Review and execute the change control on CVP when all tasks will be created.</p>
+</div>
+</li>
+<li>
+<div class="admonition bug">
+<p class="admonition-title">Currently there is a bug with disabling LLDP on Ma0, which prevents topology view from functioning correctly.</p>
+</div>
+</li>
+</ol>
 
 
 
