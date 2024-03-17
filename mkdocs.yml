@@ -1,4 +1,5 @@
 site_name: One-Click SE Demos
+site_url: https://arista-netdevops-community.github.io/one-click-se-demos
 
 theme:
   name: material

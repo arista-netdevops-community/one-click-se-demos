@@ -32,7 +32,7 @@ To set the token:
 
 ??? "Step1: Go to the Account Settings (right top corner)"
 
-    ![account settings](../assets/images/account_settings.png){: style="height:50vh" align=right}
+    ![account settings](../assets/images/account_settings.png)
 
 ???+ "Step2: Go to `Codespaces > Codespaces secrets > New secret`"
 
