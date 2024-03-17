@@ -59,7 +59,7 @@ jobs:
         env:
           MARP_USER: root:root
 
-  build_marp:
+  deploy_site:
     runs-on: ubuntu-22.04
     needs: build_marp
 
