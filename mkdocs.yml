@@ -1,4 +1,4 @@
-site_name: MKDOCs test
+site_name: One-Click SE Demos
 
 theme:
   name: material
@@ -53,8 +53,26 @@ theme:
   icon:
     logo: logo
 
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+
 nav:
-  - Home: index.md
+  - Home:
+    - How To Start: index.md
+    - Credits: credits.md
   - AVD CVaaS:
     - MLAG: avd-cvaas/mlag.md
     - Active-Active: avd-cvaas/aa.md
