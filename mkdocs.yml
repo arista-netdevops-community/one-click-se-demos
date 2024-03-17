@@ -73,6 +73,6 @@ nav:
   - Home:
     - How To Start: index.md
     - Credits: credits.md
-  - AVD CVaaS:
-    - MLAG: avd-cvaas/mlag.md
-    - Active-Active: avd-cvaas/aa.md
+  - CVaaS Demos:
+    - AVD EVPN MLAG: cvaas/avd-evpn-mlag.md
+    - AVD EVPN Active-Active: cvaas/avd-evpn-aa.md
