@@ -45,7 +45,8 @@ jobs:
       - name: Build PDF from marp_slides.md 🔨
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
-          args:  --html --pdf --allow-local-files --input-dir slides/ -o site/pdfs/
+          # args:  --html --pdf --allow-local-files --input-dir slides/ -o site/pdfs/
+          args:  --html --allow-local-files slides/avd_cvaas.md -o site/pdfs/avd_cvaas.pdf
         env:
           MARP_USER: root:root
 
