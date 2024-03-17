@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://arista-netdevops-community.github.io/one-click-se-demos/avd/extended-workshop/</loc>
+         <lastmod>2024-03-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://arista-netdevops-community.github.io/one-click-se-demos/cvaas/avd-evpn-aa/</loc>
          <lastmod>2024-03-17</lastmod>
          <changefreq>daily</changefreq>
