@@ -10,10 +10,10 @@
 
     :material-checkbox-marked-outline: Works with default Codespaces sizing!
 
-[Start The EVPN MLAG Demo](https://codespaces.new/arista-netdevops-community/one-click-se-demos?quickstart=1&devcontainer_path=.devcontainer%2Favd_cvaas_evpn_mlag%2Fdevcontainer.json){ .md-button .md-button--primary }
+[Start The EVPN MLAG Demo](https://codespaces.new/arista-netdevops-community/one-click-se-demos?quickstart=1&devcontainer_path=.devcontainer%2Favd_cvaas_evpn_mlag%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank }
 
-[Slides](https://arista-netdevops-community.github.io/one-click-se-demos/slides/avd_cvaas.html)  
-[PDF Slides](https://arista-netdevops-community.github.io/one-click-se-demos/pdfs/avd_cvaas.pdf)  
+[Slides](https://arista-netdevops-community.github.io/one-click-se-demos/slides/avd_cvaas.html){ target=_blank }  
+[PDF Slides](https://arista-netdevops-community.github.io/one-click-se-demos/pdfs/avd_cvaas.pdf){ target=_blank }  
 
 !!! Info "Last reviewed: 05.2024"
 
