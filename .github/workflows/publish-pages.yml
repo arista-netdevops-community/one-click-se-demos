@@ -12,7 +12,7 @@ on:
 permissions:
   contents: write
 jobs:
-  build-mkdocs:
+  build:
     runs-on: ubuntu-22.04
     steps:
 
@@ -36,7 +36,7 @@ jobs:
           && cp -R img site/slides/img
 
       - name: Build HTML from Marp 🔨
-        uses: docker://marpteam/marp-cli:v3.0.2
+        uses: docker://marpteam/marp-cli:v3.4.0
         with:
           args:  --html --input-dir slides/ -o site/slides/
         env:
