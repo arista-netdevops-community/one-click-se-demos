@@ -35,47 +35,19 @@ jobs:
           && mkdir site/pdfs \
           && cp -R img site/slides/img
 
-      - name: upload artifacts
-        uses: actions/upload-artifact@v4
-
-  build_marp:
-    runs-on: ubuntu-22.04
-    needs: build-mkdocs
-    strategy:
-      matrix:
-        slides_to_build:
-          - avd_cvaas
-    
-    steps:
-
-      - name: download artifacts
-        uses: actions/download-artifact@v4
-
       - name: Build HTML from Marp 🔨
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
-          args:  --html slides/${{ matrix.slides_to_convert }}.md -o site/slides/${{ matrix.slides_to_convert }}.html
+          args:  --html slides/avd_cvaas.md -o site/slides/avd_cvaas.html
         env:
           MARP_USER: root:root
 
       - name: Build PDF from marp_slides.md 🔨
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
-          args:  --html --allow-local-files slides/${{ matrix.slides_to_convert }}.md -o site/pdfs/${{ matrix.slides_to_convert }}.pdf
+          args:  --html --allow-local-files slides/avd_cvaas.md -o site/pdfs/avd_cvaas.pdf
         env:
           MARP_USER: root:root
-
-      - name: upload artifacts
-        uses: actions/upload-artifact@v4
-
-  deploy_site:
-    runs-on: ubuntu-22.04
-    needs: build_marp
-
-    steps:
-
-      - name: download artifacts
-        uses: actions/download-artifact@v4
 
       - name: Deploy production 🚀
         if: ${{ github.event_name == 'push' }}
