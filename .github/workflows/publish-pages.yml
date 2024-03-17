@@ -12,7 +12,7 @@ on:
 permissions:
   contents: write
 jobs:
-  build:
+  build-mkdocs:
     runs-on: ubuntu-22.04
     steps:
 
@@ -35,19 +35,35 @@ jobs:
           && mkdir site/pdfs \
           && cp -R img site/slides/img
 
+  build_marp:
+    runs-on: ubuntu-22.04
+    needs: build-mkdocs
+    strategy:
+      matrix:
+        slides_to_build:
+          - avd_cvaas
+    
+    steps:
+
       - name: Build HTML from Marp 🔨
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
-          args:  --html slides/*.md -o site/slides/
+          args:  --html slides/${{ matrix.slides_to_convert }}.md -o site/slides/${{ matrix.slides_to_convert }}.html
         env:
           MARP_USER: root:root
 
       - name: Build PDF from marp_slides.md 🔨
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
-          args:  --html --allow-local-files slides/*.md -o site/pdfs/
+          args:  --html --allow-local-files slides/${{ matrix.slides_to_convert }}.md -o site/pdfs/${{ matrix.slides_to_convert }}.pdf
         env:
           MARP_USER: root:root
+
+  build_marp:
+    runs-on: ubuntu-22.04
+    needs: build_marp
+
+    steps:
 
       - name: Deploy production 🚀
         if: ${{ github.event_name == 'push' }}
