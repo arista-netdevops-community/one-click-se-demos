@@ -23,6 +23,6 @@
       "storage": "32gb"
     },
     "postCreateCommand": "postCreate.sh",
-    "workspaceMount": "source=${localWorkspaceFolder}/demos/avd_cvaas_evpn_aa,target=/avd_cvaas_evpn_aa,type=bind",
+    "workspaceMount": "source=${localWorkspaceFolder}/demos/${containerWorkspaceFolder},target=/${containerWorkspaceFolder},type=bind",
     "workspaceFolder": "/avd_cvaas_evpn_aa"
 }
