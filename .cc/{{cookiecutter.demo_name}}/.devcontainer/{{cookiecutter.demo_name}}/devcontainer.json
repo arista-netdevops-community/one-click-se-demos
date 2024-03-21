@@ -15,12 +15,12 @@
           // "documentationUrl": "https://example.com/link/to/info"
         {% raw %}},{% endraw %}
 {%- endif %}
-        "ARTOKEN": {% raw %}}{{% endraw %}
+        "ARTOKEN": {% raw %}{{% endraw %}
           "description": "token to auto-download EOS images from arista.com."
           // "documentationUrl": "https://example.com/link/to/info"
         {% raw %}}{% endraw %}
     {% raw %}},{% endraw %}
-    "hostRequirements": {% raw %}}{{% endraw %}
+    "hostRequirements": {% raw %}{{% endraw %}
       "cpus": {{ cookiecutter.cpus }},
       "memory": "{{ cookiecutter.memory }}",
       "storage": "{{ cookiecutter.storage }}"

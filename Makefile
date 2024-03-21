@@ -7,3 +7,7 @@ help: ## Display help message
 .PHONY: new
 new: ## init files for a new demo
 	cookiecutter -f .cc
+
+.PHONY: replay_cc
+replay_cc: ## replay last cookiecutter run (for Cookiecutter template debugging)
+	cookiecutter -f --replay .cc
