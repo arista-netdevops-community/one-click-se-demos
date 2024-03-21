@@ -6,5 +6,5 @@
   "container_username": "avd",
   "clab_version": "0.52.0",
   "ceos_lab_version": "4.30.3M",
-  "git_init": "True"
+  "git_init": ["True", "False"]
 }
