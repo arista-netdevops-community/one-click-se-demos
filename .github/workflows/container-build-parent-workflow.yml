@@ -21,11 +21,13 @@ jobs:
             from_variant: python3.11-avd-v4.6.0
             username: avd
             clab_version: "0.52.0"
+            ceos_lab_version: 4.30.3M
           - container_name: avd_extended_workshop
             from_image: ghcr.io/aristanetworks/avd/universal
             from_variant: python3.11-avd-v4.6.0
             username: avd
             clab_version: "0.52.0"
+            ceos_lab_version: 4.30.3M
 
     with:
       container_name: ${{ matrix.container_name }}

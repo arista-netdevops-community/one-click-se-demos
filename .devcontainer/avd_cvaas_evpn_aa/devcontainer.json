@@ -5,7 +5,7 @@
         "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
         "CV_API_TOKEN": "${localEnv:CV_API_TOKEN}",
         "CONTAINERWSF": "${containerWorkspaceFolder}",
-        "CEOS_LAB_VERSION": "4.30.3M"
+        // "CEOS_LAB_VERSION": "4.30.3M"
     },
     "secrets": {
         "ARTOKEN": {

@@ -46,6 +46,14 @@ on:
       avd_branch_name:
         required: false
         type: string
+      git_init:
+        required: false
+        type: string
+        default: "True"
+      ceos_lab_version:
+        required: false
+        type: string
+        default: latest
 
 jobs:
   build_image:
@@ -82,6 +90,8 @@ jobs:
           CLAB_VERSION: ${{ inputs.clab_version }}
           AVD_GITHUB_REPO: ${{ inputs.avd_github_repo }}
           AVD_BRANCH_NAME: ${{ inputs.avd_branch_name }}
+          CEOS_LAB_VERSION_ARG: ${{ inputs.ceos_lab_version }}
+          GIT_INIT_ARG: ${{ inputs.git_init }}
         with:
           subFolder: containers/${{ inputs.container_name }}
           imageName: ghcr.io/${{ github.repository }}/${{ inputs.container_name }}
