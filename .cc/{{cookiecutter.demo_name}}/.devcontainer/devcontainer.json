@@ -1,0 +1,31 @@
+{% raw %}{{% endraw %}
+    "image": "ghcr.io/arista-netdevops-community/one-click-se-demos/{{ cookiecutter.demo_name }}:latest",
+    // containerEnv set the variables applied to entire container
+    "containerEnv": {% raw %}{{% endraw %}
+        "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
+{%- if cv_api_token_required %}
+        "CV_API_TOKEN": "${localEnv:CV_API_TOKEN}",
+{%- endif %}
+        "CONTAINERWSF": "${containerWorkspaceFolder}"
+    {% raw %}},{% endraw %}
+    "secrets": {% raw %}}{{% endraw %}
+{%- if cv_api_token_required %}
+        "CV_API_TOKEN": {% raw %}}{{% endraw %}
+          "description": "CVaaS service account token."
+          // "documentationUrl": "https://example.com/link/to/info"
+        {% raw %}}},{% endraw %}
+{%- endif %}
+        "ARTOKEN": {% raw %}}{{% endraw %}
+          "description": "token to auto-download EOS images from arista.com."
+          // "documentationUrl": "https://example.com/link/to/info"
+        {% raw %}}}{% endraw %}
+    {% raw %}}},{% endraw %}
+    "hostRequirements": {% raw %}}{{% endraw %}
+      "cpus": {{ cookiecutter.cpus }},
+      "memory": "{{ cookiecutter.memory }}",
+      "storage": "{{ cookiecutter.storage }}"
+    {% raw %}}},{% endraw %}
+    "postCreateCommand": "postCreate.sh",
+    "workspaceMount": "source=${localWorkspaceFolder}/demos/${containerWorkspaceFolder},target=/${containerWorkspaceFolder},type=bind",
+    "workspaceFolder": "/{{ cookiecutter.demo_name }}"
+{% raw %}}}{% endraw %}
