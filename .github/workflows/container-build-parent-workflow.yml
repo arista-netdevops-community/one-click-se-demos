@@ -37,4 +37,4 @@ jobs:
       clab_version: ${{ matrix.clab_version }}
       platform: ${{ matrix.platform }}
       ceos_lab_version: ${{ matrix.ceos_lab_version }}
-      git_init: ${{ matrix.git_init }}
+      # git_init: ${{ matrix.git_init }}
