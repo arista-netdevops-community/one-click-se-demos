@@ -20,4 +20,4 @@ jobs:
       from_variant: {{ cookiecutter.from_variant }}
       username: {{ cookiecutter.container_username }}
       clab_version: "{{ cookiecutter.clab_version }}"
-      ceos_lab_version: "{{ cookiecutter.clab_version }}"
+      ceos_lab_version: "{{ cookiecutter.ceos_lab_version }}"
