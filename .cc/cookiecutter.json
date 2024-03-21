@@ -5,5 +5,9 @@
   "container_username": "avd",
   "clab_version": "0.52.0",
   "ceos_lab_version": "4.30.3M",
-  "git_init": ["True", "False"]
+  "git_init": ["True", "False"],
+  "cpus": [2, 4, 8, 16, 32],
+  "memory": ["8GB", "16GB", "64GB", "128GB"],
+  "storage": ["32GB", "32GB", "64GB", "128GB"],
+  "cv_api_token_required": [true, false]
 }

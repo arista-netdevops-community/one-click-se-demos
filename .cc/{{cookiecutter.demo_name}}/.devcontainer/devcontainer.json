@@ -3,13 +3,13 @@
     // containerEnv set the variables applied to entire container
     "containerEnv": {% raw %}{{% endraw %}
         "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
-{%- if cv_api_token_required %}
+{%- if cookiecutter.cv_api_token_required %}
         "CV_API_TOKEN": "${localEnv:CV_API_TOKEN}",
 {%- endif %}
         "CONTAINERWSF": "${containerWorkspaceFolder}"
     {% raw %}},{% endraw %}
     "secrets": {% raw %}}{{% endraw %}
-{%- if cv_api_token_required %}
+{%- if cookiecutter.cv_api_token_required %}
         "CV_API_TOKEN": {% raw %}}{{% endraw %}
           "description": "CVaaS service account token."
           // "documentationUrl": "https://example.com/link/to/info"
