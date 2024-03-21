@@ -7,7 +7,7 @@
             "USERNAME": "${localEnv:USERNAME}",
             "CLAB_VERSION": "${localEnv:CLAB_VERSION}",
             "CEOS_LAB_VERSION_ARG": "${localEnv:CEOS_LAB_VERSION_ARG}",
-            "GIT_INIT": "${localEnv:GIT_INIT}"
+            "GIT_INIT_ARG": "${localEnv:GIT_INIT_ARG}"
         }
     },
     "customizations": {
