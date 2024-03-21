@@ -22,7 +22,7 @@
       "memory": "16gb",
       "storage": "32gb"
     },
-    "postCreateCommand": "postCreate.sh; git init",
+    "postCreateCommand": "postCreate.sh",
     "workspaceMount": "source=${localWorkspaceFolder}/demos/${containerWorkspaceFolder},target=/${containerWorkspaceFolder},type=bind",
     "workspaceFolder": "/avd_cvaas_evpn_aa"
 }
