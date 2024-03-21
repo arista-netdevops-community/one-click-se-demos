@@ -1,16 +1,13 @@
 ---
-env:
-  DEMO_NAME: avd-cvaas-evpn-aa
-
-name: build container for ${DEMO_NAME}
+name: build container for avd-cvaas-evpn-mlag
 
 on:
   push:
     branches: [main]
     paths:
-      - .github/workflows/${DEMO_NAME}.yml
+      - .github/workflows/avd-cvaas-evpn-mlag.yml
       - .github/workflows/container-build-child-workflow.yml
-      - containers/${DEMO_NAME}
+      - containers/avd-cvaas-evpn-mlag
   workflow_dispatch:
     branches: [main]
 
@@ -18,7 +15,7 @@ jobs:
   build-demo-container:
     uses: ./.github/workflows/container-build-child-workflow.yml
     with:
-      container_name: ${DEMO_NAME}
+      container_name: avd-cvaas-evpn-mlag
       from_image: ghcr.io/aristanetworks/avd/universal
       from_variant: python3.11-avd-v4.6.0
       username: avd
