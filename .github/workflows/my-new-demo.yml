@@ -1,0 +1,23 @@
+---
+name: build container for my-new-demo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/my-new-demo.yml
+      - .github/workflows/container-build-child-workflow.yml
+      - containers/my-new-demo
+  workflow_dispatch:
+    branches: [main]
+
+jobs:
+  build-demo-container:
+    uses: ./.github/workflows/container-build-child-workflow.yml
+    with:
+      container_name: my-new-demo
+      from_image: ghcr.io/aristanetworks/avd/universal
+      from_variant: python3.11-avd-v4.6.0
+      username: avd
+      clab_version: "0.52.0"
+      ceos_lab_version: 4.30.3M
