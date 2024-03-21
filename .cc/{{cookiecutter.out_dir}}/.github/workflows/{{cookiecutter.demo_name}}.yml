@@ -21,3 +21,4 @@ jobs:
       username: {{ cookiecutter.container_username }}
       clab_version: "{{ cookiecutter.clab_version }}"
       ceos_lab_version: "{{ cookiecutter.ceos_lab_version }}"
+      git_init: "{{ cookiecutter.git_init }}"
