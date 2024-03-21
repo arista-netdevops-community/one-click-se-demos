@@ -1,5 +1,4 @@
 {
-  "out_dir": ".gitignored",
   "demo_name": "a-new-demo",
   "from_image": "ghcr.io/aristanetworks/avd/universal",
   "from_variant": "python3.11-avd-v4.6.0",
