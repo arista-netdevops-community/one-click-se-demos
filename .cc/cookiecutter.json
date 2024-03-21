@@ -6,8 +6,12 @@
   "clab_version": "0.52.0",
   "ceos_lab_version": "4.30.3M",
   "git_init": ["True", "False"],
-  "cpus": [2, 4, 8, 16, 32],
-  "memory": ["8gb", "16gb", "64gb", "128gb"],
-  "storage": ["32gb", "32gb", "64gb", "128gb"],
+  "container_size": [
+    {"cpus": 2, "memory": "8gb", "storage": "32gb"},
+    {"cpus": 4, "memory": "16gb", "storage": "32gb"},
+    {"cpus": 8, "memory": "32gb", "storage": "64gb"},
+    {"cpus": 16, "memory": "64gb", "storage": "128gb"},
+    {"cpus": 32, "memory": "128gb", "storage": "128gb"}
+  ],
   "cv_api_token_required": [true, false]
 }
