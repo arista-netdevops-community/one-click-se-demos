@@ -1,0 +1,21 @@
+---
+name: build container for AVD CVaaS EVPN AA demo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/demos/avd-cvaas-evpn-aa.yml
+      - .github/workflows/container-build-child-workflow.yml
+      - containers/avd-cvaas-evpn-aa
+
+jobs:
+  build-demo-container:
+    uses: ./.github/workflows/container-build-child-workflow.yml
+    with:
+      container_name: avd-cvaas-evpn-aa
+      from_image: ghcr.io/aristanetworks/avd/universal
+      from_variant: python3.11-avd-v4.6.0
+      username: avd
+      clab_version: "0.52.0"
+      ceos_lab_version: 4.30.3M
