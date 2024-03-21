@@ -15,10 +15,10 @@ jobs:
   build-demo-container:
     uses: ./.github/workflows/container-build-child-workflow.yml
     with:
-      container_name: {{ cookiecutter.demo_name }}
-      from_image: {{ cookiecutter.from_image }}
-      from_variant: {{ cookiecutter.from_variant }}
-      username: {{ cookiecutter.container_username }}
+      container_name: "{{ cookiecutter.demo_name }}"
+      from_image: "{{ cookiecutter.from_image }}"
+      from_variant: "{{ cookiecutter.from_variant }}"
+      username: "{{ cookiecutter.container_username }}"
       clab_version: "{{ cookiecutter.clab_version }}"
       ceos_lab_version: "{{ cookiecutter.ceos_lab_version }}"
       git_init: "{{ cookiecutter.git_init }}"
