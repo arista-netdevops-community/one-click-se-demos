@@ -8,24 +8,24 @@
 {%- endif %}
         "CONTAINERWSF": "${containerWorkspaceFolder}"
     {% raw %}},{% endraw %}
-    "secrets": {% raw %}}{{% endraw %}
+    "secrets": {% raw %}{{% endraw %}
 {%- if cookiecutter.cv_api_token_required %}
-        "CV_API_TOKEN": {% raw %}}{{% endraw %}
+        "CV_API_TOKEN": {% raw %}{{% endraw %}
           "description": "CVaaS service account token."
           // "documentationUrl": "https://example.com/link/to/info"
-        {% raw %}}},{% endraw %}
+        {% raw %}},{% endraw %}
 {%- endif %}
         "ARTOKEN": {% raw %}}{{% endraw %}
           "description": "token to auto-download EOS images from arista.com."
           // "documentationUrl": "https://example.com/link/to/info"
-        {% raw %}}}{% endraw %}
-    {% raw %}}},{% endraw %}
+        {% raw %}}{% endraw %}
+    {% raw %}},{% endraw %}
     "hostRequirements": {% raw %}}{{% endraw %}
       "cpus": {{ cookiecutter.cpus }},
       "memory": "{{ cookiecutter.memory }}",
       "storage": "{{ cookiecutter.storage }}"
-    {% raw %}}},{% endraw %}
+    {% raw %}},{% endraw %}
     "postCreateCommand": "postCreate.sh",
     "workspaceMount": "source=${localWorkspaceFolder}/demos/${containerWorkspaceFolder},target=/${containerWorkspaceFolder},type=bind",
     "workspaceFolder": "/{{ cookiecutter.demo_name }}"
-{% raw %}}}{% endraw %}
+{% raw %}}{% endraw %}
