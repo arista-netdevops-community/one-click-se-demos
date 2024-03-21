@@ -1,19 +1,18 @@
 {
-    "image": "ghcr.io/arista-netdevops-community/one-click-se-demos/avd_cvaas_demos:latest",
+    "image": "ghcr.io/arista-netdevops-community/one-click-se-demos/avd-cvaas-evpn-aa:latest",
     // containerEnv set the variables applied to entire container
     "containerEnv": {
         "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
         "CV_API_TOKEN": "${localEnv:CV_API_TOKEN}",
-        "CONTAINERWSF": "${containerWorkspaceFolder}",
-        // "CEOS_LAB_VERSION": "4.30.3M"
+        "CONTAINERWSF": "${containerWorkspaceFolder}"
     },
     "secrets": {
-        "ARTOKEN": {
-          "description": "token to auto-download EOS images from arista.com."
-          // "documentationUrl": "https://example.com/link/to/info"
-        },
         "CV_API_TOKEN": {
           "description": "CVaaS service account token."
+          // "documentationUrl": "https://example.com/link/to/info"
+        },
+        "ARTOKEN": {
+          "description": "token to auto-download EOS images from arista.com."
           // "documentationUrl": "https://example.com/link/to/info"
         }
     },
@@ -24,5 +23,5 @@
     },
     "postCreateCommand": "postCreate.sh",
     "workspaceMount": "source=${localWorkspaceFolder}/demos/${containerWorkspaceFolder},target=/${containerWorkspaceFolder},type=bind",
-    "workspaceFolder": "/avd_cvaas_evpn_aa"
+    "workspaceFolder": "/avd-cvaas-evpn-aa"
 }
