@@ -2,12 +2,12 @@
 
 ## Demo Details
 
-{%- if (cookiecutter.container_size.cpus == 2) or (cookiecutter.container_size.cpus == 4) %}
+{%- if cookiecutter.container_size.cpus in ["2", "4"] %}
 !!! Success "Container Requirements"
 
     CPUs: {{ cookiecutter.container_size.cpus }}  
     Memory: {{ cookiecutter.container_size.memory }}  
-    Storage: {{ cookiecutter.container_size.memory }}  
+    Storage: {{ cookiecutter.container_size.storage }}  
 
     :material-checkbox-marked-outline: Works with default Codespaces sizing!
 {%- else %}
@@ -15,7 +15,7 @@
 
     CPUs: {{ cookiecutter.container_size.cpus }}  
     Memory: {{ cookiecutter.container_size.memory }}  
-    Storage: {{ cookiecutter.container_size.memory }}  
+    Storage: {{ cookiecutter.container_size.storage }}  
 
     :fontawesome-triangle-exclamation: Please request high spec Codespace machines from [Github support](https://support.github.com/) first!
 {%- endif %}
