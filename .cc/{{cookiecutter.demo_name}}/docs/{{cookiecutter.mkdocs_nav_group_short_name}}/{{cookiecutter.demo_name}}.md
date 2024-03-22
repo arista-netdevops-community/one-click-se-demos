@@ -17,7 +17,7 @@
     Memory: {{ cookiecutter.container_size.memory }}  
     Storage: {{ cookiecutter.container_size.storage }}  
 
-    :fontawesome-triangle-exclamation: Please request high spec Codespace machines from [Github support](https://support.github.com/) first!
+    :material-alert-circle-outline:{ .heartbeat } Please request high spec Codespace machines from [Github support](https://support.github.com/) first!
 {%- endif %}
 
 [Start The EVPN AA Demo](https://codespaces.new/arista-netdevops-community/one-click-se-demos?quickstart=1&devcontainer_path=.devcontainer%2Favd_cvaas_evpn_aa%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}

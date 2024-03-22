@@ -3,6 +3,9 @@ site_url: https://arista-netdevops-community.github.io/one-click-se-demos/
 repo_name: SE Demos on Github
 repo_url: https://github.com/arista-netdevops-community/one-click-se-demos/
 
+extra_css:
+  - stylesheets/extra.css
+
 theme:
   name: material
   features:
