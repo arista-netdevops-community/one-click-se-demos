@@ -13,5 +13,8 @@
     {"cpus": 16, "memory": "64gb", "storage": "128gb"},
     {"cpus": 32, "memory": "128gb", "storage": "128gb"}
   ],
-  "cv_api_token_required": [true, false]
+  "cv_api_token_required": [true, false],
+  "mkdocs_nav_group_full_name": "Unsorted Labs",
+  "mkdocs_nav_group_short_name": "unsorted",
+  "mkdocs_nav_demo_full_name": "A New Demo"
 }
