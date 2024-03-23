@@ -1,4 +1,4 @@
-# {{cookiecutter.demo_name}}
+# {{cookiecutter.mkdocs_nav_demo_full_name}}
 
 This lab is tested for:  
 
