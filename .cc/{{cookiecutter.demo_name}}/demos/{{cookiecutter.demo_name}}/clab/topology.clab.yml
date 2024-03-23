@@ -1,0 +1,36 @@
+name: {{ cookiecutter.demo_name }}
+prefix: ""
+
+mgmt:
+  network: custom_mgmt
+  ipv4-subnet: 10.0.0.0/16
+
+topology:
+  kinds:
+    ceos:
+      enforce-startup-config: true
+      image: arista/ceos:{{ cookiecutter.ceos_lab_version }}
+  defaults:
+    kind: ceos
+    startup-config: init-configs/ceos-init.cfg
+{%- if cookiecutter.cv_api_token_required %}
+    extras:
+      ceos-copy-to-flash:
+        - clab/cv-onboarding-token
+    # an alternative to ceos-copy-to-flash could be bind
+    # keeping the bind settings here just in case
+    # binds:
+    #   - cv-onboarding-token:/mnt/flash/cv-onboarding-token:ro
+{%- endif %}
+  nodes:
+    node1:
+      mgmt-ipv4: 10.0.1.1
+      binds:
+        - sn/node1.txt:/mnt/flash/ceos-config:ro
+    node2:
+      mgmt-ipv4: 10.0.2.2
+      binds:
+        - sn/node2.txt:/mnt/flash/ceos-config:ro
+
+  links:
+  - endpoints: ["node1:eth21", "node2:eth1"]
