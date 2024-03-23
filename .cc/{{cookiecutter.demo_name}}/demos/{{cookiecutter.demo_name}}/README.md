@@ -9,6 +9,8 @@ This lab is tested for:
     memory: {{ cookiecutter.container_size.memory }}  
     storage: {{ cookiecutter.container_size.storage }}  
 
+Last reviewed: {% now 'local', '%d/%m/%Y' %}  
+
 Please check the lab materials:
 
 - [Lab Documentation](https://{{ cookiecutter.gh_org_name }}.github.io/{{ cookiecutter.gh_repo_name }}/{{cookiecutter.mkdocs_nav_group_short_name}}/{{cookiecutter.demo_name}}/)
