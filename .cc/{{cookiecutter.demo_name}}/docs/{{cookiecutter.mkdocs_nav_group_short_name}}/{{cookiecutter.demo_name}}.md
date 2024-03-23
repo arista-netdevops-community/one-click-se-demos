@@ -1,8 +1,7 @@
 # {{ cookiecutter.mkdocs_nav_demo_full_name }}
 
 ## Demo Details
-
-{%- if cookiecutter.container_size.cpus in ["2", "4"] %}
+{% if cookiecutter.container_size.cpus in ["2", "4"] %}
 !!! Success "Container Requirements"
 
     CPUs: {{ cookiecutter.container_size.cpus }}  
