@@ -1,5 +1,5 @@
 {% raw %}{{% endraw %}
-    "image": "ghcr.io/arista-netdevops-community/one-click-se-demos/{{ cookiecutter.demo_name }}:latest",
+    "image": "ghcr.io/{{ cookiecutter.gh_org_name }}/{{ cookiecutter.gh_repo_name }}/{{ cookiecutter.demo_name }}:latest",
     // containerEnv set the variables applied to entire container
     "containerEnv": {% raw %}{{% endraw %}
         "ARISTA_TOKEN": "${localEnv:ARTOKEN}",

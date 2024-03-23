@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cp -r ./ ../
-rm -rf /workspaces/one-click-se-demos/{{ cookiecutter.demo_name }}
+rm -rf /workspaces/{{ cookiecutter.gh_repo_name }}/{{ cookiecutter.demo_name }}
 
 # print additional instructions
 echo "The required files for {{ cookiecutter.demo_name }} were generated."

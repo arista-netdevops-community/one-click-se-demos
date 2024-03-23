@@ -1,5 +1,7 @@
 {
   "demo_name": "a-new-demo",
+  "gh_org_name": "arista-netdevops-community",
+  "gh_repo_name": "one-click-se-demos",
   "from_image": "ghcr.io/aristanetworks/avd/universal",
   "from_variant": "python3.11-avd-v4.6.0",
   "container_username": "avd",
