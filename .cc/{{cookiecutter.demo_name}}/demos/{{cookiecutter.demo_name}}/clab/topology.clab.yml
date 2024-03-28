@@ -33,4 +33,6 @@ topology:
         - sn/node2.txt:/mnt/flash/ceos-config:ro
 
   links:
-  - endpoints: ["node1:eth21", "node2:eth1"]
+{%- for link in cookiecutter.lab.lab_cabling_plan %}
+    - endpoints: ["{{ link.local_switch }}:{{ link.local_interface }}", "{{ link.remote_switch }}:{{ link.remote_interface }}"]
+{%- endfor %}
