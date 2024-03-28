@@ -160,7 +160,7 @@ if __name__ == "__main__":
         shutil.copy(src=src_file, dst=dst_file)
 
     cc_extras = cookiecutter_load(".cc-temp")
-    cookiecutter(template='.cc-temp', overwrite_if_exists=True, extra_context=cc_extras)
+    cookiecutter(template='.cc-temp', overwrite_if_exists=True, extra_context={'lab': cc_extras})
 
     # shutil.rmtree(".cc-temp")
 
