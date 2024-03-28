@@ -141,6 +141,25 @@ def cookiecutter_load(data_input_directory):
 
 if __name__ == "__main__":
 
+    files_to_copy = list()
+    for root, _, files in os.walk(".cc"):
+        for filename in files:
+            full_src_path = os.path.join(root, filename)
+            f, extension = os.path.splitext(filename)
+            if extension == ".jinja":
+                if r'{% for' in f:
+                    pass
+                else:
+                    files_to_copy.append((full_src_path, os.path.join(root, f).replace(".cc/", ".cc-temp/")))
+            else:
+                files_to_copy.append((full_src_path, full_src_path.replace(".cc/", ".cc-temp/")))
+
+    for src_file, dst_file in files_to_copy:
+        os.makedirs(os.path.dirname(dst_file), exist_ok=True)
+        shutil.copy(src=src_file, dst=dst_file)
+
+    # shutil.rmtree(".cc-temp")
+
     # cc_extras = cookiecutter_load("/workspaces/one-click-se-demos/.gitignored")
     # with open("/workspaces/one-click-se-demos/.cc/cookiecutter.json") as f:
     #     cookiecutter_json = json.load(f)
