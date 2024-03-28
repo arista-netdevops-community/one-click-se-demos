@@ -17,5 +17,6 @@
   ],
   "cv_api_token_required": [true, false],
   "mkdocs_nav_group_short_name": "unsorted",
-  "mkdocs_nav_demo_full_name": "A New Demo"
+  "mkdocs_nav_demo_full_name": "A New Demo",
+  "lab": null
 }

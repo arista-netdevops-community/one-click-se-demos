@@ -159,7 +159,8 @@ if __name__ == "__main__":
         os.makedirs(os.path.dirname(dst_file), exist_ok=True)
         shutil.copy(src=src_file, dst=dst_file)
 
-    cookiecutter(template='.cc-temp', overwrite_if_exists=True)
+    cc_extras = cookiecutter_load(".cc-temp")
+    cookiecutter(template='.cc-temp', overwrite_if_exists=True, extra_context=cc_extras)
 
     # shutil.rmtree(".cc-temp")
 
