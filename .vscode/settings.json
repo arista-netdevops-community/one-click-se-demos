@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "**.yml.jinja": "jinja-yaml",
+        "**.sh.jinja": "jinja-shell",
+        ".md.jinja": "jinja-markdown",
+        "**.json.jinja": "jinja-json",
+        "**.py.jinja": "jinja-python",
+        "**Dockerfile.jinja": "jinja-dockerfile",
+        "**.txt.jinja": "jinja",
+        "**Makefile.jinja": "jinja",
+        "**.cfg.jinja": "jinja"
+    }
+}
