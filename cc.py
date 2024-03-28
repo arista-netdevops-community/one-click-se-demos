@@ -5,6 +5,7 @@ import csv
 import yaml
 import os
 import shutil
+from cookiecutter.main import cookiecutter
 
 
 def read_csv_file(filename):
@@ -157,6 +158,8 @@ if __name__ == "__main__":
     for src_file, dst_file in files_to_copy:
         os.makedirs(os.path.dirname(dst_file), exist_ok=True)
         shutil.copy(src=src_file, dst=dst_file)
+
+    cookiecutter(template='.cc-temp', overwrite_if_exists=True)
 
     # shutil.rmtree(".cc-temp")
 
