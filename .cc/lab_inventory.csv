@@ -1,0 +1,3 @@
+hostname,mgmt_ip
+node1,10.0.1.1
+node2,10.0.2.2

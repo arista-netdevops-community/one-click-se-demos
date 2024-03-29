@@ -6,6 +6,7 @@ import yaml
 import os
 import shutil
 from cookiecutter.main import cookiecutter
+from cookiecutter import config as cc_config
 
 
 def read_csv_file(filename):
@@ -142,6 +143,12 @@ def cookiecutter_load(data_input_directory):
 
 if __name__ == "__main__":
 
+    cookiecutter_dict = cc_config.get_config("/workspaces/one-click-se-demos/.cc/cookiecutter.json")
+    cc_extras = cookiecutter_load(".cc")
+    cookiecutter_dict.update({
+        'lab': cc_extras
+    })
+
     files_to_copy = list()
     for root, _, files in os.walk(".cc"):
         for filename in files:
@@ -149,7 +156,14 @@ if __name__ == "__main__":
             f, extension = os.path.splitext(filename)
             if extension == ".jinja":
                 if r'{% for' in f:
-                    pass
+                    for_loop, true_ext = os.path.splitext(f)
+                    cc_loop_key_list = [ lk for lk in for_loop.split() if "cookiecutter" in lk ][0].split(".")[1:]
+                    loop_over = cookiecutter_dict
+                    for k in cc_loop_key_list:
+                        loop_over = loop_over[k]
+                    loop_key = for_loop.split()[2]
+                    for d in loop_over:
+                        files_to_copy.append((full_src_path, os.path.join(root, d[loop_key]+true_ext).replace(".cc/", ".cc-temp/")))
                 else:
                     files_to_copy.append((full_src_path, os.path.join(root, f).replace(".cc/", ".cc-temp/")))
             else:
@@ -159,7 +173,6 @@ if __name__ == "__main__":
         os.makedirs(os.path.dirname(dst_file), exist_ok=True)
         shutil.copy(src=src_file, dst=dst_file)
 
-    cc_extras = cookiecutter_load(".cc-temp")
     cookiecutter(template='.cc-temp', overwrite_if_exists=True, extra_context={'lab': cc_extras})
 
     shutil.rmtree(".cc-temp")
