@@ -162,11 +162,4 @@ if __name__ == "__main__":
     cc_extras = cookiecutter_load(".cc-temp")
     cookiecutter(template='.cc-temp', overwrite_if_exists=True, extra_context={'lab': cc_extras})
 
-    # shutil.rmtree(".cc-temp")
-
-    # cc_extras = cookiecutter_load("/workspaces/one-click-se-demos/.gitignored")
-    # with open("/workspaces/one-click-se-demos/.cc/cookiecutter.json") as f:
-    #     cookiecutter_json = json.load(f)
-    # cookiecutter_json.update({"lab": cc_extras})
-    # with open("/workspaces/one-click-se-demos/.cc/cookiecutter.json", "w") as f:
-    #     json.dump(cookiecutter_json, f, indent=4)
+    shutil.rmtree(".cc-temp")
