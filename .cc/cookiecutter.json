@@ -1,5 +1,6 @@
 {
   "demo_name": "a-new-demo",
+  "demo_author": "Petr Ankudinov",
   "gh_org_name": "arista-netdevops-community",
   "gh_repo_name": "one-click-se-demos",
   "from_image": "ghcr.io/aristanetworks/avd/universal",
