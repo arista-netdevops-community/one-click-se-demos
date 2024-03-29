@@ -1,4 +1,4 @@
-hostname {{ {{ cookiecutter.lab.lab_inventory[cookiecutter_file_index].hostname }} }}
+hostname {{ cookiecutter.lab.lab_inventory[cookiecutter_file_index].hostname }}
 {%- if cookiecutter.cv_api_token_required -%}
 !
 daemon TerminAttr
