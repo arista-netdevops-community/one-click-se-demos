@@ -12,8 +12,8 @@
 
 [Start The EVPN AA Demo](https://codespaces.new/arista-netdevops-community/one-click-se-demos?quickstart=1&devcontainer_path=.devcontainer%2Favd_cvaas_evpn_aa%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
 
-[Slides](https://arista-netdevops-community.github.io/one-click-se-demos/slides/avd_cvaas.html){ target=_blank }  
-[PDF Slides](https://arista-netdevops-community.github.io/one-click-se-demos/pdfs/avd_cvaas.pdf){ target=_blank }  
+[Slides](https://arista-netdevops-community.github.io/one-click-se-demos/slides/avd-cvaas-evpn-aa.html){ target=_blank }  
+[PDF Slides](https://arista-netdevops-community.github.io/one-click-se-demos/pdfs/avd-cvaas-evpn-aa.pdf){ target=_blank }  
 
 !!! Info "Last reviewed: 29/03/2024"
 
