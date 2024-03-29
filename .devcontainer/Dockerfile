@@ -17,6 +17,9 @@ RUN apt-get update \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean
 
+COPY cc.py /bin/cook
+RUN chmod +x /bin/cook
+
 USER ${USERNAME}
 
 COPY requirements.txt requirements.txt
