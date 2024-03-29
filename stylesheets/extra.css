@@ -1,0 +1,11 @@
+@keyframes heartbeat {
+  0%, 40%, 80%, 100% {
+    transform: scale(1);
+  }
+  20%, 60% {
+    transform: scale(1.15);
+  }
+}
+.heartbeat {
+  animation: heartbeat 1000ms infinite;
+}
