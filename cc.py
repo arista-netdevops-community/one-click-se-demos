@@ -7,6 +7,7 @@ import os
 import shutil
 from cookiecutter.main import cookiecutter
 from cookiecutter import config as cc_config
+import argparse
 
 
 def read_csv_file(filename):
@@ -143,8 +144,18 @@ def cookiecutter_load(data_input_directory):
 
 if __name__ == "__main__":
 
+    # get directory to load extra context
+    parser = argparse.ArgumentParser(
+        prog="cc",
+        description="Init new lab from template.")
+    parser.add_argument(
+        '-in', '--input_directory', default='.cc',
+        help='Directory with CSV or YAML files to load as extra context for Cookiecutter'
+    )
+    args = parser.parse_args()
+
     cookiecutter_dict = cc_config.get_config("/workspaces/one-click-se-demos/.cc/cookiecutter.json")
-    cc_extras = cookiecutter_load(".cc")
+    cc_extras = cookiecutter_load(args.input_directory)
     cookiecutter_dict.update({
         'lab': cc_extras
     })
