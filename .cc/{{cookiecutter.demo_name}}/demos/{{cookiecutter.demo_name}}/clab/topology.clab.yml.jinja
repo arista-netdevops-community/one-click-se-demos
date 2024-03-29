@@ -3,7 +3,7 @@ prefix: ""
 
 mgmt:
   network: custom_mgmt
-  ipv4-subnet: 10.0.0.0/16
+  ipv4-subnet: {{ cookiecutter.clab_mgmt_subnet }}/{{ cookiecutter.clab_mgmt_mask }}
 
 topology:
   kinds:
@@ -12,7 +12,6 @@ topology:
       image: arista/ceos:{{ cookiecutter.ceos_lab_version }}
   defaults:
     kind: ceos
-    startup-config: init-configs/ceos-init.cfg
 {%- if cookiecutter.cv_api_token_required %}
     extras:
       ceos-copy-to-flash:
@@ -23,14 +22,13 @@ topology:
     #   - cv-onboarding-token:/mnt/flash/cv-onboarding-token:ro
 {%- endif %}
   nodes:
-    node1:
-      mgmt-ipv4: 10.0.1.1
+{%- for node in cookiecutter.lab.lab_inventory %}
+    {{ node.hostname }}:
+      mgmt-ipv4: {{ node.mgmt_ip }}
       binds:
-        - sn/node1.txt:/mnt/flash/ceos-config:ro
-    node2:
-      mgmt-ipv4: 10.0.2.2
-      binds:
-        - sn/node2.txt:/mnt/flash/ceos-config:ro
+        - sn/{{ node.hostname }}.txt:/mnt/flash/ceos-config:ro
+      startup-config: init-configs/{{ node.hostname }}.cfg
+{%- endfor %}
 
   links:
 {%- for link in cookiecutter.lab.lab_cabling_plan %}

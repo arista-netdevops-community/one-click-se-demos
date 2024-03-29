@@ -161,6 +161,7 @@ if __name__ == "__main__":
     })
 
     files_to_copy = list()
+    file_index_list = list()
     for root, _, files in os.walk(".cc"):
         for filename in files:
             full_src_path = os.path.join(root, filename)
@@ -173,7 +174,8 @@ if __name__ == "__main__":
                     for k in cc_loop_key_list:
                         loop_over = loop_over[k]
                     loop_key = for_loop.split()[2]
-                    for d in loop_over:
+                    for i, d in enumerate(loop_over):
+                        file_index_list.append((os.path.join(root, d[loop_key]+true_ext).replace(".cc/", ".cc-temp/"), i))
                         files_to_copy.append((full_src_path, os.path.join(root, d[loop_key]+true_ext).replace(".cc/", ".cc-temp/")))
                 else:
                     files_to_copy.append((full_src_path, os.path.join(root, f).replace(".cc/", ".cc-temp/")))
@@ -183,6 +185,12 @@ if __name__ == "__main__":
     for src_file, dst_file in files_to_copy:
         os.makedirs(os.path.dirname(dst_file), exist_ok=True)
         shutil.copy(src=src_file, dst=dst_file)
+
+    for indexed_file, index in file_index_list:
+        with open(indexed_file) as f:
+            data = f.read()
+        with open(indexed_file, 'w') as f:
+            f.write("{%- set cookiecutter_file_index = "+f"{index}"+" -%}\n"+data)
 
     cookiecutter(template='.cc-temp', overwrite_if_exists=True, extra_context={'lab': cc_extras})
 

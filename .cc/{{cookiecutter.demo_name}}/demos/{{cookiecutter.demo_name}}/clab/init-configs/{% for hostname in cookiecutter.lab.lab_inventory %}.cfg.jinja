@@ -1,4 +1,5 @@
-{%- if cookiecutter.cv_api_token_required %}
+hostname {{ {{ cookiecutter.lab.lab_inventory[cookiecutter_file_index].hostname }} }}
+{%- if cookiecutter.cv_api_token_required -%}
 !
 daemon TerminAttr
    exec /usr/bin/TerminAttr -cvaddr=apiserver.cv-staging.corp.arista.io:443 -cvauth=token-secure,/mnt/flash/cv-onboarding-token -cvvrf=MGMT -disableaaa -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -taillogs
@@ -31,9 +32,9 @@ management api http-commands
 !
 interface Management0
    vrf MGMT
-   {% raw %}{{ if .MgmtIPv4Address }}   ip address {{ .MgmtIPv4Address }}/{{ .MgmtIPv4PrefixLength }}{{end}}{% endraw %}
+      ip address {{ cookiecutter.lab.lab_inventory[cookiecutter_file_index].mgmt_ip }}/{{ cookiecutter.clab_mgmt_mask }}
 !
-ip route vrf MGMT 0.0.0.0/0 192.168.0.1
+ip route vrf MGMT 0.0.0.0/0 {{ cookiecutter.clab_mgmt_gw }}
 !
 ip name-server vrf MGMT 8.8.8.8
 !
