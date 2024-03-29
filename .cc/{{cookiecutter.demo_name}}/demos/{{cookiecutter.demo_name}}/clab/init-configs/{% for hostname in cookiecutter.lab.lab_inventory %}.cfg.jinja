@@ -1,5 +1,5 @@
 hostname {{ cookiecutter.lab.lab_inventory[cookiecutter_file_index].hostname }}
-{%- if cookiecutter.cv_api_token_required -%}
+{%- if cookiecutter.cv_api_token_required %}
 !
 daemon TerminAttr
    exec /usr/bin/TerminAttr -cvaddr=apiserver.cv-staging.corp.arista.io:443 -cvauth=token-secure,/mnt/flash/cv-onboarding-token -cvvrf=MGMT -disableaaa -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -taillogs
