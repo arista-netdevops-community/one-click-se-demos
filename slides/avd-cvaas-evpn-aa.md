@@ -1,6 +1,7 @@
 ---
 marp: true
 theme: default
+class: invert
 author: Petr Ankudinov
 # size 16:9 1280px 720px
 size: 16:9
@@ -8,7 +9,7 @@ paginate: true
 math: mathjax
 style: |
     :root {
-      background: linear-gradient(to left, #abbaab, #ffffff);
+      background: linear-gradient(to bottom, #000000, #434343);
     }
     img[alt~="custom"] {
       float: right;
@@ -28,7 +29,7 @@ style: |
       background-color: transparent;
     }
     pre {
-        background: linear-gradient(to top, #abbaab, #ffffff);
+        background: linear-gradient(to top, #000000, #434343);
         background-color: transparent;
     }
 ---
@@ -46,7 +47,7 @@ Petr Ankudinov
                                     31/03/2024
 ```
 
-![bg right fit](img/github-mark-white.webp)
+![bg right](img/leonardo-yip-unsplash.jpg)
 
 ---
 
@@ -54,7 +55,7 @@ Petr Ankudinov
 
 <style scoped>section {font-size: 22px;}</style>
 
-![bg right ](img/pexels-suzy-hazelwood-1226398.jpg)
+![bg right opacity:75%](img/pexels-suzy-hazelwood-1226398.jpg)
 
 - item1
 - item2
@@ -64,7 +65,7 @@ Petr Ankudinov
 
 <style scoped>section {font-size: 45px;}</style>
 
-![bg left opacity:80%](img/pexels-ann-h-7186206.jpg)
+![bg left opacity:75%](img/pexels-ann-h-7186206.jpg)
 
 # Q&A
 
