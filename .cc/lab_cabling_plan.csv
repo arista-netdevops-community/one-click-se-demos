@@ -9,5 +9,5 @@ l04,eth1,s01,eth4
 l04,eth2,s02,eth4
 h01,eth1,l01,eth10
 h01,eth2,l02,eth10
-h02,eth1,l01,eth20
-h02,eth2,l02,eth20
+h02,eth1,l03,eth20
+h02,eth2,l04,eth20

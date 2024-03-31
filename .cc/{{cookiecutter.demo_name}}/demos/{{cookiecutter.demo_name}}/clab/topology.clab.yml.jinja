@@ -29,6 +29,11 @@ topology:
         - sn/{{ node.hostname }}.txt:/mnt/flash/ceos-config:ro
       startup-config: init-configs/{{ node.hostname }}.cfg
 {%- endfor %}
+{%- for node in cookiecutter.lab.lab_host_inventory %}
+    {{ node.hostname }}:
+      mgmt-ipv4: {{ node.mgmt_ip }}
+      startup-config: init-configs/{{ node.hostname }}.cfg
+{%- endfor %}
 
   links:
 {%- for link in cookiecutter.lab.lab_cabling_plan %}

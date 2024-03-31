@@ -84,6 +84,7 @@ nav:
     - AVD EVPN Active-Active: cvaas/avd-cvaas-evpn-aa.md
   - AVD Demos:
     - AVD Extended Workshop: avd/extended-workshop.md
+    - AVD Extended Workshop, Part 1: avd/avd-extended-workshop-part-1.md
 
 extra:
   consent:
