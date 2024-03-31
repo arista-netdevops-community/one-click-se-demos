@@ -63,6 +63,27 @@ Petr Ankudinov
 
 ---
 
+# Test Dark
+
+check topology on dark
+
+![bg right fit](img/atd-dual-dc-left.png)
+
+---
+
+# Test Light
+
+<style scoped>
+section {background: linear-gradient(to bottom, #FFFFFF, #FFFFFF); color: black; }
+h1 {color: black;}
+</style>
+
+check topology on light
+
+![bg right fit](img/atd-dual-dc-left.png)
+
+---
+
 <style scoped>section {font-size: 45px;}</style>
 
 ![bg left opacity:75%](img/pexels-ann-h-7186206.jpg)
