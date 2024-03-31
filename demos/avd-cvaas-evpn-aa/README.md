@@ -2,7 +2,7 @@
 
 This lab is tested for:  
 
-  cEOS-lab version: | 4.30.3M  
+  cEOS-lab version: 4.30.3M  
   Containerlab Version: 0.52.0  
   Codespace Container Size  
     CPUs: 4  
