@@ -43,7 +43,7 @@ _paginate: false
 ```text
 AVD CVaaS EVPN AA Demo
 Petr Ankudinov
-                                    29/03/2024
+                                    31/03/2024
 ```
 
 ![bg right fit](img/github-mark-white.webp)

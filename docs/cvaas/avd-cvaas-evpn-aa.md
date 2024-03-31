@@ -15,7 +15,7 @@
 [Slides](https://arista-netdevops-community.github.io/one-click-se-demos/slides/avd-cvaas-evpn-aa.html){ target=_blank }  
 [PDF Slides](https://arista-netdevops-community.github.io/one-click-se-demos/pdfs/avd-cvaas-evpn-aa.pdf){ target=_blank }  
 
-!!! Info "Last reviewed: 29/03/2024"
+!!! Info "Last reviewed: 31/03/2024"
 
     Demos and labs review over 6 month age may be outdated.
 

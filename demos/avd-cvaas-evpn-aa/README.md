@@ -9,7 +9,7 @@ This lab is tested for:
     memory: 16gb  
     storage: 32gb  
 
-Last reviewed: 29/03/2024  
+Last reviewed: 31/03/2024  
 
 Please check the lab materials:
 
