@@ -9,7 +9,7 @@ paginate: true
 math: mathjax
 style: |
     :root {
-      background: linear-gradient(to bottom, #000000, #434343);
+      background: linear-gradient(to bottom, #1e3744, #301B29);
     }
     img[alt~="custom"] {
       float: right;
@@ -29,7 +29,7 @@ style: |
       background-color: transparent;
     }
     pre {
-        background: linear-gradient(to top, #000000, #434343);
+        background: linear-gradient(to top, #1e3744, #301B29);
         background-color: transparent;
     }
 ---
@@ -42,24 +42,35 @@ _paginate: false
 -->
 
 ```text
-AVD Extended Workshop, Part 1 Demo
+Intro into Ansible, Ansible AVD, Git
+and VSCode for new and existing AVD users
+
 Petr Ankudinov
                                     31/03/2024
 ```
 
-![bg right](img/leonardo-yip-unsplash.jpg)
+![bg left fit](img/avd-logo.webp)
 
 ---
 
-# Agenda
+# What is this Workshop about?
 
-<style scoped>section {font-size: 22px;}</style>
+<style scoped>section {font-size: 18px;}</style>
 
 ![bg right opacity:75%](img/pexels-suzy-hazelwood-1226398.jpg)
 
-- item1
-- item2
-- item3
+- This workshop is 3 sections:
+  - Part 1, Intro:
+    - Introducing the tools
+    - Get the lab environment up and running
+    - How to setup Ansible AVD environment
+    - Run AVD playbooks
+    - Make some changes in AVD repository
+  - Part 2, Ansible and Git 101
+  - Part 3, Common provisioning cases
+- Each section requires around 2 hours to complete. The entire workshop can be complete in a single day or split into 3 seperate sessions.
+- Make a break when you see a slide with a coffee cup ☕️
+- Ask questions at any time!
 
 ---
 
