@@ -2,37 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://arista-netdevops-community.github.io/one-click-se-demos/</loc>
-         <lastmod>2024-03-31</lastmod>
+         <lastmod>2024-04-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://arista-netdevops-community.github.io/one-click-se-demos/credits/</loc>
-         <lastmod>2024-03-31</lastmod>
+         <lastmod>2024-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://arista-netdevops-community.github.io/one-click-se-demos/avd/avd-examples-single-l3ls/</loc>
+         <lastmod>2024-04-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://arista-netdevops-community.github.io/one-click-se-demos/avd/avd-extended-workshop-part-1/</loc>
-         <lastmod>2024-03-31</lastmod>
+         <lastmod>2024-04-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://arista-netdevops-community.github.io/one-click-se-demos/avd/extended-workshop/</loc>
-         <lastmod>2024-03-31</lastmod>
+         <lastmod>2024-04-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://arista-netdevops-community.github.io/one-click-se-demos/cvaas/avd-cvaas-evpn-aa/</loc>
-         <lastmod>2024-03-31</lastmod>
+         <lastmod>2024-04-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://arista-netdevops-community.github.io/one-click-se-demos/cvaas/avd-evpn-aa/</loc>
-         <lastmod>2024-03-31</lastmod>
+         <lastmod>2024-04-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://arista-netdevops-community.github.io/one-click-se-demos/cvaas/avd-evpn-mlag/</loc>
-         <lastmod>2024-03-31</lastmod>
+         <lastmod>2024-04-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
