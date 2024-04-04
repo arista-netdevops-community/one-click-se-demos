@@ -1,0 +1,22 @@
+{
+    "image": "ghcr.io/arista-netdevops-community/one-click-se-demos/avd-examples-single-l3ls:latest",
+    // containerEnv set the variables applied to entire container
+    "containerEnv": {
+        "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
+        "CONTAINERWSF": "${containerWorkspaceFolder}"
+    },
+    "secrets": {
+        "ARTOKEN": {
+          "description": "token to auto-download EOS images from arista.com."
+          // "documentationUrl": "https://example.com/link/to/info"
+        }
+    },
+    "hostRequirements": {
+      "cpus": 8,
+      "memory": "32gb",
+      "storage": "64gb"
+    },
+    "postCreateCommand": "postCreate.sh",
+    "workspaceMount": "source=${localWorkspaceFolder}/demos/${containerWorkspaceFolder},target=/${containerWorkspaceFolder},type=bind",
+    "workspaceFolder": "/avd-examples-single-l3ls"
+}

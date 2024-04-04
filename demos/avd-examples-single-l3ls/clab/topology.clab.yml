@@ -1,0 +1,85 @@
+name: avd-examples-single-l3ls
+prefix: ""
+
+mgmt:
+  network: custom_mgmt
+  ipv4-subnet: 172.16.1.0/24
+
+topology:
+  kinds:
+    ceos:
+      enforce-startup-config: true
+      image: arista/ceos:4.30.3M
+  defaults:
+    kind: ceos
+  nodes:
+    dc1-spine1:
+      mgmt-ipv4: 172.16.1.11
+      binds:
+        - sn/dc1-spine1.txt:/mnt/flash/ceos-config:ro
+      startup-config: init-configs/dc1-spine1.cfg
+    dc1-spine2:
+      mgmt-ipv4: 172.16.1.12
+      binds:
+        - sn/dc1-spine2.txt:/mnt/flash/ceos-config:ro
+      startup-config: init-configs/dc1-spine2.cfg
+    dc1-leaf1a:
+      mgmt-ipv4: 172.16.1.101
+      binds:
+        - sn/dc1-leaf1a.txt:/mnt/flash/ceos-config:ro
+      startup-config: init-configs/dc1-leaf1a.cfg
+    dc1-leaf1b:
+      mgmt-ipv4: 172.16.1.102
+      binds:
+        - sn/dc1-leaf1b.txt:/mnt/flash/ceos-config:ro
+      startup-config: init-configs/dc1-leaf1b.cfg
+    dc1-leaf2a:
+      mgmt-ipv4: 172.16.1.103
+      binds:
+        - sn/dc1-leaf2a.txt:/mnt/flash/ceos-config:ro
+      startup-config: init-configs/dc1-leaf2a.cfg
+    dc1-leaf2b:
+      mgmt-ipv4: 172.16.1.104
+      binds:
+        - sn/dc1-leaf2b.txt:/mnt/flash/ceos-config:ro
+      startup-config: init-configs/dc1-leaf2b.cfg
+    dc1-leaf1c:
+      mgmt-ipv4: 172.16.1.151
+      binds:
+        - sn/dc1-leaf1c.txt:/mnt/flash/ceos-config:ro
+      startup-config: init-configs/dc1-leaf1c.cfg
+    dc1-leaf2c:
+      mgmt-ipv4: 172.16.1.152
+      binds:
+        - sn/dc1-leaf2c.txt:/mnt/flash/ceos-config:ro
+      startup-config: init-configs/dc1-leaf2c.cfg
+    dc1-leaf1-server1:
+      mgmt-ipv4: 172.16.1.201
+      startup-config: init-configs/dc1-leaf1-server1.cfg
+    dc1-leaf2-server1:
+      mgmt-ipv4: 172.16.1.202
+      startup-config: init-configs/dc1-leaf2-server1.cfg
+
+  links:
+    - endpoints: ["dc1-leaf1a:eth1", "dc1-spine1:eth1"]
+    - endpoints: ["dc1-leaf1a:eth2", "dc1-spine2:eth1"]
+    - endpoints: ["dc1-leaf1b:eth1", "dc1-spine1:eth2"]
+    - endpoints: ["dc1-leaf1b:eth2", "dc1-spine2:eth2"]
+    - endpoints: ["dc1-leaf2a:eth1", "dc1-spine1:eth3"]
+    - endpoints: ["dc1-leaf2a:eth2", "dc1-spine2:eth3"]
+    - endpoints: ["dc1-leaf2b:eth1", "dc1-spine1:eth4"]
+    - endpoints: ["dc1-leaf2b:eth2", "dc1-spine2:eth4"]
+    - endpoints: ["dc1-leaf1a:eth3", "dc1-leaf1b:eth3"]
+    - endpoints: ["dc1-leaf1a:eth4", "dc1-leaf1b:eth4"]
+    - endpoints: ["dc1-leaf2a:eth3", "dc1-leaf2b:eth3"]
+    - endpoints: ["dc1-leaf2a:eth4", "dc1-leaf2b:eth4"]
+    - endpoints: ["dc1-leaf1c:eth1", "dc1-leaf1a:eth8"]
+    - endpoints: ["dc1-leaf1c:eth2", "dc1-leaf1b:eth8"]
+    - endpoints: ["dc1-leaf2c:eth1", "dc1-leaf2a:eth8"]
+    - endpoints: ["dc1-leaf2c:eth2", "dc1-leaf2b:eth8"]
+    - endpoints: ["dc1-leaf1-server1:eth1", "dc1-leaf1a:eth5"]
+    - endpoints: ["dc1-leaf1-server1:eth2", "dc1-leaf1b:eth5"]
+    - endpoints: ["dc1-leaf1-server1:eth3", "dc1-leaf1c:eth5"]
+    - endpoints: ["dc1-leaf2-server1:eth1", "dc1-leaf2a:eth5"]
+    - endpoints: ["dc1-leaf2-server1:eth2", "dc1-leaf2b:eth5"]
+    - endpoints: ["dc1-leaf2-server1:eth3", "dc1-leaf2c:eth5"]
