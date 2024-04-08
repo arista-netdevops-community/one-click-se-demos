@@ -85,7 +85,6 @@ nav:
   - AVD Demos:
     - AVD Extended Workshop: avd/extended-workshop.md
     - AVD Extended Workshop, Part 1: avd/avd-extended-workshop-part-1.md
-    - AVD Examples Single L3LS: avd/avd-examples-single-l3ls.md
 
 extra:
   consent:
