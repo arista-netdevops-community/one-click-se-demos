@@ -92,6 +92,11 @@ copyright: >
 extra:
   consent:
     title: Cookie consent
+    consent:
+    actions:
+      - accept
+      - manage
+      - reject
     description: >- 
       We use cookies to recognize your repeated visits and preferences, as well
       as to measure the effectiveness of our documentation and whether users
