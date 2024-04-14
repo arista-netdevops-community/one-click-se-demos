@@ -86,6 +86,9 @@ nav:
     - AVD Extended Workshop: avd/extended-workshop.md
     - AVD Extended Workshop, Part 1: avd/avd-extended-workshop-part-1.md
 
+copyright: >
+  &nbsp;&#x1F36A;&nbsp;<a href="#__consent">Change cookie settings</a>
+
 extra:
   consent:
     title: Cookie consent
