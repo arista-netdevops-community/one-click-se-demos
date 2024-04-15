@@ -17,8 +17,8 @@ jobs:
     with:
       container_name: "avd-extended-workshop-part-1"
       from_image: "ghcr.io/aristanetworks/avd/universal"
-      from_variant: "python3.11-avd-v4.7.0"
+      from_variant: "python3.11-avd-v4.7.1"
       username: "avd"
       clab_version: "0.52.0"
-      ceos_lab_version: "4.31.2F"
-      git_init: "False"
+      ceos_lab_version: "4.30.5M"
+      git_init: "True"

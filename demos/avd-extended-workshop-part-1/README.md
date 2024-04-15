@@ -2,14 +2,14 @@
 
 This lab is tested for:  
 
-  cEOS-lab version: 4.31.2F  
+  cEOS-lab version: 4.30.5M  
   Containerlab Version: 0.52.0  
   Codespace Container Size  
     CPUs: 4  
     memory: 16gb  
     storage: 32gb  
 
-Last reviewed: 31/03/2024  
+Last reviewed: 15/04/2024  
 
 Please check the lab materials:
 
