@@ -118,3 +118,6 @@ cEOS-lab-*
 # ingnore images and other files not to be uploaded to GitHub
 .gitignored/*
 !.gitignored/.gitkeep
+
+# ignore mkdocs serve privacy cache
+.cache

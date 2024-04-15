@@ -14,12 +14,11 @@ theme:
     - content.code.annotate
     - content.code.copy
     # - content.code.select
-    # - content.footnote.tooltips
+    - content.footnote.tooltips
     # - content.tabs.link
     - content.tooltips
-    # - header.autohide
+    - header.autohide
     # - navigation.expand
-    - navigation.footer
     - navigation.indexes
     # - navigation.instant
     # - navigation.instant.prefetch
