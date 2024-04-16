@@ -38,7 +38,20 @@ theme:
     logo: fontawesome/solid/gears
 
 markdown_extensions:
+  - attr_list
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
 
 nav:
   - Home:
@@ -50,6 +63,9 @@ nav:
   - AVD Demos:
     - AVD Extended Workshop: avd/extended-workshop.md
     - AVD Extended Workshop, Part 1: avd/avd-extended-workshop-part-1.md
+
+copyright: >
+  &nbsp;&#x1F36A;&nbsp;<a href="#__consent">Change cookie settings</a>
 
 extra:
   consent:
