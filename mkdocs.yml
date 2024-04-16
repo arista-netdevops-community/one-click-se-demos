@@ -89,8 +89,8 @@ copyright: >
   &nbsp;&#x1F36A;&nbsp;<a href="#__consent">Change cookie settings</a>
 
 extra:
-  # consent:
-  #   title: Cookie consent
+  consent:
+    title: Cookie consent
   #   actions:
   #     - accept
   #     - manage
