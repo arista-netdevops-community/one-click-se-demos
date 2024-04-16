@@ -91,7 +91,6 @@ copyright: >
 extra:
   consent:
     title: Cookie consent
-    consent:
     actions:
       - accept
       - manage
