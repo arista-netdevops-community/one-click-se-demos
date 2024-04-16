@@ -93,7 +93,6 @@ extra:
     title: Cookie consent
     actions:
       - accept
-      - manage
       - reject
     description: >- 
       We use cookies to recognize your repeated visits and preferences, as well
