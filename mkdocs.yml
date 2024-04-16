@@ -37,21 +37,21 @@ theme:
     repo: fontawesome/brands/github
     logo: fontawesome/solid/gears
 
-markdown_extensions:
-  - attr_list
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.tabbed:
-      alternate_style: true
+# markdown_extensions:
+#   - attr_list
+#   - admonition
+#   - pymdownx.details
+#   - pymdownx.superfences
+#   - pymdownx.critic
+#   - pymdownx.caret
+#   - pymdownx.keys
+#   - pymdownx.mark
+#   - pymdownx.tilde
+#   - pymdownx.emoji:
+#       emoji_index: !!python/name:material.extensions.emoji.twemoji
+#       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+#   - pymdownx.tabbed:
+#       alternate_style: true
 
 nav:
   - Home:
