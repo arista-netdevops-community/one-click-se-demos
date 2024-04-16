@@ -768,23 +768,26 @@ Github spending limit is always zero by default. That means you remain in full c
 <h2 id="set-required-tokens-before-you-start">Set Required Tokens Before You Start</h2>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>==<strong>Do NOT set your tokens under the repository settings!</strong>== :skull_and_crossbones:<br />
+<p><mark><strong>Do NOT set your tokens under the repository settings!</strong></mark> <img alt="☠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2620.svg" title=":skull_and_crossbones:" /><br />
 The repository tokens will be visible to all contributors and someone may occasionally use your token to get restricted access. Only set tokens under you account, keep the token lifetime short enough and refresh them periodically.</p>
 </div>
 <p>To set the token:</p>
-<p>??? "Step1: Go to the Account Settings (right top corner)"</p>
-<pre><code>![account settings](assets/images/account_settings.png){ .opacity09 }
-</code></pre>
-<p>???+ "Step2: Go to <code>Codespaces &gt; Codespaces secrets &gt; New secret</code>"</p>
-<pre><code>- add ARTOKEN to auto-download EOS images from [arista.com](arista.com). Under `Repository access` select `arista-netdevops-community/one-click-se-demos`
-- add CV_API_TOKEN if CVaaS is part of the demo. Keep in mind, this token has to be created under service account. Device onboarding token is not required as it will be generated automatically. Under `Repository access` select `arista-netdevops-community/one-click-se-demos`
-
-![codespaces secrets](assets/images/codespaces-secrets.png){ .opacity09 }
-
-!!! Warning "WARNING!"
-
-    Do NOT forget to set `Repository access` for your secrets, otherwise they will be inactive. Some containers may provide a hint before you start them if required secrets are not configured correctly.
-</code></pre>
+<details>
+<summary>Step1: Go to the Account Settings (right top corner)</summary>
+<p><img alt="account settings" class="opacity09" src="assets/images/account_settings.png" /></p>
+</details>
+<details open="open">
+<summary>Step2: Go to <code>Codespaces &gt; Codespaces secrets &gt; New secret</code></summary>
+<ul>
+<li>add ARTOKEN to auto-download EOS images from <a href="arista.com">arista.com</a>. Under <code>Repository access</code> select <code>arista-netdevops-community/one-click-se-demos</code></li>
+<li>add CV_API_TOKEN if CVaaS is part of the demo. Keep in mind, this token has to be created under service account. Device onboarding token is not required as it will be generated automatically. Under <code>Repository access</code> select <code>arista-netdevops-community/one-click-se-demos</code></li>
+</ul>
+<p><img alt="codespaces secrets" class="opacity09" src="assets/images/codespaces-secrets.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">WARNING!</p>
+<p>Do NOT forget to set <code>Repository access</code> for your secrets, otherwise they will be inactive. Some containers may provide a hint before you start them if required secrets are not configured correctly.</p>
+</div>
+</details>
 <h2 id="start-and-stop-the-demo-lab">Start and Stop The Demo / Lab</h2>
 <p>Please access the corresponding documentation section to start the demo and access the related guides.</p>
 <div class="admonition info">
@@ -864,6 +867,11 @@ The repository tokens will be visible to all contributors and someone may occasi
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &nbsp;&#x1F36A;&nbsp;<a href="#__consent">Change cookie settings</a>
+
+    </div>
   
   
     Made with
