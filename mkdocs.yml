@@ -4,36 +4,12 @@ site_url: https://arista-netdevops-community.github.io/one-click-se-demos/
 repo_name: SE Demos on Github
 repo_url: https://github.com/arista-netdevops-community/one-click-se-demos
 
-extra_css:
-  - stylesheets/extra.css
-
 theme:
   name: material
   features:
-    - announce.dismiss
-    - content.code.annotate
-    - content.code.copy
-    # - content.code.select
-    - content.footnote.tooltips
-    # - content.tabs.link
-    - content.tooltips
-    - header.autohide
-    # - navigation.expand
-    - navigation.indexes
-    # - navigation.instant
-    # - navigation.instant.prefetch
-    # - navigation.instant.progress
-    # - navigation.prune
-    - navigation.sections
     - navigation.tabs
-    # - navigation.tabs.sticky
-    - navigation.top
-    - navigation.tracking
     - search.highlight
-    - search.share
     - search.suggest
-    - toc.follow
-    # - toc.integrate
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -59,20 +35,7 @@ theme:
     logo: fontawesome/solid/gears
 
 markdown_extensions:
-  - attr_list
   - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.tabbed:
-      alternate_style: true
 
 nav:
   - Home:
@@ -84,39 +47,3 @@ nav:
   - AVD Demos:
     - AVD Extended Workshop: avd/extended-workshop.md
     - AVD Extended Workshop, Part 1: avd/avd-extended-workshop-part-1.md
-
-copyright: >
-  &nbsp;&#x1F36A;&nbsp;<a href="#__consent">Change cookie settings</a>
-
-extra:
-  consent:
-    title: Cookie consent
-    actions:
-      - accept
-      - manage
-      - reject
-    description: >- 
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
-  analytics:
-    provider: google
-    property: G-SJDW948EQD
-    feedback:
-      title: Was this page helpful?
-      ratings:
-        - icon: material/emoticon-happy-outline
-          name: This page was helpful
-          data: 1
-          note: >-
-            Thanks for your feedback!
-        - icon: material/emoticon-sad-outline
-          name: This page could be improved
-          data: 0
-          note: >- 
-            Thanks for your feedback! Help us improve this page by
-            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
-
-# plugins:
-#   - privacy
