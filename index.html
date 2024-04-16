@@ -749,55 +749,45 @@
 <h2 id="motivation">Motivation</h2>
 <p>Every good demo should only take one click to start!<br />
 The purpose of this repository is to provide a collection of demos and labs for Arista SEs and customers, that can be started in Github Codespaces by pressing a single button.</p>
-<div class="admonition warning">
-<p class="admonition-title">WARNING!</p>
-<ul>
-<li>This repository is still under construction!</li>
-<li>Please make sure you are using the correct Codespaces size when running the demo!</li>
-</ul>
-</div>
+<p>!!! Warning "WARNING!"</p>
+<pre><code>- This repository is still under construction!
+- Please make sure you are using the correct Codespaces size when running the demo!
+</code></pre>
 <h2 id="codespaces-machine-types">Codespaces Machine Types</h2>
 <p>By default Github provides Codespaces with up to 4 CPUs and 16 GB RAM. That's enough to run some demos and labs in this repository, but not all of them.<br />
 As of time of writing <a href="https://github.com/features/codespaces">Github provides 120-core/hours of Codespaces for free each month</a>. That is approximately 30 hours a month with 4 CPUs.<br />
 If you need bigger machines, please contact <a href="https://support.github.com/">Github support</a> to enable them. Keep in mind though, that Github may ask for a payment option to enable them and free time will run out faster with bigger instances.<br />
 Github spending limit is always zero by default. That means you remain in full control of your expenses, unless you change the spending limit.</p>
-<div class="admonition warning">
-<p class="admonition-title">WARNING!</p>
-<p>Do NOT enable pre-builds! This may lead to excessive use of Codespaces storage across different regions and increased costs / reduced free time. We don't need Codespaces pre-builds for any demo and to speed up the container start we simply rely on Github packages that are free for public repositories.</p>
-</div>
+<p>!!! Warning "WARNING!"</p>
+<pre><code>Do NOT enable pre-builds! This may lead to excessive use of Codespaces storage across different regions and increased costs / reduced free time. We don't need Codespaces pre-builds for any demo and to speed up the container start we simply rely on Github packages that are free for public repositories.
+</code></pre>
 <h2 id="set-required-tokens-before-you-start">Set Required Tokens Before You Start</h2>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p><mark><strong>Do NOT set your tokens under the repository settings!</strong></mark> <img alt="☠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2620.svg" title=":skull_and_crossbones:" /><br />
-The repository tokens will be visible to all contributors and someone may occasionally use your token to get restricted access. Only set tokens under you account, keep the token lifetime short enough and refresh them periodically.</p>
-</div>
+<p>!!! Danger "Danger"</p>
+<pre><code>==**Do NOT set your tokens under the repository settings!**== :skull_and_crossbones:  
+The repository tokens will be visible to all contributors and someone may occasionally use your token to get restricted access. Only set tokens under you account, keep the token lifetime short enough and refresh them periodically.
+</code></pre>
 <p>To set the token:</p>
-<details>
-<summary>Step1: Go to the Account Settings (right top corner)</summary>
-<p><img alt="account settings" class="opacity09" src="assets/images/account_settings.png" /></p>
-</details>
-<details open="open">
-<summary>Step2: Go to <code>Codespaces &gt; Codespaces secrets &gt; New secret</code></summary>
-<ul>
-<li>add ARTOKEN to auto-download EOS images from <a href="arista.com">arista.com</a>. Under <code>Repository access</code> select <code>arista-netdevops-community/one-click-se-demos</code></li>
-<li>add CV_API_TOKEN if CVaaS is part of the demo. Keep in mind, this token has to be created under service account. Device onboarding token is not required as it will be generated automatically. Under <code>Repository access</code> select <code>arista-netdevops-community/one-click-se-demos</code></li>
-</ul>
-<p><img alt="codespaces secrets" class="opacity09" src="assets/images/codespaces-secrets.png" /></p>
-<div class="admonition warning">
-<p class="admonition-title">WARNING!</p>
-<p>Do NOT forget to set <code>Repository access</code> for your secrets, otherwise they will be inactive. Some containers may provide a hint before you start them if required secrets are not configured correctly.</p>
-</div>
-</details>
+<p>??? "Step1: Go to the Account Settings (right top corner)"</p>
+<pre><code>![account settings](assets/images/account_settings.png){ .opacity09 }
+</code></pre>
+<p>???+ "Step2: Go to <code>Codespaces &gt; Codespaces secrets &gt; New secret</code>"</p>
+<pre><code>- add ARTOKEN to auto-download EOS images from [arista.com](arista.com). Under `Repository access` select `arista-netdevops-community/one-click-se-demos`
+- add CV_API_TOKEN if CVaaS is part of the demo. Keep in mind, this token has to be created under service account. Device onboarding token is not required as it will be generated automatically. Under `Repository access` select `arista-netdevops-community/one-click-se-demos`
+
+![codespaces secrets](assets/images/codespaces-secrets.png){ .opacity09 }
+
+!!! Warning "WARNING!"
+
+    Do NOT forget to set `Repository access` for your secrets, otherwise they will be inactive. Some containers may provide a hint before you start them if required secrets are not configured correctly.
+</code></pre>
 <h2 id="start-and-stop-the-demo-lab">Start and Stop The Demo / Lab</h2>
 <p>Please access the corresponding documentation section to start the demo and access the related guides.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Codespaces have 30 minutes inactivity timeout.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Please do NOT forget to delete the Codespaces you started when you don't need them any more. You can find the full list of Codespaces here: <a href="https://github.com/codespaces">github.com/codespaces</a></p>
-</div>
+<p>!!! Info</p>
+<pre><code>Codespaces have 30 minutes inactivity timeout.
+</code></pre>
+<p>!!! Tip</p>
+<pre><code>Please do NOT forget to delete the Codespaces you started when you don't need them any more. You can find the full list of Codespaces here: [github.com/codespaces](https://github.com/codespaces)
+</code></pre>
 
 
 
