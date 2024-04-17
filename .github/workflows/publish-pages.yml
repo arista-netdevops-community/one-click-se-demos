@@ -11,6 +11,8 @@ on:
     - .github/workflows/publish-pages.yml
 permissions:
   contents: write
+  pages: write
+  id-token: write
 jobs:
   build:
     runs-on: ubuntu-22.04
