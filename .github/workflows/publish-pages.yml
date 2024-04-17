@@ -49,9 +49,21 @@ jobs:
         env:
           MARP_USER: root:root
 
-      - name: Deploy production 🚀
-        if: ${{ github.event_name == 'push' }}
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Setup Pages 📖
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact 🔼
+        uses: actions/upload-pages-artifact@v3
         with:
-          branch: gh-pages
-          folder: ./site/
+          path: ./site/
+
+      - name: Deploy to GitHub Pages 🚀
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # - name: Deploy production 🚀
+      #   if: ${{ github.event_name == 'push' }}
+      #   uses: JamesIves/github-pages-deploy-action@v4
+      #   with:
+      #     branch: gh-pages
+      #     folder: ./site/
