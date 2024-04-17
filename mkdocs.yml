@@ -37,14 +37,14 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      # primary: brown
+      primary: brown
       accent: red
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      # primary: brown
+      primary: brown
       accent: amber
       toggle:
         icon: material/weather-night
