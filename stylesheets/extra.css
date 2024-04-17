@@ -27,3 +27,9 @@
 .contrast90 {
   filter: contrast(90%);
 }
+.md-header {
+  background: linear-gradient(to right, #16222A, #3A6073);
+}
+.md-tabs {
+  background: linear-gradient(to right, #16222A, #3A6073);
+}
