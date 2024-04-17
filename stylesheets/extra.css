@@ -33,3 +33,10 @@
 .md-tabs {
   background: linear-gradient(to right, #16222A, #3A6073);
 }
+.md-footer {
+  background: linear-gradient(to right, #16222A, #3A6073);
+}
+[data-md-color-scheme="slate"] {
+  --md-footer-bg-color: linear-gradient(to right, #16222A, #3A6073);
+  --md-footer-bg-color--dark: linear-gradient(to right, #16222A, #3A6073)ed;
+}
