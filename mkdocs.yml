@@ -26,6 +26,8 @@ theme:
     # - navigation.prune
     - navigation.sections
     - navigation.tabs
+    # enabling prune for testing only, to check if it's stable
+    #   it's not making any difference with current site setup
     - navigation.prune
     # - navigation.tabs.sticky
     - navigation.top

@@ -51,6 +51,17 @@ jobs:
         env:
           MARP_USER: root:root
 
+      - name: setup node.js 🏗️
+        - uses: actions/setup-node@v4
+          with:
+            node-version: 18
+
+      - name: install gzipper and compress files 🖥️
+        run: |
+          npm install
+          npm i gzipper -g
+          gzipper compress --include htm,html,css,js,svg,xml,map,json,img,png,jpg,jpeg --zopfli --brotli --remove-larger .
+
       - name: Setup Pages 📖
         uses: actions/configure-pages@v5
 
