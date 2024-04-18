@@ -58,7 +58,7 @@ jobs:
 
       - name: install gzipper and compress files 🖥️
         run: |
-          npm install
+          npm init
           npm i gzipper -g
           gzipper compress --include htm,html,css,js,svg,xml,map,json,img,png,jpg,jpeg --zopfli --brotli --remove-larger ./site/
 
