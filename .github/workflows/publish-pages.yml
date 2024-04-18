@@ -60,7 +60,7 @@ jobs:
         run: |
           npm install
           npm i gzipper -g
-          gzipper compress --include htm,html,css,js,svg,xml,map,json,img,png,jpg,jpeg --zopfli --brotli --remove-larger .
+          gzipper compress --include htm,html,css,js,svg,xml,map,json,img,png,jpg,jpeg --zopfli --brotli --remove-larger ./site/
 
       - name: Setup Pages 📖
         uses: actions/configure-pages@v5
