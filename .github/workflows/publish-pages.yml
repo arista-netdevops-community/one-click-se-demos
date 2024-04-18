@@ -52,7 +52,7 @@ jobs:
           MARP_USER: root:root
 
       - name: setup node.js 🏗️
-        - uses: actions/setup-node@v4
+        uses: actions/setup-node@v4
           with:
             node-version: 18
 
