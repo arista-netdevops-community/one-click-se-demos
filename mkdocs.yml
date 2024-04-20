@@ -5,7 +5,7 @@ repo_name: SE Demos on Github
 repo_url: https://github.com/arista-netdevops-community/one-click-se-demos
 
 extra_css:
-  - stylesheets/extra.css
+  - assets/stylesheets/extra.css
 
 theme:
   name: material
@@ -24,7 +24,7 @@ theme:
     # - navigation.instant.prefetch
     # - navigation.instant.progress
     # - navigation.prune
-    - navigation.sections
+    # - navigation.sections
     - navigation.tabs
     # enabling prune for testing only, to check if it's stable
     #   it's not making any difference with current site setup
@@ -81,12 +81,14 @@ nav:
   - Home:
     - How To Start: index.md
     - Credits: credits.md
-  - CVaaS Demos:
-    - AVD EVPN MLAG: cvaas/avd-evpn-mlag.md
-    - AVD EVPN Active-Active: cvaas/avd-cvaas-evpn-aa.md
-  - AVD Demos:
-    - AVD Extended Workshop: avd/extended-workshop.md
-    - AVD Extended Workshop, Part 1: avd/avd-extended-workshop-part-1.md
+  - CVaaS:
+    - Demo:
+      - AVD EVPN MLAG: cvaas/demos/avd-evpn-mlag/avd-evpn-mlag.md
+      - AVD EVPN Active-Active: cvaas/demos/avd-evpn-active-active/avd-evpn-active-active.md
+  - AVD:
+    - Workshops:
+      - AVD Extended Workshop: avd/workshops/avd-extended-workshop/avd-extended-workshop.md
+      - AVD Extended Workshop, Part 1: avd/workshops/avd-extended-workshop-part-1/avd-extended-workshop-part-1.md
 
 copyright: >
   &nbsp;&#x1F36A;&nbsp;<a href="#__consent">Change cookie settings</a>
