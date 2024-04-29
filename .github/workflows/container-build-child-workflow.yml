@@ -51,7 +51,7 @@ on:
         type: string
       git_init:
         required: false
-        type: bool
+        type: boolean
         default: true
       ceos_lab_version:
         required: false
