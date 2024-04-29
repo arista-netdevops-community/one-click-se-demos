@@ -17,7 +17,7 @@
 
 !!! Info "Last reviewed: 29/04/2024"
 
-    Demos and labs review over 6 month age may be outdated.
+    Demos and labs reviewed over 6 month age may be outdated.
 
 ## How To Run The Demo
 
