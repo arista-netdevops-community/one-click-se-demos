@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: default
+theme: dracula
 class: invert
 author: Petr Ankudinov
 # size 16:9 1280px 720px
