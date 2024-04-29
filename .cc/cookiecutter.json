@@ -1,5 +1,7 @@
 {
   "demo_name": "a-new-demo",
+  "demo_group": "unsorted",
+  "full_demo_name": "A New Demo",
   "demo_author": "Petr Ankudinov",
   "gh_org_name": "arista-netdevops-community",
   "gh_repo_name": "one-click-se-demos",
@@ -17,8 +19,6 @@
     {"cpus": 32, "memory": "128gb", "storage": "128gb"}
   ],
   "cv_api_token_required": [true, false],
-  "mkdocs_nav_group_short_name": "unsorted",
-  "mkdocs_nav_demo_full_name": "A New Demo",
   "clab_mgmt_subnet": "10.0.0.0",
   "clab_mgmt_mask": "16",
   "clab_mgmt_gw": "10.0.0.1",
