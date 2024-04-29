@@ -10,7 +10,7 @@
   "container_username": "avd",
   "clab_version": "0.54.2",
   "ceos_lab_version": "4.30.6M",
-  "git_init": ["True", "False"],
+  "git_init": true,
   "container_size": [
     {"cpus": 2, "memory": "8gb", "storage": "32gb"},
     {"cpus": 4, "memory": "16gb", "storage": "32gb"},
@@ -18,7 +18,7 @@
     {"cpus": 16, "memory": "64gb", "storage": "128gb"},
     {"cpus": 32, "memory": "128gb", "storage": "128gb"}
   ],
-  "cv_api_token_required": [true, false],
+  "cv_api_token_required": false,
   "clab_mgmt_subnet": "10.0.0.0",
   "clab_mgmt_mask": "16",
   "clab_mgmt_gw": "10.0.0.1",
