@@ -1,4 +1,4 @@
-name: avd-extended-workshop-part-1
+name: AVD Extended Workshop, Part 1
 prefix: ""
 
 mgmt:
@@ -9,7 +9,7 @@ topology:
   kinds:
     ceos:
       enforce-startup-config: true
-      image: arista/ceos:4.30.5M
+      image: arista/ceos:4.30.6M
   defaults:
     kind: ceos
   nodes:

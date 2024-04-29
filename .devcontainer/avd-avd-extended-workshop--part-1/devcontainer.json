@@ -1,0 +1,22 @@
+{
+    "image": "ghcr.io/arista-netdevops-community/one-click-se-demos/avd:avd-extended-workshop--part-1",
+    // containerEnv set the variables applied to entire container
+    "containerEnv": {
+        "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
+        "CONTAINERWSF": "${containerWorkspaceFolder}"
+    },
+    "secrets": {
+        "ARTOKEN": {
+          "description": "token to auto-download EOS images from arista.com."
+          // "documentationUrl": "https://example.com/link/to/info"
+        }
+    },
+    "hostRequirements": {
+      "cpus": 4,
+      "memory": "16gb",
+      "storage": "32gb"
+    },
+    "postCreateCommand": "postCreate.sh",
+    "workspaceMount": "source=${localWorkspaceFolder}/demos/${containerWorkspaceFolder},target=/${containerWorkspaceFolder},type=bind",
+    "workspaceFolder": "/avd-avd-extended-workshop--part-1"
+}

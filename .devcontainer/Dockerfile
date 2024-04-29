@@ -20,6 +20,8 @@ RUN apt-get update \
 COPY cc.py /bin/cook
 RUN chmod +x /bin/cook
 
+ENV TZ=UTC
+
 USER ${USERNAME}
 
 COPY requirements.txt requirements.txt
