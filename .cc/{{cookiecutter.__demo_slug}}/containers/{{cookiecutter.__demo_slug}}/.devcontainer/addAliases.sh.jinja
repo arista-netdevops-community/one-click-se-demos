@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set +e
+
+{% for node in cookiecutter.__lab.lab_host_inventory %}
+echo "alias {{ node.hostname }}='sshpass -p {{ cookiecutter.clab_password }} ssh -o \"StrictHostKeyChecking no\" {{ cookiecutter.clab_user }}@{{ node.mgmt_ip }}'" >> ~/.zshrc
+{%- endfor %}

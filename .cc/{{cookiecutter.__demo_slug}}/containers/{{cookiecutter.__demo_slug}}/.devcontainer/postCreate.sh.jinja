@@ -6,10 +6,6 @@ CVTOKEN=$(curl -H "Authorization: Bearer ${CV_API_TOKEN}" "https://www.cv-stagin
 echo "$CVTOKEN" > ${CONTAINERWSF}/clab/cv-onboarding-token
 ardl get eos --image-type cEOS --version ${CEOS_LAB_VERSION}  --import-docker
 
-{% for node in cookiecutter.__lab.lab_host_inventory %}
-echo "alias {{ node.hostname }}='sshpass -p {{ cookiecutter.clab_password }} ssh -o \"StrictHostKeyChecking no\" {{ cookiecutter.clab_user }}@{{ node.mgmt_ip }}'" > ~/.zshrc
-{%- endfor %}
-
 # init demo dir as Git repo if requested for this demo env
 if ${GIT_INIT}; then
   cd ${CONTAINERWSF}

@@ -26,8 +26,13 @@ RUN apt-get update \
 # copy postCreate script
 COPY ./postCreate.sh /bin/postCreate.sh
 RUN chmod +x /bin/postCreate.sh
+# copy addAliases script
+COPY ./addAliases.sh /bin/addAliases.sh
+RUN chmod +x /bin/addAliases.sh
 
 USER ${USERNAME}
+
+RUN /bin/addAliases.sh
 
 # install the latest containerlab, yamllint, cook-and-cut and eos-downloader
 RUN bash -c "$(curl -sL https://get.containerlab.dev)" -- -v ${CLAB_VERSION} \
