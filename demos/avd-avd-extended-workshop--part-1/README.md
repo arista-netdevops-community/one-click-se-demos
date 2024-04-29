@@ -13,6 +13,6 @@ Last reviewed: 29/04/2024
 
 Please check the lab materials:
 
-- [Lab Documentation](https://arista-netdevops-community.github.io/one-click-se-demos/avd-avd-extended-workshop--part-1/)
+- [Lab Documentation](https://arista-netdevops-community.github.io/one-click-se-demos/avd-avd-extended-workshop--part-1/avd-avd-extended-workshop--part-1/)
 - [HTML Slides](https://arista-netdevops-community.github.io/one-click-se-demos/slides/avd-avd-extended-workshop--part-1.html)
 - [PDF Slides](https://arista-netdevops-community.github.io/one-click-se-demos/pdfs/avd-avd-extended-workshop--part-1.pdf)
