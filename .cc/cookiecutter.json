@@ -6,10 +6,10 @@
   "gh_org_name": "arista-netdevops-community",
   "gh_repo_name": "one-click-se-demos",
   "from_image": "ghcr.io/aristanetworks/avd/universal",
-  "from_variant": "python3.11-avd-v4.6.0",
+  "from_variant": "python3.11-avd-v4.7.1",
   "container_username": "avd",
-  "clab_version": "0.52.0",
-  "ceos_lab_version": "4.30.3M",
+  "clab_version": "0.54.2",
+  "ceos_lab_version": "4.30.6M",
   "git_init": ["True", "False"],
   "container_size": [
     {"cpus": 2, "memory": "8gb", "storage": "32gb"},
