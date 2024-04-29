@@ -1,4 +1,4 @@
-# {{ cookiecutter.mkdocs_nav_demo_full_name }}
+# {{ cookiecutter.demo_name }}
 
 ## Demo Details
 {% if cookiecutter.container_size.cpus in ["2", "4"] %}
@@ -19,10 +19,10 @@
     :material-alert-circle-outline:{ .heartbeat } Please request high spec Codespace machines from [Github support](https://support.github.com/) first!
 {%- endif %}
 
-[Start "{{ cookiecutter.mkdocs_nav_demo_full_name }}" in Codespace](https://codespaces.new/{{ cookiecutter.gh_org_name }}/{{ cookiecutter.gh_repo_name }}?quickstart=1&devcontainer_path=.devcontainer%2F{{ cookiecutter.demo_name }}%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
+[Start "{{ cookiecutter.demo_name }}" in Codespace](https://codespaces.new/{{ cookiecutter.__gh_slug }}?quickstart=1&devcontainer_path=.devcontainer%2F{{ cookiecutter.__demo_slug }}%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
 
-[Slides](https://{{ cookiecutter.gh_org_name }}.github.io/{{ cookiecutter.gh_repo_name }}/slides/{{ cookiecutter.demo_name }}.html){ target=_blank }  
-[PDF Slides](https://{{ cookiecutter.gh_org_name }}.github.io/{{ cookiecutter.gh_repo_name }}/pdfs/{{ cookiecutter.demo_name }}.pdf){ target=_blank }  
+[Slides](https://{{ cookiecutter.__gh_org_name }}.github.io/{{ cookiecutter.__gh_repo_name }}/slides/{{ cookiecutter.__demo_slug }}.html){ target=_blank }  
+[PDF Slides](https://{{ cookiecutter.__gh_org_name }}.github.io/{{ cookiecutter.__gh_repo_name }}/pdfs/{{ cookiecutter.__demo_slug }}.pdf){ target=_blank }  
 
 !!! Info "Last reviewed: {% now 'local', '%d/%m/%Y' %}"
 

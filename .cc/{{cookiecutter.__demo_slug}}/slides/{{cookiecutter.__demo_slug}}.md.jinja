@@ -34,7 +34,7 @@ style: |
     }
 ---
 
-# {{ cookiecutter.mkdocs_nav_demo_full_name }}
+# {{ cookiecutter.demo_name }}
 
 <!-- Do not add page number on this slide -->
 <!--
@@ -42,7 +42,7 @@ _paginate: false
 -->
 
 ```text
-{{ cookiecutter.mkdocs_nav_demo_full_name }} Demo
+{{ cookiecutter.demo_name }} Demo
 {{ cookiecutter.demo_author }}
                                     {% now 'local', '%d/%m/%Y' %}
 ```
@@ -70,4 +70,4 @@ _paginate: false
 # Q&A
 
 - [Ansible AVD](https://avd.arista.com/)
-- [This repository](https://github.com/{{ cookiecutter.gh_org_name }}/{{ cookiecutter.gh_repo_name }})
+- [This repository](https://github.com/{{ __gh_slug }})
