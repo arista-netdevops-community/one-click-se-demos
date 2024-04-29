@@ -192,6 +192,6 @@ if __name__ == "__main__":
         with open(indexed_file, 'w') as f:
             f.write("{%- set cookiecutter_file_index = "+f"{index}"+" -%}\n"+data)
 
-    cookiecutter(template='.cc-temp', overwrite_if_exists=True, extra_context={'lab': cc_extras})
+    cookiecutter(template='.cc-temp', overwrite_if_exists=True, extra_context={'__lab': cc_extras})
 
     shutil.rmtree(".cc-temp")
