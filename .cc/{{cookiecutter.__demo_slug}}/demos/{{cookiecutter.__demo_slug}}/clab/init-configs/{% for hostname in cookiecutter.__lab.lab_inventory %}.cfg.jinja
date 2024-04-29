@@ -1,4 +1,4 @@
-hostname {{ cookiecutter.lab.lab_inventory[cookiecutter_file_index].hostname }}
+hostname {{ cookiecutter.__lab.lab_inventory[cookiecutter_file_index].hostname }}
 {%- if cookiecutter.cv_api_token_required %}
 !
 daemon TerminAttr
@@ -32,7 +32,7 @@ management api http-commands
 !
 interface Management0
    vrf MGMT
-      ip address {{ cookiecutter.lab.lab_inventory[cookiecutter_file_index].mgmt_ip }}/{{ cookiecutter.clab_mgmt_mask }}
+      ip address {{ cookiecutter.__lab.lab_inventory[cookiecutter_file_index].mgmt_ip }}/{{ cookiecutter.clab_mgmt_mask }}
 !
 ip route vrf MGMT 0.0.0.0/0 {{ cookiecutter.clab_mgmt_gw }}
 !

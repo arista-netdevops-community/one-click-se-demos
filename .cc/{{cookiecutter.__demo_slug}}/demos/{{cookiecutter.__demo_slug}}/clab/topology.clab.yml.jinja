@@ -22,20 +22,20 @@ topology:
     #   - cv-onboarding-token:/mnt/flash/cv-onboarding-token:ro
 {%- endif %}
   nodes:
-{%- for node in cookiecutter.lab.lab_inventory %}
+{%- for node in cookiecutter.__lab.lab_inventory %}
     {{ node.hostname }}:
       mgmt-ipv4: {{ node.mgmt_ip }}
       binds:
         - sn/{{ node.hostname }}.txt:/mnt/flash/ceos-config:ro
       startup-config: init-configs/{{ node.hostname }}.cfg
 {%- endfor %}
-{%- for node in cookiecutter.lab.lab_host_inventory %}
+{%- for node in cookiecutter.__lab.lab_host_inventory %}
     {{ node.hostname }}:
       mgmt-ipv4: {{ node.mgmt_ip }}
       startup-config: init-configs/{{ node.hostname }}.cfg
 {%- endfor %}
 
   links:
-{%- for link in cookiecutter.lab.lab_cabling_plan %}
+{%- for link in cookiecutter.__lab.lab_cabling_plan %}
     - endpoints: ["{{ link.local_switch }}:{{ link.local_interface }}", "{{ link.remote_switch }}:{{ link.remote_interface }}"]
 {%- endfor %}
