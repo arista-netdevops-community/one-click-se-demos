@@ -157,7 +157,7 @@ if __name__ == "__main__":
     cookiecutter_dict = cc_config.get_config("/workspaces/one-click-se-demos/.cc/cookiecutter.json")
     cc_extras = cookiecutter_load(args.input_directory)
     cookiecutter_dict.update({
-        'lab': cc_extras
+        '__lab': cc_extras
     })
 
     files_to_copy = list()
