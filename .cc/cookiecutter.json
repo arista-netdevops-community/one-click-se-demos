@@ -1,10 +1,13 @@
 {
-  "demo_name": "a-new-demo",
+  "demo_name": "A New Demo",
+  "__demo_slug": "{{ cookiecutter.demo_name.lower().replace(' ','-').replace(',','-').replace('[','').replace(']','') }}",
   "demo_group": "unsorted",
-  "full_demo_name": "A New Demo",
+  "__group_slug": "{{ cookiecutter.demo_group.lower() }}",
+  "__demo_dir": "{{ cookiecutter.__group_slug }}-{{ cookiecutter.__demo_slug }}",
   "demo_author": "Petr Ankudinov",
   "gh_org_name": "arista-netdevops-community",
   "gh_repo_name": "one-click-se-demos",
+  "__gh_slug": "{{ cookiecutter.gh_org_name }}/{{ cookiecutter.gh_repo_name }}",
   "from_image": "ghcr.io/aristanetworks/avd/universal",
   "from_variant": "python3.11-avd-v4.7.1",
   "container_username": "avd",
@@ -24,5 +27,5 @@
   "clab_mgmt_gw": "10.0.0.1",
   "clab_user": "arista",
   "clab_password": "arista",
-  "lab": null
+  "__lab": null
 }
