@@ -3,7 +3,7 @@
   "demo_group": "unsorted",
   "__demo_name": "{{ cookiecutter.demo_name.lower().replace(' ','-').replace(',','-').replace('[','').replace(']','') }}",
   "__demo_group": "{{ cookiecutter.demo_group.lower() }}",
-  "__demo_slug": "{{ cookiecutter.__demo_name }}-{{ cookiecutter.__demo_group }}",
+  "__demo_slug": "{{ cookiecutter.__demo_group }}-{{ cookiecutter.__demo_name }}",
   "demo_author": "Petr Ankudinov",
   "__gh_org_name": "arista-netdevops-community",
   "__gh_repo_name": "one-click-se-demos",
