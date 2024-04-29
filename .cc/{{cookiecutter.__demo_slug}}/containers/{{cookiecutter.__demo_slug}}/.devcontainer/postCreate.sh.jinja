@@ -7,7 +7,7 @@ echo "$CVTOKEN" > ${CONTAINERWSF}/clab/cv-onboarding-token
 ardl get eos --image-type cEOS --version ${CEOS_LAB_VERSION}  --import-docker
 
 # init demo dir as Git repo if requested for this demo env
-if [ "${GIT_INIT}" == "True" ]; then
+if ${GIT_INIT}; then
   cd ${CONTAINERWSF}
   git init
   git add .
