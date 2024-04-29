@@ -5,9 +5,9 @@ on:
   push:
     branches: [main]
     paths:
-      - .github/workflows/{{ cookiecutter.demo_name }}.yml
+      - .github/workflows/{{ cookiecutter.__demo_slug }}.yml
       - .github/workflows/container-build-child-workflow.yml
-      - containers/{{ cookiecutter.demo_name }}
+      - containers/{{ cookiecutter.__demo_slug }}
   workflow_dispatch:
     branches: [main]
 
@@ -15,10 +15,11 @@ jobs:
   build-demo-container:
     uses: ./.github/workflows/container-build-child-workflow.yml
     with:
-      container_name: "{{ cookiecutter.demo_name }}"
+      container_name: "{{ cookiecutter.__demo_group }}"
+      image_tags: "{{ cookiecutter.__demo_name }}"
       from_image: "{{ cookiecutter.from_image }}"
       from_variant: "{{ cookiecutter.from_variant }}"
       username: "{{ cookiecutter.container_username }}"
       clab_version: "{{ cookiecutter.clab_version }}"
       ceos_lab_version: "{{ cookiecutter.ceos_lab_version }}"
-      git_init: "{{ cookiecutter.git_init }}"
+      git_init: {{ cookiecutter.git_init }}

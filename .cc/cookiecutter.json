@@ -1,9 +1,9 @@
 {
   "demo_name": "A New Demo",
-  "__demo_slug": "{{ cookiecutter.demo_name.lower().replace(' ','-').replace(',','-').replace('[','').replace(']','') }}",
   "demo_group": "unsorted",
-  "__group_slug": "{{ cookiecutter.demo_group.lower() }}",
-  "__demo_dir": "{{ cookiecutter.__group_slug }}-{{ cookiecutter.__demo_slug }}",
+  "__demo_name": "{{ cookiecutter.demo_name.lower().replace(' ','-').replace(',','-').replace('[','').replace(']','') }}",
+  "__demo_group": "{{ cookiecutter.demo_group.lower() }}",
+  "__demo_slug": "{{ cookiecutter.__demo_name }}-{{ cookiecutter.__demo_group }}",
   "demo_author": "Petr Ankudinov",
   "gh_org_name": "arista-netdevops-community",
   "gh_repo_name": "one-click-se-demos",

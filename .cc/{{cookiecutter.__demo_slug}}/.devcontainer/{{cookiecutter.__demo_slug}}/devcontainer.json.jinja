@@ -1,5 +1,5 @@
 {% raw %}{{% endraw %}
-    "image": "ghcr.io/{{ cookiecutter.gh_org_name }}/{{ cookiecutter.gh_repo_name }}/{{ cookiecutter.demo_name }}:latest",
+    "image": "ghcr.io/{{ __gh_slug }}/{{ cookiecutter.__demo_group }}:{{ __demo_name }}",
     // containerEnv set the variables applied to entire container
     "containerEnv": {% raw %}{{% endraw %}
         "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
@@ -27,5 +27,5 @@
     {% raw %}},{% endraw %}
     "postCreateCommand": "postCreate.sh",
     "workspaceMount": "source=${localWorkspaceFolder}/demos/${containerWorkspaceFolder},target=/${containerWorkspaceFolder},type=bind",
-    "workspaceFolder": "/{{ cookiecutter.demo_name }}"
+    "workspaceFolder": "/{{ cookiecutter.__demo_slug }}"
 {% raw %}}{% endraw %}
