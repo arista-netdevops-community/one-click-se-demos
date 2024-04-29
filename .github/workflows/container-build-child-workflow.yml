@@ -96,7 +96,7 @@ jobs:
           CEOS_LAB_VERSION_ARG: ${{ inputs.ceos_lab_version }}
           GIT_INIT_ARG: ${{ inputs.git_init }}
         with:
-          subFolder: containers/${{ inputs.container_name }}
+          subFolder: containers/${{ inputs.container_name }}-${{ inputs.image_tags }}
           imageName: ghcr.io/${{ github.repository }}/${{ inputs.container_name }}
           imageTag: ${{ inputs.image_tags }}
           platform: ${{ inputs.platform }}
