@@ -22,8 +22,8 @@
     {% raw %}},{% endraw %}
     "hostRequirements": {% raw %}{{% endraw %}
       "cpus": {{ cookiecutter.container_size.cpus }},
-      "memory": "{{ cookiecutter.container_size.memory }}",
-      "storage": "{{ cookiecutter.container_size.storage }}"
+      "memory": "{{ cookiecutter.container_size.memory.lower().replace(' ','') }}",
+      "storage": "{{ cookiecutter.container_size.storage.lower().replace(' ','') }}"
     {% raw %}},{% endraw %}
     "postCreateCommand": "postCreate.sh",
     "workspaceMount": "source=${localWorkspaceFolder}/demos/${containerWorkspaceFolder},target=/${containerWorkspaceFolder},type=bind",

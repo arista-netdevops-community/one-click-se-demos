@@ -15,11 +15,11 @@
   "ceos_lab_version": "4.30.6M",
   "git_init": true,
   "container_size": [
-    {"cpus": 2, "memory": "8gb", "storage": "32gb"},
-    {"cpus": 4, "memory": "16gb", "storage": "32gb"},
-    {"cpus": 8, "memory": "32gb", "storage": "64gb"},
-    {"cpus": 16, "memory": "64gb", "storage": "128gb"},
-    {"cpus": 32, "memory": "128gb", "storage": "128gb"}
+    {"cpus": 2, "memory": "8 GB", "storage": "32 GB"},
+    {"cpus": 4, "memory": "16 GB", "storage": "32 GB"},
+    {"cpus": 8, "memory": "32 GB", "storage": "64 GB"},
+    {"cpus": 16, "memory": "64 GB", "storage": "128 GB"},
+    {"cpus": 32, "memory": "128 GB", "storage": "128 GB"}
   ],
   "cv_api_token_required": false,
   "clab_mgmt_subnet": "10.0.0.0",

@@ -6,8 +6,8 @@ This lab is tested for:
   Containerlab Version: 0.54.2  
   Codespace Container Size  
     CPUs: 4  
-    memory: 16gb  
-    storage: 32gb  
+    memory: 16 GB  
+    storage: 32 GB  
 
 Last reviewed: 29/04/2024  
 

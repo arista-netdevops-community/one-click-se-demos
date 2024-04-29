@@ -5,8 +5,8 @@
 !!! Success "Container Requirements"
 
     CPUs: 4  
-    Memory: 16gb  
-    Storage: 32gb  
+    Memory: 16 GB  
+    Storage: 32 GB  
 
     :material-checkbox-marked-outline: Works with default Codespaces sizing!
 
