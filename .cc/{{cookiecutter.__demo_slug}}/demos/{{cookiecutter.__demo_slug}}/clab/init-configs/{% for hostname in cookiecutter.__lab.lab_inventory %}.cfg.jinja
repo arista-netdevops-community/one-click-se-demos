@@ -29,6 +29,8 @@ management api http-commands
    vrf MGMT
       no shutdown
 !
+aaa authorization exec default local
+!
 interface Management0
    vrf MGMT
       ip address {{ cookiecutter.__lab.lab_inventory[cookiecutter_file_index].mgmt_ip }}/{{ cookiecutter.clab_mgmt_mask }}
