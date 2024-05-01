@@ -7,7 +7,7 @@ on:
     paths:
       - .github/workflows/avd-avd-extended-workshop--part-1.yml
       - .github/workflows/container-build-child-workflow.yml
-      - containers/avd-avd-extended-workshop--part-1
+      - containers/avd-avd-extended-workshop--part-1/**
   workflow_dispatch:
     branches: [main]
 

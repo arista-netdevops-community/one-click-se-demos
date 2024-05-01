@@ -7,7 +7,7 @@ on:
     paths:
       - .github/workflows/{{ cookiecutter.__demo_slug }}.yml
       - .github/workflows/container-build-child-workflow.yml
-      - containers/{{ cookiecutter.__demo_slug }}
+      - containers/{{ cookiecutter.__demo_slug }}/**
   workflow_dispatch:
     branches: [main]
 

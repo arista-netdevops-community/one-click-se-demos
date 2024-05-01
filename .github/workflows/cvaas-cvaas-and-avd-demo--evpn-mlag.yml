@@ -7,7 +7,7 @@ on:
     paths:
       - .github/workflows/cvaas-cvaas-and-avd-demo--evpn-mlag.yml
       - .github/workflows/container-build-child-workflow.yml
-      - containers/cvaas-cvaas-and-avd-demo--evpn-mlag
+      - containers/cvaas-cvaas-and-avd-demo--evpn-mlag/**
   workflow_dispatch:
     branches: [main]
 
