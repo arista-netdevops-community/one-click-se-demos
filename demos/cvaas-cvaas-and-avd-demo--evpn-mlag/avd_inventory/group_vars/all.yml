@@ -34,6 +34,11 @@ local_users:
     role: network-admin
     sha512_password: "{{ ansible_password | password_hash(rounds=5000, salt=1) }}"
 
+# AAA Authorization Settings
+aaa_authorization:
+  exec:
+    default: local
+
 ansible_user: arista
 ansible_password: arista
 ansible_network_os: arista.eos.eos
