@@ -1,0 +1,25 @@
+---
+name: build container for CVaaS and AVD Demo, EVPN MLAG
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/cvaas-cvaas-and-avd-demo--evpn-mlag.yml
+      - .github/workflows/container-build-child-workflow.yml
+      - containers/cvaas-cvaas-and-avd-demo--evpn-mlag
+  workflow_dispatch:
+    branches: [main]
+
+jobs:
+  build-demo-container:
+    uses: ./.github/workflows/container-build-child-workflow.yml
+    with:
+      container_name: "cvaas"
+      image_tags: "cvaas-and-avd-demo--evpn-mlag"
+      from_image: "ghcr.io/aristanetworks/avd/universal"
+      from_variant: "python3.11-avd-v4.7.1"
+      username: "avd"
+      clab_version: "0.54.2"
+      ceos_lab_version: "4.30.6M"
+      git_init: True

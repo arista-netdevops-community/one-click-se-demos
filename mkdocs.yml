@@ -88,7 +88,7 @@ nav:
     - Credits: credits.md
   - CVaaS:
     - Demo:
-      - AVD EVPN MLAG: cvaas/demos/avd-evpn-mlag/avd-evpn-mlag.md
+      - CVaaS and AVD Demo, EVPN MLAG: cvaas-cvaas-and-avd-demo--evpn-mlag/cvaas-cvaas-and-avd-demo--evpn-mlag.md
       - AVD EVPN Active-Active: cvaas/demos/avd-evpn-active-active/avd-evpn-active-active.md
   - AVD:
     - Workshops:
