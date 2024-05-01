@@ -65,8 +65,6 @@ show bgp evpn route-type ip-prefix ipv4
 show bgp evpn route-type mac-ip
 ```
 
-!!! Warning "Lab Documents Not Finished"
-
-    This document is created from a Cookiecutter template.
-    If you see this message - the lab is not finished and likely published for testing purposes.
-    Don't use it unless you are the author.
+Do any other testing in the lab.  
+Impress your customer, colleagues or make yourself a bit smarter and happier.  
+Your rock! 🚀
