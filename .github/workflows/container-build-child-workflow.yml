@@ -20,8 +20,7 @@ on:
         type: string
         # there is no need to build ARM images for now
         # disabling to save time and resources
-        # default: linux/arm64/v8,linux/amd64
-        default: linux/amd64
+        default: linux/arm64/v8,linux/amd64
       from_image:
         required: true
         type: string

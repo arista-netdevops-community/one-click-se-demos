@@ -19,6 +19,10 @@
 
     Demos and labs reviewed over 6 month age may be outdated.
 
+## Lab Topology
+
+![lab topology](img/small-l3ls-mlag.png)
+
 ## How To Run The Demo
 
 ???+ Tip "Wait until cEOS-lab image will be imported"

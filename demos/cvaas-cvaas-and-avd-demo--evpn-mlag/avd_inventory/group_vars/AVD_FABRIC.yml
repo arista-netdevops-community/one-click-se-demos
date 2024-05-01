@@ -1,0 +1,57 @@
+---
+fabric_name: AVD_FABRIC
+
+# Spine Switches
+spine:
+  defaults:
+    platform: cEOS
+    bgp_as: 65100
+    loopback_ipv4_pool: 100.64.0.0/24
+  nodes:
+    - name: S01
+      id: 1
+      mgmt_ip: 10.0.1.1/16
+    - name: S02
+      id: 2
+      mgmt_ip: 10.0.1.2/16
+
+l3leaf:
+  defaults:
+    platform: cEOS
+    loopback_ipv4_pool: 100.65.0.0/24
+    loopback_ipv4_offset: 2
+    vtep_loopback_ipv4_pool: 100.65.1.0/24
+    uplink_interfaces: ['Ethernet1', 'Ethernet2']
+    uplink_switches: ['S01', 'S02']
+    uplink_ipv4_pool: 172.30.255.0/24
+    mlag_interfaces: ['Ethernet3', 'Ethernet4']
+    mlag_peer_ipv4_pool: 100.65.2.0/24
+    mlag_peer_l3_ipv4_pool: 100.65.3.0/24
+    virtual_router_mac_address: 00:1c:73:00:dc:01
+    spanning_tree_mode: mstp
+    spanning_tree_priority: 16384
+  node_groups:
+    - group: pod0
+      bgp_as: 65101
+      nodes:
+        - name: L01
+          id: 1
+          mgmt_ip: 10.0.2.1/24
+          uplink_switch_interfaces: ['Ethernet1', 'Ethernet1']
+        - name: L02
+          id: 2
+          mgmt_ip: 10.0.2.2/24
+          uplink_switch_interfaces: ['Ethernet2', 'Ethernet2']
+    - group: pod1
+      bgp_as: 65102
+      nodes:
+        - name: L03
+          id: 3
+          mgmt_ip: 10.0.2.3/24
+          uplink_switch_interfaces: ['Ethernet1', 'Ethernet1']
+        - name: L04
+          id: 4
+          mgmt_ip: 10.0.2.4/24
+          uplink_switch_interfaces: ['Ethernet2', 'Ethernet2']
+
+p2p_uplinks_mtu: 9214
