@@ -52,6 +52,14 @@ make tags
 make test
 ```
 
+Connect to a host (h01 or h02) and execute `test` alias to confirm connectivity.  
+Execute following commands to verify EVPN control plane:
+
+- `show ip bgp summary`
+- `show bgp evpn summary`
+- `show bgp evpn route-type ip-prefix ipv4`
+- `show bgp evpn route-type mac-ip`
+
 1. !!! Tip "Review and execute the change control on CVP when all tasks will be created."
 2. !!! Bug "Currently there is a bug with disabling LLDP on Ma0, which prevents topology view from functioning correctly."
 
