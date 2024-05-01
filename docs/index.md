@@ -25,7 +25,7 @@ Github spending limit is always zero by default. That means you remain in full c
 
 !!! Danger "Danger"
 
-    ==**Do NOT set your tokens under the repository settings!**== :skull_and_crossbones:  
+    ==**Do NOT set your tokens under the repository settings!**== :skull_and_crossbones:{ .heartbeat }  
     The repository tokens will be visible to all contributors and someone may occasionally use your token to get restricted access. Only set tokens under you account, keep the token lifetime short enough and refresh them periodically.
 
 To set the token:
