@@ -11,7 +11,10 @@
         "**.cfg.jinja": "jinja"
     },
     "markdown.marp.themes": [
-        "./slides/themes/dracula.css"
+        "./slides/themes/dracula.css",
+        "./slides/themes/beam.css",
+        "./slides/themes/einstein.css",
+        "./slides/themes/jobs.css"
     ],
     "markdownlint.config": {
         "default": true,
