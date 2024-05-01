@@ -36,22 +36,30 @@ l3leaf:
       nodes:
         - name: l01
           id: 1
-          mgmt_ip: 10.0.2.1/24
+          mgmt_ip: 10.0.2.1/16
           uplink_switch_interfaces: ['Ethernet1', 'Ethernet1']
+          filter:
+            tags: [l01]
         - name: l02
           id: 2
-          mgmt_ip: 10.0.2.2/24
+          mgmt_ip: 10.0.2.2/16
           uplink_switch_interfaces: ['Ethernet2', 'Ethernet2']
+          filter:
+            tags: [l02]
     - group: pod1
       bgp_as: 65102
       nodes:
         - name: l03
           id: 3
-          mgmt_ip: 10.0.2.3/24
+          mgmt_ip: 10.0.2.3/16
           uplink_switch_interfaces: ['Ethernet3', 'Ethernet3']
+          filter:
+            tags: [l03]
         - name: l04
           id: 4
-          mgmt_ip: 10.0.2.4/24
+          mgmt_ip: 10.0.2.4/16
           uplink_switch_interfaces: ['Ethernet4', 'Ethernet4']
+          filter:
+            tags: [l04]
 
 p2p_uplinks_mtu: 9214
