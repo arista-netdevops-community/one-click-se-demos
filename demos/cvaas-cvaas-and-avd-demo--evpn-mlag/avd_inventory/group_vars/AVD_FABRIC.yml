@@ -8,10 +8,10 @@ spine:
     bgp_as: 65100
     loopback_ipv4_pool: 100.64.255.0/24
   nodes:
-    - name: S01
+    - name: s01
       id: 1
       mgmt_ip: 10.0.1.1/16
-    - name: S02
+    - name: s02
       id: 2
       mgmt_ip: 10.0.1.2/16
 
@@ -34,22 +34,22 @@ l3leaf:
     - group: pod0
       bgp_as: 65101
       nodes:
-        - name: L01
+        - name: l01
           id: 1
           mgmt_ip: 10.0.2.1/24
           uplink_switch_interfaces: ['Ethernet1', 'Ethernet1']
-        - name: L02
+        - name: l02
           id: 2
           mgmt_ip: 10.0.2.2/24
           uplink_switch_interfaces: ['Ethernet2', 'Ethernet2']
     - group: pod1
       bgp_as: 65102
       nodes:
-        - name: L03
+        - name: l03
           id: 3
           mgmt_ip: 10.0.2.3/24
           uplink_switch_interfaces: ['Ethernet3', 'Ethernet3']
-        - name: L04
+        - name: l04
           id: 4
           mgmt_ip: 10.0.2.4/24
           uplink_switch_interfaces: ['Ethernet4', 'Ethernet4']

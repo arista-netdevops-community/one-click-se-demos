@@ -14,9 +14,9 @@ all:
           vars:
             type: spine
           hosts:
-            S01:
+            s01:
               ansible_host: 10.0.1.1
-            S02:
+            s02:
               ansible_host: 10.0.1.2
 
         AVD_FABRIC_LEAFS:
@@ -25,15 +25,15 @@ all:
           children:
             pod0:
               hosts:
-                L01:
+                l01:
                   ansible_host: 10.0.2.1
-                L02:
+                l02:
                   ansible_host: 10.0.2.2
             pod1:
               hosts:
-                L03:
+                l03:
                   ansible_host: 10.0.2.3
-                L04:
+                l04:
                   ansible_host: 10.0.2.4
 
     AVD_FABRIC_ENDPOINTS:
