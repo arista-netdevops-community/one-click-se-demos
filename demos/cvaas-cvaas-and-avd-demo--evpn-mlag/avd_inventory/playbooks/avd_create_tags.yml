@@ -5,7 +5,7 @@
   gather_facts: false
   vars:
     CVP_TAGS:
-      - device: S01
+      - device: s01
         device_tags:
           - name: topology_hint_datacenter
             value: DC1
@@ -15,7 +15,7 @@
             value: pod0
           - name: topology_hint_rack
             value: None
-      - device: S02
+      - device: s02
         device_tags:
           - name: topology_hint_datacenter
             value: DC1
@@ -25,7 +25,7 @@
             value: pod0
           - name: topology_hint_rack
             value: None
-      - device: L01
+      - device: l01
         device_tags:
           - name: topology_hint_datacenter
             value: DC1
@@ -35,7 +35,7 @@
             value: pod0
           - name: topology_hint_rack
             value: rack0
-      - device: L02
+      - device: l02
         device_tags:
           - name: topology_hint_datacenter
             value: DC1
@@ -45,7 +45,7 @@
             value: pod0
           - name: topology_hint_rack
             value: rack0
-      - device: L03
+      - device: l03
         device_tags:
           - name: topology_hint_datacenter
             value: DC1
@@ -55,7 +55,7 @@
             value: pod1
           - name: topology_hint_rack
             value: rack1
-      - device: L04
+      - device: l04
         device_tags:
           - name: topology_hint_datacenter
             value: DC1
