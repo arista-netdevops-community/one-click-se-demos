@@ -2,6 +2,8 @@
 
 DO NOT ENTER!
 
+![stay back](assets/img/pexels-danne-555709.jpg)
+
 !!! Warning "WARNING!"
 
     This area is for contributors only!  
