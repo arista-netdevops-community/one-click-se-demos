@@ -105,8 +105,6 @@ $RECYCLE.BIN/
 # ignore clab files
 clab-*
 *.bak
-# do not ignore clab workshops
-!clab-build-containerlab-with-ceos*
 
 # ignore cv onboarding token
 clab/cv-onboarding-token
@@ -120,6 +118,3 @@ cEOS-lab-*
 # ingnore images and other files not to be uploaded to GitHub
 .gitignored/*
 !.gitignored/.gitkeep
-
-# ignore mkdocs serve privacy cache
-.cache

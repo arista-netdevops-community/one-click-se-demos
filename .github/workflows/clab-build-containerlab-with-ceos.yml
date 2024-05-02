@@ -1,0 +1,24 @@
+---
+name: build container for Build Containerlab with cEOS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/clab-build-containerlab-with-ceos.yml
+      - .github/workflows/container-build-child-workflow.yml
+      - containers/clab-build-containerlab-with-ceos/**
+  workflow_dispatch:
+    branches: [main]
+
+jobs:
+  build-demo-container:
+    uses: ./.github/workflows/container-build-child-workflow.yml
+    with:
+      container_name: "clab"
+      image_tags: "build-containerlab-with-ceos"
+      from_image: "ghcr.io/aristanetworks/avd/base"
+      from_variant: "python3.11"
+      username: "avd"
+      ceos_lab_version: "4.30.6M"
+      git_init: True
