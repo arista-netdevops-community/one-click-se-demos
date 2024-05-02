@@ -1,5 +1,15 @@
 # AVD Extended Workshop, Part 1
 
+!!! Warning "Lab Documents Not Finished"
+
+    DO NOT ENTER!
+
+    ![stay back](assets/img/pexels-danne-555709.jpg)
+
+    This document is created from a Cookiecutter template.
+    If you see this message - the lab is not finished and likely published for testing purposes.
+    Don't use it unless you are the author.
+
 ## Demo Details
 
 !!! Success "Container Requirements"
@@ -21,7 +31,7 @@
 
 ## Lab Topology
 
-![lab topology](img/atd-l3ls.png)
+![lab topology](assets/img/avd-avd-extended-workshop--part-1/atd-l3ls.png)
 
 ## How To Run The Demo
 
@@ -40,9 +50,3 @@ make start
 ???+ Tip "Wait until all devices will start streaming to CVaaS."
 
     This may take a while.
-
-!!! Warning "Lab Documents Not Finished"
-
-    This document is created from a Cookiecutter template.
-    If you see this message - the lab is not finished and likely published for testing purposes.
-    Don't use it unless you are the author.
