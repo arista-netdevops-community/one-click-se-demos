@@ -11,9 +11,10 @@ servers:
     - l01
     - l02
     vlans: 100
+    ethernet_segment:
+      short_esi: dead:beef:0001
     port_channel:
       mode: active
-      short_esi: auto
 
 - name: h02
   adapters:
@@ -25,6 +26,7 @@ servers:
     - l03
     - l04
     vlans: 200
+    ethernet_segment:
+      short_esi: dead:beef:0002
     port_channel:
       mode: active
-      short_esi: auto

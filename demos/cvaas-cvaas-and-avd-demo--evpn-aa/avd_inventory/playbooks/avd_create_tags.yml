@@ -32,7 +32,7 @@
           - name: topology_hint_type
             value: leaf
           - name: topology_hint_pod
-            value: pod0
+            value: None
           - name: topology_hint_rack
             value: rack0
       - device: l02
@@ -42,7 +42,7 @@
           - name: topology_hint_type
             value: leaf
           - name: topology_hint_pod
-            value: pod0
+            value: None
           - name: topology_hint_rack
             value: rack0
       - device: l03
@@ -52,7 +52,7 @@
           - name: topology_hint_type
             value: leaf
           - name: topology_hint_pod
-            value: pod1
+            value: None
           - name: topology_hint_rack
             value: rack1
       - device: l04
@@ -62,7 +62,7 @@
           - name: topology_hint_type
             value: leaf
           - name: topology_hint_pod
-            value: pod1
+            value: None
           - name: topology_hint_rack
             value: rack1
 
