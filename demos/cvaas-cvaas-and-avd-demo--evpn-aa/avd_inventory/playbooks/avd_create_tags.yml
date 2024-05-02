@@ -1,0 +1,74 @@
+---
+- name: Add topology tags
+  hosts: CV_SERVERS
+  connection: local
+  gather_facts: false
+  vars:
+    CVP_TAGS:
+      - device: s01
+        device_tags:
+          - name: topology_hint_datacenter
+            value: DC1
+          - name: topology_hint_type
+            value: spine
+          - name: topology_hint_pod
+            value: pod0
+          - name: topology_hint_rack
+            value: None
+      - device: s02
+        device_tags:
+          - name: topology_hint_datacenter
+            value: DC1
+          - name: topology_hint_type
+            value: spine
+          - name: topology_hint_pod
+            value: pod0
+          - name: topology_hint_rack
+            value: None
+      - device: l01
+        device_tags:
+          - name: topology_hint_datacenter
+            value: DC1
+          - name: topology_hint_type
+            value: leaf
+          - name: topology_hint_pod
+            value: pod0
+          - name: topology_hint_rack
+            value: rack0
+      - device: l02
+        device_tags:
+          - name: topology_hint_datacenter
+            value: DC1
+          - name: topology_hint_type
+            value: leaf
+          - name: topology_hint_pod
+            value: pod0
+          - name: topology_hint_rack
+            value: rack0
+      - device: l03
+        device_tags:
+          - name: topology_hint_datacenter
+            value: DC1
+          - name: topology_hint_type
+            value: leaf
+          - name: topology_hint_pod
+            value: pod1
+          - name: topology_hint_rack
+            value: rack1
+      - device: l04
+        device_tags:
+          - name: topology_hint_datacenter
+            value: DC1
+          - name: topology_hint_type
+            value: leaf
+          - name: topology_hint_pod
+            value: pod1
+          - name: topology_hint_rack
+            value: rack1
+
+  tasks:
+    - name: "create tags"
+      arista.cvp.cv_tag_v3:
+        tags: "{{CVP_TAGS}}"
+        #mode: delete
+        mode: assign
