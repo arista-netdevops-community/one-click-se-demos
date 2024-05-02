@@ -95,10 +95,10 @@ nav:
       # - AVD Extended Workshop: avd/workshops/avd-extended-workshop/avd-extended-workshop.md
       - AVD Extended Workshop, Part 1: avd-avd-extended-workshop--part-1.md
   # - cLab:
-  #   - Build Containerlab with cEOS: clab-build-containerlab-with-ceos/clab-build-containerlab-with-ceos.md
+  #   - Build Containerlab with cEOS: clab-build-containerlab-with-ceos.md
   - Construction Area:
     - Warning: construction-area.md
-    - Build Containerlab with cEOS: clab-build-containerlab-with-ceos/clab-build-containerlab-with-ceos.md
+    - Build Containerlab with cEOS: clab-build-containerlab-with-ceos.md
 
 copyright: >
   &nbsp;&#x1F36A;&nbsp;<a href="#__consent">Change cookie settings</a>
