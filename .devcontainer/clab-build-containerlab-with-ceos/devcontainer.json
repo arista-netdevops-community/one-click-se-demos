@@ -1,5 +1,5 @@
 {
-    "image": "ghcr.io/arista-netdevops-community/one-click-se-demos/clab:build-containerlab-with-ceos",
+    "image": "ghcr.io/${localEnv:GITHUB_REPOSITORY}/clab:build-containerlab-with-ceos",
     // containerEnv set the variables applied to entire container
     "containerEnv": {
         "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
