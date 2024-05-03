@@ -22,9 +22,6 @@ RUN apt-get update \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean
 
-# copy onCreate script
-COPY ./onCreate.sh /bin/onCreate.sh
-RUN chmod +x /bin/onCreate.sh
 # copy postCreate script
 COPY ./postCreate.sh /bin/postCreate.sh
 RUN chmod +x /bin/postCreate.sh
