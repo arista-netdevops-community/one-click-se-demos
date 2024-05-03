@@ -15,7 +15,7 @@ jobs:
           echo "---" > docs/assets/data/github.yml
           export GH_REPO_STRING=${{ github.repository }}
           echo "org_name: ${GH_REPO_STRING##*/}" >> docs/assets/data/github.yml
-          echo "repo_name: ${{ GITHUB_REPOSITORY_OWNER }}" >> docs/assets/data/github.yml
+          echo "repo_name: ${{ github.github_repository_owner }}" >> docs/assets/data/github.yml
           echo "" >> docs/assets/data/github.yml
 
       - name: Archive artifacts
