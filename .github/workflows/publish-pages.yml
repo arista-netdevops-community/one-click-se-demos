@@ -27,6 +27,8 @@ jobs:
           export GH_REPO_STRING=${{ github.GITHUB_REPOSITORY }}
           echo ${GH_REPO_STRING##*/} >> docs/assets/data/github.yml
           echo "${{ github.GITHUB_REPOSITORY_OWNER }}" >> docs/assets/data/github.yml
+          echo "" >> docs/assets/data/github.yml
+          cat docs/assets/data/github.yml
 
       - name: Setup Python3 🐍
         uses: actions/setup-python@v5
