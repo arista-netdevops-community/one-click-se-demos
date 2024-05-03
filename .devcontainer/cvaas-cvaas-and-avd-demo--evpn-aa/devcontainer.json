@@ -1,5 +1,5 @@
 {
-    "image": "ghcr.io/arista-netdevops-community/one-click-se-demos/cvaas:cvaas-and-avd-demo--evpn-aa",
+    "image": "ghcr.io/${localEnv:GITHUB_REPOSITORY}/cvaas:cvaas-and-avd-demo--evpn-aa",
     // containerEnv set the variables applied to entire container
     "containerEnv": {
         "ARISTA_TOKEN": "${localEnv:ARTOKEN}",

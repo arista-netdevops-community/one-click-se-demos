@@ -102,4 +102,4 @@ check topology on light
 # Q&A
 
 - [Ansible AVD](https://avd.arista.com/)
-- [This repository](https://github.com/arista-netdevops-community/one-click-se-demos)
+- [This repository](https://github.com/{{gh.repository}})

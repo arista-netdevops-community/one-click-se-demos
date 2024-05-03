@@ -1,5 +1,5 @@
 {
-    "image": "ghcr.io/arista-netdevops-community/one-click-se-demos/avd-extended-workshop-part-1:latest",
+    "image": "ghcr.io/${localEnv:GITHUB_REPOSITORY}/avd-extended-workshop-part-1:latest",
     // containerEnv set the variables applied to entire container
     "containerEnv": {
         "ARISTA_TOKEN": "${localEnv:ARTOKEN}",

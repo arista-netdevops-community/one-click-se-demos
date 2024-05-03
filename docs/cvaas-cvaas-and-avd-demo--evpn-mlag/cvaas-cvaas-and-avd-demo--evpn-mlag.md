@@ -10,10 +10,10 @@
 
     :material-checkbox-marked-outline: Works with default Codespaces sizing!
 
-[Start "CVaaS and AVD Demo, EVPN MLAG" in Codespace](https://codespaces.new/arista-netdevops-community/one-click-se-demos?quickstart=1&devcontainer_path=.devcontainer%2Fcvaas-cvaas-and-avd-demo--evpn-mlag%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
+[Start "CVaaS and AVD Demo, EVPN MLAG" in Codespace](https://codespaces.new/{{gh.repository}}?quickstart=1&devcontainer_path=.devcontainer%2Fcvaas-cvaas-and-avd-demo--evpn-mlag%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
 
-[Slides](https://arista-netdevops-community.github.io/one-click-se-demos/slides/cvaas-cvaas-and-avd-demo--evpn-mlag.html){ target=_blank }  
-[PDF Slides](https://arista-netdevops-community.github.io/one-click-se-demos/pdfs/cvaas-cvaas-and-avd-demo--evpn-mlag.pdf){ target=_blank }  
+[Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/slides/cvaas-cvaas-and-avd-demo--evpn-mlag.html){ target=_blank }  
+[PDF Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/pdfs/cvaas-cvaas-and-avd-demo--evpn-mlag.pdf){ target=_blank }  
 
 !!! Info "Last reviewed: 01/05/2024"
 

@@ -154,7 +154,7 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    cookiecutter_dict = cc_config.get_config("/workspaces/one-click-se-demos/.cc/cookiecutter.json")
+    cookiecutter_dict = cc_config.get_config(".cc/cookiecutter.json")
     cc_extras = cookiecutter_load(args.input_directory)
     cookiecutter_dict.update({
         '__lab': cc_extras

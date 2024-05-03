@@ -13,6 +13,6 @@ Last reviewed: 02/05/2024
 
 Please check the lab materials:
 
-- [Lab Documentation](https://arista-netdevops-community.github.io/one-click-se-demos/clab-build-containerlab-with-ceos/clab-build-containerlab-with-ceos/)
-- [HTML Slides](https://arista-netdevops-community.github.io/one-click-se-demos/slides/clab-build-containerlab-with-ceos.html)
-- [PDF Slides](https://arista-netdevops-community.github.io/one-click-se-demos/pdfs/clab-build-containerlab-with-ceos.pdf)
+- [Lab Documentation](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/clab-build-containerlab-with-ceos/clab-build-containerlab-with-ceos/)
+- [HTML Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/slides/clab-build-containerlab-with-ceos.html)
+- [PDF Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/pdfs/clab-build-containerlab-with-ceos.pdf)

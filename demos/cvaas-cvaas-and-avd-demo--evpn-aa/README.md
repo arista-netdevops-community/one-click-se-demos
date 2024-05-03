@@ -13,6 +13,6 @@ Last reviewed: 02/05/2024
 
 Please check the lab materials:
 
-- [Lab Documentation](https://arista-netdevops-community.github.io/one-click-se-demos/cvaas-cvaas-and-avd-demo--evpn-aa/cvaas-cvaas-and-avd-demo--evpn-aa/)
-- [HTML Slides](https://arista-netdevops-community.github.io/one-click-se-demos/slides/cvaas-cvaas-and-avd-demo--evpn-aa.html)
-- [PDF Slides](https://arista-netdevops-community.github.io/one-click-se-demos/pdfs/cvaas-cvaas-and-avd-demo--evpn-aa.pdf)
+- [Lab Documentation](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/cvaas-cvaas-and-avd-demo--evpn-aa/cvaas-cvaas-and-avd-demo--evpn-aa/)
+- [HTML Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/slides/cvaas-cvaas-and-avd-demo--evpn-aa.html)
+- [PDF Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/pdfs/cvaas-cvaas-and-avd-demo--evpn-aa.pdf)
