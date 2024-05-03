@@ -9,6 +9,8 @@ on:
     - mkdocs.yml
     - img/**
     - .github/workflows/publish-pages.yml
+  workflow_dispatch:
+    branches: [main]
 permissions:
   contents: write
   pages: write
