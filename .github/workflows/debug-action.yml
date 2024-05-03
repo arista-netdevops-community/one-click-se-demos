@@ -12,8 +12,15 @@ jobs:
 
       - name: Set variables for Mkdocs Macros ℹ️
         run: |
-          echo "---"
+          echo "---" > docs/assets/data/github.yml
           export GH_REPO_STRING=${{ github.GITHUB_REPOSITORY }}
-          echo ${GH_REPO_STRING##*/}
-          echo "${{ github.GITHUB_REPOSITORY_OWNER }}"
-          echo ""
+          echo ${GH_REPO_STRING##*/} >> docs/assets/data/github.yml
+          echo "${{ github.GITHUB_REPOSITORY_OWNER }}" >> docs/assets/data/github.yml
+          echo "" >> docs/assets/data/github.yml
+
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: gitvars_artifacts
+          path: |
+            docs/assets/data/github.yml
