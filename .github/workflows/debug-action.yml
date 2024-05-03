@@ -13,7 +13,7 @@ jobs:
       - name: Set variables for Mkdocs Macros ℹ️
         run: |
           echo "---" > docs/assets/data/github.yml
-          export GH_REPO_STRING=${{ github.GITHUB_REPOSITORY }}
+          export GH_REPO_STRING=${{ github.repository }}
           echo ${GH_REPO_STRING##*/} >> docs/assets/data/github.yml
           echo "${{ github.GITHUB_REPOSITORY_OWNER }}" >> docs/assets/data/github.yml
           echo "" >> docs/assets/data/github.yml
