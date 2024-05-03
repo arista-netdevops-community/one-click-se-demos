@@ -6,7 +6,8 @@
 {%- if cookiecutter.cv_api_token_required %}
         "CV_API_TOKEN": "${localEnv:CV_API_TOKEN}",
 {%- endif %}
-        "CONTAINERWSF": "${containerWorkspaceFolder}"
+        "CONTAINERWSF": "${containerWorkspaceFolder}",
+        "GITHUB_REPOSITORY": "${localEnv:GITHUB_REPOSITORY}"
     {% raw %}},{% endraw %}
     "secrets": {% raw %}{{% endraw %}
 {%- if cookiecutter.cv_api_token_required %}

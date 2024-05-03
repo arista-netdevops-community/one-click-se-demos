@@ -36,6 +36,7 @@ jobs:
           grep -rl 'https://github.com/.*/one-click-se-demos' . --exclude-dir .git | xargs sed -i 's/https:\/\/github.com\/.*\/one-click-se-demos/https:\/\/github.com\/'"${{ github.repository_owner }}"'\/one-click-se-demos/g'
           grep -rl '{{gh.repo_name}}' . --exclude-dir .git | xargs sed -i 's/{{gh.repo_name}}/'"${{ github.repository_owner }}"'/g'
           grep -rl '{{gh.org_name}}' . --exclude-dir .git | xargs sed -i 's/{{gh.org_name}}/'"${{ github.repository_owner }}"'/g'
+          grep -rl '{{gh.repository}}' . --exclude-dir .git | xargs sed -i 's@{{gh.org_name}}@'"${{ github.repository }}"'@g'
 
       - name: Setup Python3 🐍
         uses: actions/setup-python@v5
