@@ -13,10 +13,9 @@ jobs:
       - name: Set variables for Mkdocs Macros ℹ️
         run: |
           echo "---" > docs/assets/data/github.yml
-          export GH_REPO_STRING=${{ github.repository }}
-          echo "org_name: ${GH_REPO_STRING##*/}" >> docs/assets/data/github.yml
-          echo "repo_name: ${{ github.repository_owner }}" >> docs/assets/data/github.yml
-          echo "test: ${{ github.event.repository.name }}" >> docs/assets/data/github.yml
+          echo "org_name: ${{ github.repository_owner }}" >> docs/assets/data/github.yml
+          echo "repo_name: ${{ github.event.repository.name }}" >> docs/assets/data/github.yml
+          echo "repository: ${{ github.repository }}" >> docs/assets/data/github.yml
 
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
