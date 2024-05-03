@@ -20,7 +20,7 @@
 
     :material-checkbox-marked-outline: Works with default Codespaces sizing!
 
-[Start "Build Containerlab with cEOS" in Codespace](https://codespaces.new/{{gh.org_name}}/{{gh.repo_name}}?quickstart=1&devcontainer_path=.devcontainer%2Fclab-build-containerlab-with-ceos%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
+[Start "Build Containerlab with cEOS" in Codespace](https://codespaces.new/{{gh.repository}}?quickstart=1&devcontainer_path=.devcontainer%2Fclab-build-containerlab-with-ceos%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
 
 [Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/slides/clab-build-containerlab-with-ceos.html){ target=_blank }  
 [PDF Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/pdfs/clab-build-containerlab-with-ceos.pdf){ target=_blank }  
