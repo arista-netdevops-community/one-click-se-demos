@@ -1,0 +1,19 @@
+name: debug
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+
+      - name: Checkout code ✅
+        uses: actions/checkout@v4
+
+      - name: Set variables for Mkdocs Macros ℹ️
+        run: |
+          echo "---"
+          export GH_REPO_STRING=${{ github.GITHUB_REPOSITORY }}
+          echo ${GH_REPO_STRING##*/}
+          echo "${{ github.GITHUB_REPOSITORY_OWNER }}"
+          echo ""
