@@ -21,6 +21,9 @@ jobs:
       - name: Checkout code ✅
         uses: actions/checkout@v4
 
+      - name: Set variables for Mkdocs Macros
+        run: env | sort
+
       - name: Setup Python3 🐍
         uses: actions/setup-python@v5
         with:

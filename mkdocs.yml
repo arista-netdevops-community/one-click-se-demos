@@ -135,3 +135,6 @@ extra:
 plugins:
   - privacy
   - search
+  - macros:
+      include_yaml:
+        - gh: docs/assets/data/github.yml
