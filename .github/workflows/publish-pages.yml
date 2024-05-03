@@ -32,6 +32,7 @@ jobs:
       - name: Build MkDocs Site
         run: |
           pip install mkdocs-material
+          pip install mkdocs-macros-plugin
           mkdocs build
 
       - name: Build Directories and Copy images 🖼️
