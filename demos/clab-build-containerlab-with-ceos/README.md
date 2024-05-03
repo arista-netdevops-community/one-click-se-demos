@@ -13,6 +13,6 @@ Last reviewed: 02/05/2024
 
 Please check the lab materials:
 
-- [Lab Documentation](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/clab-build-containerlab-with-ceos/clab-build-containerlab-with-ceos/)
+- [Lab Documentation](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/clab-build-containerlab-with-ceos/)
 - [HTML Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/slides/clab-build-containerlab-with-ceos.html)
 - [PDF Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/pdfs/clab-build-containerlab-with-ceos.pdf)
