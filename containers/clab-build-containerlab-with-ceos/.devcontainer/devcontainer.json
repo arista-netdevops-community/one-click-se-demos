@@ -9,6 +9,16 @@
             "GIT_INIT_ARG": "${localEnv:GIT_INIT_ARG}"
         }
     },
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+            "version": "latest",
+            "dockerDashComposeVersion": "none"
+        },
+        // Add sshd to support gh cli codespace cp.
+        "ghcr.io/devcontainers/features/sshd:1": {
+            "version": "latest"
+        }
+    },
     "customizations": {
         "vscode": {
             "extensions": [
