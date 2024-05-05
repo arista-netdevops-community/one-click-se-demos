@@ -31,7 +31,7 @@ jobs:
         id: upload-artifact-step
         uses: actions/upload-pages-artifact@v3
         with:
-          # name: clab-build-containerlab-with-ceos.tar.gz
+          name: clab-build-containerlab-with-ceos.zip
           path: ./clab-build-containerlab-with-ceos/
 
       - name: Show Artifact URL
