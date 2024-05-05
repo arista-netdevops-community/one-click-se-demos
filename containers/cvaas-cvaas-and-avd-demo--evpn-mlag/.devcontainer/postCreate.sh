@@ -15,7 +15,9 @@ ardl get eos --image-type cEOS --version ${CEOS_LAB_VERSION}  --import-docker
 if ${GIT_INIT}; then
   cd ${CONTAINERWSF}
   git init
-  git config --global --add safe.directory ${PWD}
+  git config --add safe.directory ${PWD}
+  if [ -z "$(git config user.name)" ]; then git config user.email "user@one-click.lab"; fi
+  if [ -z "$(git config user.email)" ]; then git config user.name "Lab User"; fi
   git add .
   git commit -m "git init"
 fi
