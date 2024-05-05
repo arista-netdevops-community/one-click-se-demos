@@ -35,8 +35,6 @@ jobs:
 
       - name: Replace URLs to match git repo ✂️
         run: |
-          grep -rl 'https://.*.github.io/one-click-se-demos/' . --exclude-dir .git | xargs sed -i 's/https:\/\/.*.github.io\/one-click-se-demos/https:\/\/'"${{ github.repository_owner }}"'.github.io\/one-click-se-demos/g'
-          grep -rl 'https://github.com/.*/one-click-se-demos' . --exclude-dir .git | xargs sed -i 's/https:\/\/github.com\/.*\/one-click-se-demos/https:\/\/github.com\/'"${{ github.repository_owner }}"'\/one-click-se-demos/g'
           grep -rl '{{gh.repo_name}}' . --exclude-dir .git | xargs sed -i 's/{{gh.repo_name}}/'"${{ github.event.repository.name }}"'/g'
           grep -rl '{{gh.org_name}}' . --exclude-dir .git | xargs sed -i 's/{{gh.org_name}}/'"${{ github.repository_owner }}"'/g'
           grep -rl '{{gh.repository}}' . --exclude-dir .git | xargs sed -i 's@{{gh.org_name}}@'"${{ github.repository }}"'@g'
