@@ -164,7 +164,7 @@ docker run hello-world
 
 > If Github Codespace or provided Dev Container is used and the Arista token is set, the image will be pulled from arista.com automatically.
 
-![bg right h:720](img/clab-build-containerlab-with-ceos/ceos-lab-download.png)
+![bg right h:720](img/clab-build-containerlab-with-ceos/ceos-download.png)
 
 ---
 
