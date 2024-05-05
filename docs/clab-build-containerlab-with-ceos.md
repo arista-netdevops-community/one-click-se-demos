@@ -25,6 +25,12 @@
 [Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/slides/clab-build-containerlab-with-ceos.html){ target=_blank }  
 [PDF Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/pdfs/clab-build-containerlab-with-ceos.pdf){ target=_blank }  
 
+## How To Run The Lab on Your Machine
+
+It is possible to run the lab on your local machine (or any server) instead of using Github Codespaces.  
+You can [download all required lab files here](https://arista-netdevops-community.github.io/one-click-se-demos/lab_archives/clab-build-containerlab-with-ceos.tar.gz).  
+However you must take care of you VSCode setup and setting up environment variables. Also keep in mind that auto-downloaded image will not work on ARM-based MacBooks.
+
 !!! Info "Last reviewed: 02/05/2024"
 
     Demos and labs reviewed over 6 month age may be outdated.
