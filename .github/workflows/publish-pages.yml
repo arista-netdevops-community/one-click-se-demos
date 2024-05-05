@@ -9,6 +9,9 @@ on:
     - mkdocs.yml
     - img/**
     - .github/workflows/publish-pages.yml
+    # also trigger if lab archives changed
+    - demos/**
+    - .devcontainer/**
   workflow_dispatch:
     branches: [main]
 permissions:
