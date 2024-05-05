@@ -37,7 +37,7 @@ jobs:
         run: |
           grep -rl 'https://.*.github.io/one-click-se-demos/' . --exclude-dir .git | xargs sed -i 's/https:\/\/.*.github.io\/one-click-se-demos/https:\/\/'"${{ github.repository_owner }}"'.github.io\/one-click-se-demos/g'
           grep -rl 'https://github.com/.*/one-click-se-demos' . --exclude-dir .git | xargs sed -i 's/https:\/\/github.com\/.*\/one-click-se-demos/https:\/\/github.com\/'"${{ github.repository_owner }}"'\/one-click-se-demos/g'
-          grep -rl '{{gh.repo_name}}' . --exclude-dir .git | xargs sed -i 's/{{gh.repo_name}}/'"${{ github.repository_owner }}"'/g'
+          grep -rl '{{gh.repo_name}}' . --exclude-dir .git | xargs sed -i 's/{{gh.repo_name}}/'"${{ github.event.repository.name }}"'/g'
           grep -rl '{{gh.org_name}}' . --exclude-dir .git | xargs sed -i 's/{{gh.org_name}}/'"${{ github.repository_owner }}"'/g'
           grep -rl '{{gh.repository}}' . --exclude-dir .git | xargs sed -i 's@{{gh.org_name}}@'"${{ github.repository }}"'@g'
 
@@ -72,20 +72,20 @@ jobs:
         env:
           MARP_USER: root:root
 
-      # - name: Add lab archive for local download
-      #   run: |
-      #     mkdir site/lab_archives
-      #     mkdir temp_labs
-      #     for DEMO_DIR in demos/*
-      #     do
-      #       DEMO_NAME="${DEMO_DIR##*/}"
-      #       mkdir temp_labs/${DEMO_NAME}
-      #       mkdir temp_labs/${DEMO_NAME}/.devcontainer
-      #       mkdir temp_labs/${DEMO_NAME}/demos
-      #       cp -r .devcontainer/${DEMO_NAME}/* temp_labs/${DEMO_NAME}/.devcontainer/
-      #       cp -r demos/${DEMO_NAME}/ temp_labs/${DEMO_NAME}/demos/
-      #       tar -czvf site/lab_archives/${DEMO_NAME}.tar.gz temp_labs/${DEMO_NAME}
-      #     done
+      - name: Add lab archive for local download
+        run: |
+          mkdir site/lab_archives
+          mkdir temp_labs
+          for DEMO_DIR in demos/*
+          do
+            DEMO_NAME="${DEMO_DIR##*/}"
+            mkdir temp_labs/${DEMO_NAME}
+            mkdir temp_labs/${DEMO_NAME}/.devcontainer
+            mkdir temp_labs/${DEMO_NAME}/demos
+            cp -r .devcontainer/${DEMO_NAME}/* temp_labs/${DEMO_NAME}/.devcontainer/
+            cp -r demos/${DEMO_NAME}/ temp_labs/${DEMO_NAME}/demos/
+            tar -czvf site/lab_archives/${DEMO_NAME}.tar.gz temp_labs/${DEMO_NAME}
+          done
 
       # - name: setup node.js 🏗️
       #   uses: actions/setup-node@v4
