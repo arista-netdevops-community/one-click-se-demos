@@ -29,10 +29,10 @@
     :material-alert-circle-outline:{ .heartbeat } Please request high spec Codespace machines from [Github support](https://support.github.com/) first!
 {%- endif %}
 
-[Start "{{ cookiecutter.demo_name }}" in Codespace](https://codespaces.new/{{ cookiecutter.__gh_slug }}?quickstart=1&devcontainer_path=.devcontainer%2F{{ cookiecutter.__demo_slug }}%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
+[Start "{{ cookiecutter.demo_name }}" in Codespace](https://codespaces.new/{% raw %}'{{gh.repository}}'{%endraw%}?quickstart=1&devcontainer_path=.devcontainer%2F{{ cookiecutter.__demo_slug }}%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
 
-[Slides](https://{{ cookiecutter.__gh_org_name }}.github.io/{{ cookiecutter.__gh_repo_name }}/slides/{{ cookiecutter.__demo_slug }}.html){ target=_blank }  
-[PDF Slides](https://{{ cookiecutter.__gh_org_name }}.github.io/{{ cookiecutter.__gh_repo_name }}/pdfs/{{ cookiecutter.__demo_slug }}.pdf){ target=_blank }  
+[Slides](https://{% raw %}{{gh.org_name}}{%endraw%}.github.io/{% raw %}{{gh.repo_name}}{%endraw%}/slides/{{ cookiecutter.__demo_slug }}.html){ target=_blank }  
+[PDF Slides](https://{% raw %}{{gh.org_name}}{%endraw%}.github.io/{% raw %}{{gh.repo_name}}{%endraw%}/pdfs/{{ cookiecutter.__demo_slug }}.pdf){ target=_blank }  
 
 !!! Info "Last reviewed: {% now 'local', '%d/%m/%Y' %}"
 
@@ -41,7 +41,7 @@
 ## How To Run The Lab on Your Machine
 
 It is possible to run the lab on your local machine (or any server) instead of using Github Codespaces.  
-You can [download all required lab files here](https://{{ cookiecutter.__gh_org_name }}.github.io/one-click-se-demos/lab_archives/{{ cookiecutter.__demo_slug }}.tar.gz).  
+You can [download all required lab files here](https://{% raw %}{{gh.org_name}}{%endraw%}.github.io/one-click-se-demos/lab_archives/{{ cookiecutter.__demo_slug }}.tar.gz).  
 However you must take care of you VSCode setup and setting up environment variables. Also keep in mind that auto-downloaded image will not work on ARM-based MacBooks.
 
 ## How To Run The Demo
