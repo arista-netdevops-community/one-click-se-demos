@@ -26,14 +26,13 @@ jobs:
           mkdir clab-build-containerlab-with-ceos/demos
           cp -r .devcontainer/clab-build-containerlab-with-ceos/* clab-build-containerlab-with-ceos/.devcontainer/
           cp -r demos/clab-build-containerlab-with-ceos/ clab-build-containerlab-with-ceos/demos/
-          tar -czvf clab-build-containerlab-with-ceos.tar.gz clab-build-containerlab-with-ceos/
       
       - name: Upload artifact 🔼
         id: upload-artifact-step
         uses: actions/upload-pages-artifact@v3
         with:
-          name: clab-build-containerlab-with-ceos.tar.gz
-          path: clab-build-containerlab-with-ceos.tar.gz
+          # name: clab-build-containerlab-with-ceos.tar.gz
+          path: ./clab-build-containerlab-with-ceos/
 
       - name: Show Artifact URL
         run: echo 'Artifact URL is ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.upload-artifact-step.outputs.artifact-id }}'
