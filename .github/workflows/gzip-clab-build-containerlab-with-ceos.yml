@@ -36,4 +36,4 @@ jobs:
           path: clab-build-containerlab-with-ceos.tar.gz
 
       - name: Show Artifact URL
-        run: echo 'Artifact URL is ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.upload-artifact-step.outputs.artifact-id }}''
+        run: echo 'Artifact URL is ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.upload-artifact-step.outputs.artifact-id }}'
