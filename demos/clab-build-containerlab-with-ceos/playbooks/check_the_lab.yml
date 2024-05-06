@@ -1,0 +1,29 @@
+---
+- name: Run show commands on all switches and print the output
+  hosts: [l01,l02,s01,s02]
+  vars:
+    ansible_connection: httpapi
+    ansible_network_os: eos
+    ansible_user: admin
+    ansible_password: admin
+    ansible_become: yes
+    ansible_become_method: enable
+    ansible_httpapi_use_ssl: true
+    ansible_httpapi_validate_certs: false
+  tasks:
+  - name: run show commands
+    arista.eos.eos_command:
+      commands:
+      - show ip bgp summary
+      - show port-channel dense
+      - show lldp neighbors
+    register: cli_output
+  - name: display result
+    ansible.builtin.debug:
+      msg:
+      - "show ip bgp summary"
+      - "{{ cli_output.stdout_lines[0] }}"
+      - "show port-channel dense"
+      - "{{ cli_output.stdout_lines[1] }}"
+      - "show lldp neighbors"
+      - "{{ cli_output.stdout_lines[2] }}"

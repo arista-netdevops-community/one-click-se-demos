@@ -322,7 +322,7 @@ Execute few command to confirm that cEOS-lab is functioning:
 
 # Deploy the Lab with Custom Startup Config
 
-<style scoped>section {font-size: 18px;}</style>
+<style scoped>section {font-size: 20px;}</style>
 
 - Deploy the lab with the custom configuration:
 
@@ -332,27 +332,269 @@ Execute few command to confirm that cEOS-lab is functioning:
 
   > NOTE: `--reconfigure` is required if `--cleanup` flag was not specified in the previous step. Otherwise custom configs can be ignored and startup configs in `clab-build-clab-with-ceos/` will be used instead.
 
-- Custom startup configs are located in the `clab/init-configs` directory and assigned to every node using `startup-config:` key in the `topology.clab.yml`. This allows creating pre-configured labs. In this workshop switches are preconfigured with a full EVPN MLAG setup. Host is pre-configured as well and should be able to ping the diagnostic loopbacks of leaf switches:
+- Custom startup configs are located in the `clab/init-configs` directory and assigned to every node using `startup-config:` key in the `topology.clab.yml`. This allows creating pre-configured labs. In this workshop switches are preconfigured with a full EVPN MLAG setup. Host is pre-configured as well and should be able to ping the default gateway and diagnostic loopbacks of leaf switches:
 
   ```console
   $ ssh admin@h01
   Password:
   h01>en
+  h01#ping 10.100.100.1
   h01#bash for i in {3..4}; do ping -c 4 100.64.101.${i}; done
   ```
 
-- You can also check following commands on the leaf switches:
+---
 
-  - `show ip bgp summary`
-  - `show bgp evpn summary`
-  - `show mlag`
-  - `show port-channel dense`
+# Additional Checks
+
+Execute following commands on leaf1 to confirm that it is functioning as expected:
+
+- `show ip bgp summary`
+- `show bgp evpn summary`
+- `show mlag`
+- `show port-channel dense`
+
+```console
+l01#sh ip bgp summary 
+BGP summary information for VRF default
+Router identifier 100.65.255.3, local AS number 65101
+Neighbor Status Codes: m - Under maintenance
+  Description              Neighbor   V AS           MsgRcvd   MsgSent  InQ OutQ  Up/Down State   PfxRcd PfxAcc
+  s01_Ethernet1/1          100.65.0.0 4 65100             12        14    0    0 00:04:26 Estab   1      1
+  s02_Ethernet1/1          100.65.0.2 4 65100             11        13    0    0 00:04:26 Estab   1      1
+  l02                      100.65.2.1 4 65101             12        12    0    0 00:04:29 Estab   4      4
+```
 
 ---
 
 # cEOS-lab Interface Mapping
 
-to-be-defined
+<style scoped>section {font-size: 20px;}</style>
+
+<div class="columns">
+<div>
+
+The lab with custom configs also has a custom interface mapping defined in `interface_mapping.json`.  
+This can be useful to match real interface names, for example to have `Management1` interface on cEOS-lab instead of the default `Management0` or to get `EthernetX/X` style naming.  
+
+To get `/` as part of an interface name you can simply use `_` (underscore) in cLab topology file. There is no need to define interface map for that. However management interface can only be renamed via interface mapping.
+
+</div>
+<div>
+
+```json
+{
+    "ManagementIntf": {
+        "eth0": "Management1"
+    },
+    "EthernetIntf": {
+        "eth1_1": "Ethernet1/1",
+        "eth2_1": "Ethernet2/1",
+        "eth3_1": "Ethernet3/1",
+        "eth4_1": "Ethernet4/1",
+        "eth10_1": "Ethernet10/1"
+    }
+}
+```
+
+</div>
+</div>
+
+---
+
+# Make Packet Capture
+
+<style scoped>section {font-size: 22px;}</style>
+
+- Every container has it's own Linux namespace. To list all interfaces for leaf1, execute following command:
+
+  ```bash
+  sudo ip netns exec l01 ip link
+  ```
+
+- Run following command and wait a few minutes to capture a BGP packets:
+
+  ```bash
+  sudo ip netns exec l01 tcpdump -nni eth1_1 port 179 -vvv
+  ```
+
+- For additional details about packet capture check [cLab documentation](https://containerlab.dev/manual/wireshark/).
+
+```console
+$ sudo ip netns exec l01 tcpdump -nni eth1_1 port 179 -vvv
+tcpdump: listening on eth1_1, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+12:44:46.487613 IP (tos 0xc0, ttl 1, id 5838, offset 0, flags [DF], proto TCP (6), length 71)
+    100.65.0.0.41659 > 100.65.0.1.179: Flags [P.], cksum 0x5113 (correct), seq 4189457049:4189457068, ack 2029471463, win 215, options [nop,nop,TS val 2090790905 ecr 910314922], length 19: BGP
+        Keepalive Message (4), length: 19
+12:44:46.487696 IP (tos 0xc0, ttl 1, id 37600, offset 0, flags [DF], proto TCP (6), length 52)
+    100.65.0.1.179 > 100.65.0.0.41659: Flags [.], cksum 0x0b93 (correct), seq 1, ack 19, win 215, options [nop,nop,TS val 910333765 ecr 2090790905], length 0
+12:44:56.117576 IP (tos 0xc0, ttl 3, id 16321, offset 0, flags [DF], proto TCP (6), length 71)
+    100.65.255.3.179 > 100.64.255.1.36257: Flags [P.], cksum 0xba92 (correct), seq 3638527337:3638527356, ack 2720785880, win 211, options [nop,nop,TS val 4112950959 ecr 1286050690], length 19: BGP
+        Keepalive Message (4), length: 19
+12:44:56.117754 IP (tos 0xc0, ttl 3, id 31784, offset 0, flags [DF], proto TCP (6), length 52)
+    100.64.255.1.36257 > 100.65.255.3.179: Flags [.], cksum 0x5add (correct), seq 1, ack 19, win 212, options [nop,nop,TS val 1286076241 ecr 4112950959], length 0
+12:45:14.505482 IP (tos 0xc0, ttl 1, id 37601, offset 0, flags [DF], proto TCP (6), length 71)
+    100.65.0.1.179 > 100.65.0.0.41659: Flags [P.], cksum 0x99f2 (correct), seq 1:20, ack 19, win 215, options [nop,nop,TS val 910361783 ecr 2090790905], length 19: BGP
+```
+
+---
+
+# Containerlab in a Container
+
+<style scoped>section {font-size: 19px;}</style>
+
+- Destroy the lab with cleanup flag: `sudo containerlab destroy --topo clab/topology.clab.yml --cleanup`
+- It is possible to run the containerlab on the host without installing it by simply running it in a container. This is helpful on MacBooks (the only way to run cLab) and advanced use cases (like this workshop).
+- Start Containerlab by using this command:
+
+  ```bash
+  docker run --rm -it --privileged \
+    --network host \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v /etc/hosts:/etc/hosts \
+    --pid="host" \
+    -w $(pwd) \
+    -v $(pwd):$(pwd) \
+    ghcr.io/srl-labs/clab bash
+  ```
+
+- This will start the container in the interactive mode. Once in the container prompt, execute following command to start the lab:
+
+  ```bash
+  containerlab deploy --debug --topo clab/topology.clab.yml --reconfigure
+  ```
+
+- Destroy the lab with `containerlab destroy --topo clab/topology.clab.yml --cleanup` when ready and exit the container by typing `exit`.
+
+---
+
+# Containerlab in a Container (Non-Interactive)
+
+<style scoped>section {font-size: 22px;}</style>
+
+<div class="columns">
+<div>
+
+- Running cLab container in non-interactive mode is helpful to create shortcuts, etc.
+- You can test it now or skip this step.
+- Check [the documentation](https://containerlab.dev/install/#container) for additional details.
+
+</div>
+<div>
+
+```bash
+# deploy the lab
+docker run --rm --privileged \
+  --network host \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v /etc/hosts:/etc/hosts \
+  --pid="host" \
+  -w $(pwd) \
+  -v $(pwd):$(pwd) \
+  ghcr.io/srl-labs/clab containerlab deploy --debug --topo clab/topology.clab.yml --reconfigure
+
+
+
+# destroy the lab
+docker run --rm --privileged \
+  --network host \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v /etc/hosts:/etc/hosts \
+  --pid="host" \
+  -w $(pwd) \
+  -v $(pwd):$(pwd) \
+  ghcr.io/srl-labs/clab containerlab destroy --topo clab/topology.clab.yml --cleanup
+```
+
+</div>
+</div>
+
+---
+
+# Crafting Your Own Container
+
+<style scoped>section {font-size: 22px;}</style>
+
+- It is easy to craft your own container with Containerlab installed.
+- You can check some Dockerfiles in [this repository](https://github.com/{{gh.repository}}) for inspiration or check [cLab documentation](https://containerlab.dev/install/#docker-in-docker)
+- Possible reasons to create your own container:
+  
+  - Produce a consistent environment that is easy to share.
+  - Pre-install additional tools. (Ansible, docker-in-docker, etc.)
+  - Add aliases, etc.
+
+- This workshop is a good example of an enviroment using a custom pre-build container with Docker-in-Docker and cLab
+
+---
+
+# Ansible with Containerlab
+
+<style scoped>section {font-size: 22px;}</style>
+
+- When containerlab starts it automatically creates Ansible inventory that can be used to automate certain tasks in the lab.
+- Start the lab and inspect the inventory file: `cat clab-build-clab-with-ceos/ansible-inventory.yml`
+- Check if ansible is already installed: `ansible --version`
+- Install Ansible if it's not present:
+
+  ```bash
+  pip3 install "ansible-core>=2.14.0,<2.16"
+  ansible-galaxy collection install ansible.netcommon
+  ansible-galaxy collection install arista.eos
+  # install community.general to support callback plugins in ansible.cfg, etc.
+  ansible-galaxy collection install community.general
+  ```
+
+- Inspect `ansible.cfg` and make sure that it is matching your environment.
+- Run the playbook: `ansible-playbook playbooks/check_the_lab.yml`
+- The playbook will execute number of show commands on all switches in the lab and print output on the screen.
+
+---
+
+# Possible Caveats
+
+<style scoped>section {font-size: 18px;}</style>
+
+![bg right](img/pexels-danne-555709.jpg)
+
+> WARNING: If you are planning to deploy a high scale lab, test it on a non-production host that you can access and recover any time. Incorrectly deployed Containerlab at scale can bring your host down due to high CPU utilization on start.
+
+- It's always good to add `--max-workers` and `--timeout` flags to your containerlab deploy command.
+- Use recent cEOS-lab version. 4.30 or higher is strongly recommended!
+- cLab is creating a lot of files as root. That can cause permission issues. For example, make sure that all cLab files are gitignored:
+
+  ```bash
+  # ignore clab files
+  clab-*
+  *.bak
+  ```
+
+---
+
+# Additional Scale Caveats
+
+<style scoped>section {font-size: 18px;}</style>
+
+- In the past Ubuntu used to have low `fs.inotify.max_user_instances` limit. On top, older cEOS-lab versions were decreasing this system limit to 1256. This was causing issues with high scale labs.
+- On a modern system and any cEOS-lab later than 4.28 this system is high enough. 62800 is the default. Increasing this limit on a modern host with high memory is not causing any issues. Feel free to play with this parameter if required:
+
+  ```bash
+  # set system limit
+  sudo sysctl -w fs.inotify.max_user_instances=62800
+  # create 99-zceos.conf
+  sudo sh -c 'echo "fs.inotify.max_user_instances = 62800" > /etc/sysctl.d/99-zceos.conf'
+  # check the limit
+  sudo sysctl -a  | grep -i inotify
+  ```
+
+  ```yaml
+  topology:
+  kinds:
+    ceos:
+      # mount custom 99-zceos.conf to cEOS-lab containers
+      binds:
+        - /etc/sysctl.d/99-zceos.conf:/etc/sysctl.d/99-zceos.conf:ro
+  ```
+
+- Generally you don't have to touch that. But be aware and check in case of issues.
 
 ---
 
