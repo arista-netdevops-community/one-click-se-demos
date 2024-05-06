@@ -320,6 +320,42 @@ Execute few command to confirm that cEOS-lab is functioning:
 
 ---
 
+# Deploy the Lab with Custom Startup Config
+
+<style scoped>section {font-size: 18px;}</style>
+
+- Deploy the lab with the custom configuration:
+
+  ```bash
+  sudo containerlab deploy --debug --topo clab/topology.clab.yml --reconfigure
+  ```
+
+  > NOTE: `--reconfigure` is required if `--cleanup` flag was not specified in the previous step. Otherwise custom configs can be ignored and startup configs in `clab-build-clab-with-ceos/` will be used instead.
+
+- Custom startup configs are located in the `clab/init-configs` directory and assigned to every node using `startup-config:` key in the `topology.clab.yml`. This allows creating pre-configured labs. In this workshop switches are preconfigured with a full EVPN MLAG setup. Host is pre-configured as well and should be able to ping the diagnostic loopbacks of leaf switches:
+
+  ```console
+  $ ssh admin@h01
+  Password:
+  h01>en
+  h01#bash for i in {3..4}; do ping -c 4 100.64.101.${i}; done
+  ```
+
+- You can also check following commands on the leaf switches:
+
+  - `show ip bgp summary`
+  - `show bgp evpn summary`
+  - `show mlag`
+  - `show port-channel dense`
+
+---
+
+# cEOS-lab Interface Mapping
+
+to-be-defined
+
+---
+
 <style scoped>section {font-size: 45px;}</style>
 
 ![bg left opacity:80%](img/pexels-ann-h-7186206.jpg)

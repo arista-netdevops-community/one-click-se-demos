@@ -17,32 +17,36 @@ topology:
       mgmt-ipv4: 10.0.1.1
       binds:
         - sn/s01.txt:/mnt/flash/ceos-config:ro
+        - interface_mapping.json:/mnt/flash/EosIntfMapping.json:ro
       startup-config: init-configs/s01.cfg
     s02:
       mgmt-ipv4: 10.0.1.2
       binds:
         - sn/s02.txt:/mnt/flash/ceos-config:ro
+        - interface_mapping.json:/mnt/flash/EosIntfMapping.json:ro
       startup-config: init-configs/s02.cfg
     l01:
       mgmt-ipv4: 10.0.2.1
       binds:
         - sn/l01.txt:/mnt/flash/ceos-config:ro
+        - interface_mapping.json:/mnt/flash/EosIntfMapping.json:ro
       startup-config: init-configs/l01.cfg
     l02:
       mgmt-ipv4: 10.0.2.2
       binds:
         - sn/l02.txt:/mnt/flash/ceos-config:ro
+        - interface_mapping.json:/mnt/flash/EosIntfMapping.json:ro
       startup-config: init-configs/l02.cfg
     h01:
       mgmt-ipv4: 10.0.3.1
       startup-config: init-configs/h01.cfg
 
   links:
-    - endpoints: ["l01:eth1", "s01:eth1"]
-    - endpoints: ["l01:eth2", "s02:eth1"]
-    - endpoints: ["l02:eth1", "s01:eth2"]
-    - endpoints: ["l02:eth2", "s02:eth2"]
-    - endpoints: ["l01:eth3", "l02:eth3"]
-    - endpoints: ["l01:eth4", "l02:eth4"]
-    - endpoints: ["h01:eth1", "l01:eth10"]
-    - endpoints: ["h01:eth2", "l02:eth10"]
+    - endpoints: ["l01:eth1_1", "s01:eth1_1"]
+    - endpoints: ["l01:eth2_1", "s02:eth1_1"]
+    - endpoints: ["l02:eth1_1", "s01:eth2_1"]
+    - endpoints: ["l02:eth2_1", "s02:eth2_1"]
+    - endpoints: ["l01:eth3_1", "l02:eth3_1"]
+    - endpoints: ["l01:eth4_1", "l02:eth4_1"]
+    - endpoints: ["h01:eth1", "l01:eth10_1"]
+    - endpoints: ["h01:eth2", "l02:eth10_1"]
