@@ -178,7 +178,7 @@ docker run hello-world
     docker import cEOS-lab-4.30.6M.tar.xz arista/ceos:4.30.6M
     ```
 
-    > NOTE: you can also import the image with the tag latest to allow quick "upgrade" of those lab where specific version is not required: `docker tag arista/ceos:4.30.2F arista/ceos:latest`
+    > NOTE: you can also import the image with the tag latest to allow quick "upgrade" of those lab where specific version is not required: `docker tag arista/ceos:4.30.6M arista/ceos:latest`
 
 2. Confirm that the image was imported successfully:
 
@@ -417,6 +417,7 @@ To get `/` as part of an interface name you can simply use `_` (underscore) in c
   sudo ip netns exec l01 tcpdump -nni eth1_1 port 179 -vvv
   ```
 
+- You can clear BGP sessions on `l01` if it takes too long to capture keepalives: `clear ip bgp *`
 - For additional details about packet capture check [cLab documentation](https://containerlab.dev/manual/wireshark/).
 
 ```console

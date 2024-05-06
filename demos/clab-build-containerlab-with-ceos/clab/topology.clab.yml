@@ -1,4 +1,4 @@
-name: Build Containerlab with cEOS
+name: build-clab-with-ceos
 prefix: ""
 
 mgmt:
