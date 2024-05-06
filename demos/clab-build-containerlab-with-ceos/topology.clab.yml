@@ -1,0 +1,35 @@
+name: build-clab-with-ceos
+prefix: ""
+
+mgmt:
+  network: custom_mgmt
+  ipv4-subnet: 10.0.0.0/16
+
+topology:
+  kinds:
+    ceos:
+      enforce-startup-config: true
+      image: arista/ceos:4.30.6M
+  defaults:
+    kind: ceos
+  nodes:
+    s01:
+      mgmt-ipv4: 10.0.1.1
+    s02:
+      mgmt-ipv4: 10.0.1.2
+    l01:
+      mgmt-ipv4: 10.0.2.1
+    l02:
+      mgmt-ipv4: 10.0.2.2
+    h01:
+      mgmt-ipv4: 10.0.3.1
+
+  links:
+    - endpoints: ["l01:eth1", "s01:eth1"]
+    - endpoints: ["l01:eth2", "s02:eth1"]
+    - endpoints: ["l02:eth1", "s01:eth2"]
+    - endpoints: ["l02:eth2", "s02:eth2"]
+    - endpoints: ["l01:eth3", "l02:eth3"]
+    - endpoints: ["l01:eth4", "l02:eth4"]
+    - endpoints: ["h01:eth1", "l01:eth10"]
+    - endpoints: ["h01:eth2", "l02:eth10"]

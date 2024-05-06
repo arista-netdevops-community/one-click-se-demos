@@ -175,18 +175,18 @@ docker run hello-world
 1. Go to the directory with the uploaded image and import the image:
 
     ```bash
-    docker import cEOS-lab-4.30.2F.tar.xz ceos-lab:4.30.2F
+    docker import cEOS-lab-4.30.6M.tar.xz arista/ceos:4.30.6M
     ```
 
-    > NOTE: you can also import the image with the tag latest to allow quick "upgrade" of those lab where specific version is not required: `docker tag ceos-lab:4.30.2F ceos-lab:latest`
+    > NOTE: you can also import the image with the tag latest to allow quick "upgrade" of those lab where specific version is not required: `docker tag arista/ceos:4.30.2F arista/ceos:latest`
 
 2. Confirm that the image was imported successfully:
 
     ```console
     $ docker image ls
     REPOSITORY    TAG       IMAGE ID       CREATED          SIZE
-    ceos-lab      4.30.2F   21b540a4a343   45 minutes ago   1.95GB
-    ceos-lab      latest    21b540a4a343   45 minutes ago   1.95GB
+    arista/ceos      4.30.6M   21b540a4a343   45 minutes ago   1.95GB
+    arista/ceos      latest    21b540a4a343   45 minutes ago   1.95GB
     hello-world   latest    b038788ddb22   3 months ago     9.14kB
     ```
 
@@ -206,7 +206,117 @@ docker run hello-world
 
 ---
 
-to-be-defined
+# Deploy The Lab
+
+<style scoped>section {font-size: 20px;}</style>
+
+![bg right 80%](img/clab-build-containerlab-with-ceos/min-l3ls-mlag.png)
+
+- Inspect `topology.clab.yml` and deploy the lab:
+
+  ```bash
+  sudo containerlab deploy
+  ```
+
+- This command will deploy Containerlab with the default EOS configuration provided by Containerlab.
+- (Optional): you can add `--debug` flag to get additional information while Containerlab is starting.
+
+> NOTE: there is no need to specify topology file explicitely, as there only one `.clab.yml` file in the current directory. When multiple topologies are present, the topology to be started must be specified explicitely.
+
+---
+
+# Inspect the Lab
+
+<style scoped>section {font-size: 12px;}</style>
+
+Once the lab is ready, you'll see a table with the list of deployed containers, their host names and management IPs:
+
+```text
++---+------+--------------+---------------------+------+---------+--------------+--------------+
+| # | Name | Container ID |        Image        | Kind |  State  | IPv4 Address | IPv6 Address |
++---+------+--------------+---------------------+------+---------+--------------+--------------+
+| 1 | h01  | 5367c60bcb1c | arista/ceos:4.30.6M | ceos | running | 10.0.3.1/16  | N/A          |
+| 2 | l01  | 783f209af70e | arista/ceos:4.30.6M | ceos | running | 10.0.2.1/16  | N/A          |
+| 3 | l02  | 47f9904801ce | arista/ceos:4.30.6M | ceos | running | 10.0.2.2/16  | N/A          |
+| 4 | s01  | 82812ceefb42 | arista/ceos:4.30.6M | ceos | running | 10.0.1.1/16  | N/A          |
+| 5 | s02  | 2839bc4a1ca7 | arista/ceos:4.30.6M | ceos | running | 10.0.1.2/16  | N/A          |
++---+------+--------------+---------------------+------+---------+--------------+--------------+
+```
+
+> You can call the table again any time with `sudo clab inspect -t topology.clab.yml`. Or simply `sudo clab inspect`.
+
+Containerlab creates corresponding entries in the `/etc/hosts` file as well:
+
+```bash
+$ cat /etc/hosts | grep clab- -A 5
+###### CLAB-build-clab-with-ceos-START ######
+10.0.2.1        l01
+10.0.2.2        l02
+10.0.1.1        s01
+10.0.1.2        s02
+10.0.3.1        h01
+###### CLAB-build-clab-with-ceos-END ######
+```
+
+You can also list containers using docker command:
+
+```console
+$ docker container ls
+CONTAINER ID   IMAGE                 COMMAND                  CREATED          STATUS          PORTS     NAMES
+5367c60bcb1c   arista/ceos:4.30.6M   "bash -c '/mnt/flash…"   18 minutes ago   Up 18 minutes             h01
+82812ceefb42   arista/ceos:4.30.6M   "bash -c '/mnt/flash…"   18 minutes ago   Up 18 minutes             s01
+783f209af70e   arista/ceos:4.30.6M   "bash -c '/mnt/flash…"   18 minutes ago   Up 18 minutes             l01
+2839bc4a1ca7   arista/ceos:4.30.6M   "bash -c '/mnt/flash…"   18 minutes ago   Up 18 minutes             s02
+47f9904801ce   arista/ceos:4.30.6M   "bash -c '/mnt/flash…"   18 minutes ago   Up 18 minutes             l02
+```
+
+---
+
+# Access cEOS-lab CLI
+
+<style scoped>section {font-size: 20px;}</style>
+
+There are few options to access cEOS-lab CLI:
+
+- SSH to the container. For ex.:
+  
+  ```bash
+  # the default login is `admin` and password is `admin`
+  ssh admin@l01
+  ```
+
+- Connect to the "console" using Docker command. For ex.: `docker exec -it l01 CLi`
+
+  > NOTE: `docker exec -it l01 bash` allows to connect directly to the switch shell.
+
+Execute few command to confirm that cEOS-lab is functioning:
+
+- `show version`
+- `show lldp neighbors`
+- `show running-config`
+
+---
+
+# Destroy the Lab
+
+<style scoped>section {font-size: 22px;}</style>
+
+- Destroy the lab with `sudo containerlab destroy`  
+- This will stop all containers, but will keep the files created by clab for the next run. For example, startup-configs.  
+- Check the flash content for leaf1 and inspect it's startup config:
+
+  ```console
+  $ ls clab-build-clab-with-ceos/l01/flash
+  AsuFastPktTransmit.log  SsuRestoreLegacy.log  debug             kickstart-config  startup-config
+  Fossil                  aboot                 fastpkttx.backup  persist           system_mac_address
+  SsuRestore.log          boot-config           if-wait.sh        schedule          tpm-data
+  ```
+
+- To remove these files and have a clean environment on the next run, use `--cleanup` flag:
+
+  ```bash
+  sudo containerlab destroy --cleanup
+  ```
 
 ---
 
