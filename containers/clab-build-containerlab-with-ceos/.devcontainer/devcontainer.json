@@ -6,8 +6,7 @@
             "FROM_VARIANT": "${localEnv:FROM_VARIANT}",
             "USERNAME": "${localEnv:USERNAME}",
             "CEOS_LAB_VERSION_ARG": "${localEnv:CEOS_LAB_VERSION_ARG}",
-            "GIT_INIT_ARG": "${localEnv:GIT_INIT_ARG}",
-            "label": "org.opencontainers.image.description=The image is for development and testing purposes only and not officially supported"
+            "GIT_INIT_ARG": "${localEnv:GIT_INIT_ARG}"
         }
     },
     "features": {
