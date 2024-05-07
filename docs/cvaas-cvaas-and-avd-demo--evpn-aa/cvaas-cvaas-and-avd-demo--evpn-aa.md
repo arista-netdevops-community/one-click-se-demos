@@ -10,6 +10,13 @@
 
     :material-checkbox-marked-outline: Works with default Codespaces sizing!
 
+!!! Warning "WARNING!"
+
+    While the lab is tested and works well on 4 CPUs, it is very close to the limit.  
+    That means lab can take longer time to start and Codespaces can become unstable during some high CPU activities.  
+    For this reason the number of Ansible forks was decreased to 1 and it is recommended to watch CPU utilization (bottom of Codespace window) and wait for it to settle before starting the next CPU intensive task.  
+    Alternatively you can click `Change options` button when starting the Codespace and pick 8-core machine type or higher for better performance and stability. In that case you can also increase the number of Ansible forks in `ansible.cfg` to the default 5.
+
 [Start "CVaaS and AVD Demo, EVPN AA" in Codespace](https://codespaces.new/{{gh.repository}}?quickstart=1&devcontainer_path=.devcontainer%2Fcvaas-cvaas-and-avd-demo--evpn-aa%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
 
 [Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/slides/cvaas-cvaas-and-avd-demo--evpn-aa.html){ target=_blank }  
