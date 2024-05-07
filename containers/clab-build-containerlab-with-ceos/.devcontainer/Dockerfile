@@ -10,6 +10,10 @@ ARG GIT_INIT_ARG
 ENV CEOS_LAB_VERSION=${CEOS_LAB_VERSION_ARG}
 ENV GIT_INIT=${GIT_INIT_ARG}
 
+LABEL maintainer="Petr Ankudinov"
+LABEL org.opencontainers.image.title="clab-build-containerlab-with-ceos"
+LABEL org.opencontainers.image.description="The image is for development and testing purposes only and not officially supported"
+
 USER root
 
 # install some basic tools inside the container
