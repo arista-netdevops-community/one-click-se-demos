@@ -20,5 +20,6 @@ jobs:
       from_image: "ghcr.io/aristanetworks/avd/base"
       from_variant: "python3.11"
       username: "avd"
+      clab_version: "0.54.2"
       ceos_lab_version: "4.30.6M"
       git_init: True

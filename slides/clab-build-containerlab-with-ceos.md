@@ -203,6 +203,7 @@ docker run hello-world
   ```
 
 - Refer to the [Containerlab quick start documentation](https://containerlab.dev/quickstart/) for the details.
+- Containerlab is pre-installed if you are using Codespaces.
 
 ---
 

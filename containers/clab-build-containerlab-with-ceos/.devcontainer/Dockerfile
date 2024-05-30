@@ -35,5 +35,6 @@ USER ${USERNAME}
 RUN /bin/addAliases.sh
 
 # install the latest yamllint and eos-downloader
-RUN pip3 install --user yamllint \
+RUN bash -c "$(curl -sL https://get.containerlab.dev)" -- -v ${CLAB_VERSION} \
+    && pip3 install --user yamllint \
     && pip install --user "eos-downloader>=0.10.1"

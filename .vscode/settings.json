@@ -28,7 +28,9 @@
                 "br",
                 "sup"
             ]
-        }
+        },
+        // disable as MD046 is not behaving correctly with Mkdocs
+        "MD046": false
     },
     "markdown.marp.enableHtml": true
 }

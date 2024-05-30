@@ -81,6 +81,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  # allows list ident with 2 spaces
+  - mdx_truly_sane_lists
 
 copyright: >
   &nbsp;&#x1F36A;&nbsp;<a href="#__consent">Change cookie settings</a>
