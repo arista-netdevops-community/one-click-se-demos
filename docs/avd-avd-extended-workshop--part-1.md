@@ -10,7 +10,7 @@
 
     :material-checkbox-marked-outline: Works with default Codespaces sizing!
 
-[Start "AVD Extended Workshop, Part 1" in Codespace](https://codespaces.new/{{gh.repository}}?quickstart=1&devcontainer_path=.devcontainer%2Favd-avd-extended-workshop--part-1%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
+[Start "AVD Extended Workshop, Part 1" in Codespace](https://codespaces.new/{{gh.repository}}/tree/{{gh.branch}}?quickstart=1&devcontainer_path=.devcontainer%2Favd-avd-extended-workshop--part-1%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
 
 [Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/slides/avd-avd-extended-workshop--part-1.html){ target=_blank }  
 [PDF Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/pdfs/avd-avd-extended-workshop--part-1.pdf){ target=_blank }  
