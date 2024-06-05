@@ -27,7 +27,7 @@
       "memory": "32gb",
       "storage": "64gb"
     },
-    "postCreateCommand": "postCreate.sh",
+    "postCreateCommand": "/bin/entrypoint.sh true; postCreate.sh",
     "workspaceMount": "source=${localWorkspaceFolder}/demos/${containerWorkspaceFolder},target=/${containerWorkspaceFolder},type=bind",
     "workspaceFolder": "/avd-single-dc-l3ls"
 }
