@@ -11,15 +11,3 @@ start: ## Deploy ceos lab
 .PHONY: stop
 stop: ## Destroy ceos lab
 	sudo containerlab destroy --debug --topo $(CURRENT_DIR)/clab/topology.clab.yml --cleanup
-
-.PHONY: build
-build: ## Generate AVD configs
-	cd $(CURRENT_DIR)/avd_inventory; ansible-playbook build.yml
-
-.PHONY: deploy_eapi
-deploy_eapi: ## Deploy AVD configs using eAPI
-	cd $(CURRENT_DIR)/avd_inventory; ansible-playbook deploy.yml
-
-.PHONY: deploy_cvp
-deploy_cvp: ## Deploy AVD configs using eAPI
-	cd $(CURRENT_DIR)/avd_inventory; ansible-playbook deploy-cvp.yml

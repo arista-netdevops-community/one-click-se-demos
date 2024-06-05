@@ -1,0 +1,25 @@
+---
+name: build container for Single DC L3LS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/avd-single-dc-l3ls.yml
+      - .github/workflows/container-build-child-workflow.yml
+      - containers/avd-single-dc-l3ls/**
+  workflow_dispatch:
+    branches: [main]
+
+jobs:
+  build-demo-container:
+    uses: ./.github/workflows/container-build-child-workflow.yml
+    with:
+      container_name: "avd"
+      image_tags: "single-dc-l3ls"
+      from_image: "ghcr.io/aristanetworks/avd/dev"
+      from_variant: "python3.11"
+      username: "avd"
+      clab_version: "0.54.2"
+      ceos_lab_version: "4.32.0.1F"
+      git_init: True

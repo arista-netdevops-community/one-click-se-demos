@@ -135,6 +135,8 @@ nav:
     - Workshops:
       # - AVD Extended Workshop: avd/workshops/avd-extended-workshop/avd-extended-workshop.md
       - AVD Extended Workshop, Part 1: avd-avd-extended-workshop--part-1.md
+    - Examples:
+      - Single DC L3LS: avd-single-dc-l3ls.md
   - cLab:
     - Workshops:
       - Build Containerlab with cEOS: clab-build-containerlab-with-ceos.md
