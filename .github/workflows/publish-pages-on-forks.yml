@@ -2,7 +2,7 @@ name: marp-and-mkdocs-to-pages
 concurrency: marp-and-mkdocs-to-pages
 on:
   push:
-    branches: [ main ]
+    branches: [ '**' ]
     paths:
     - slides/**
     - docs/**
@@ -13,14 +13,14 @@ on:
     - demos/**
     - .devcontainer/**
   workflow_dispatch:
-    branches: [main]
+    branches: [ '**' ]
 permissions:
   contents: write
   pages: write
   id-token: write
 jobs:
   build:
-    if: github.repository == 'arista-netdevops-community/one-click-se-demos'
+    if: github.repository != 'arista-netdevops-community/one-click-se-demos'
     runs-on: ubuntu-22.04
     steps:
 
