@@ -1,5 +1,5 @@
 {
-    "image": "ghcr.io/${localEnv:GITHUB_REPOSITORY}:single-dc-l3ls",
+    "image": "ghcr.io/${localEnv:GITHUB_REPOSITORY}/avd:single-dc-l3ls",
     // containerEnv set the variables applied to entire container
     "containerEnv": {
         "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
