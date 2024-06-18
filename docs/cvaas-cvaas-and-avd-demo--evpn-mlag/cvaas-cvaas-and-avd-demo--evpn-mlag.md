@@ -2,13 +2,13 @@
 
 ## Demo Details
 
-!!! Success "Container Requirements"
+!!! Warning "Container Requirements"
 
-    CPUs: 4  
-    Memory: 16 GB  
-    Storage: 32 GB  
+    CPUs: 8  
+    Memory: 32 GB  
+    Storage: 64 GB  
 
-    :material-checkbox-marked-outline: Works with default Codespaces sizing!
+    :material-alert-circle-outline:{ .heartbeat } Please request high spec Codespace machines from [Github support](https://support.github.com/) first!
 
 !!! Warning "WARNING!"
 
