@@ -9,7 +9,7 @@
     },
     "secrets": {
         "CV_API_TOKEN": {
-          "description": "CVaaS service account token."
+          "description": "(Optional) CVaaS service account token. Required only if CVaaS will be part of the demo."
           // "documentationUrl": "https://example.com/link/to/info"
         },
         "ARTOKEN": {
@@ -17,7 +17,7 @@
           // "documentationUrl": "https://example.com/link/to/info"
         },
         "CVURL": {
-          "description": "URL to be used to access CVaaS. Default is `cv-staging.corp.arista.io`"
+          "description": "(Optional) URL to be used to access CVaaS. Default is `cv-staging.corp.arista.io`"
           // "documentationUrl": "https://example.com/link/to/info"
         }
     },
