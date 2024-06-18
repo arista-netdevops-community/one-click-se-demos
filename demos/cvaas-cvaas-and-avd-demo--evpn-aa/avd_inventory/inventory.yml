@@ -5,7 +5,7 @@ all:
     CV_SERVERS:
       hosts:
         lab_cv_instance:
-          ansible_host: "{{ lookup('ansible.builtin.env', 'CVURL', default='www.cv-staging.corp.arista.io') }}"
+          ansible_host: "www.cv-staging.corp.arista.io"
 
     AVD_FABRIC:
       children:
