@@ -7,7 +7,7 @@ grep -rl '{{gh.repo_name}}' . --exclude-dir .git | xargs sed -i 's/{{gh.repo_nam
 grep -rl '{{gh.org_name}}' . --exclude-dir .git | xargs sed -i 's/{{gh.org_name}}/'"${GITHUB_REPOSITORY%%/*}"'/g'
 grep -rl '{{gh.repository}}' . --exclude-dir .git | xargs sed -i 's@{{gh.repository}}@'"${GITHUB_REPOSITORY}"'@g'
 # update URL in clab init configs if set
-if ${CVURL}; then
+if [ "${CVURL}" ]; then
   grep -rl 'cv-staging.corp.arista.io' . --exclude-dir .git | xargs sed -i 's@cv-staging.corp.arista.io@'"${CVURL}"'@g'
 fi
 
