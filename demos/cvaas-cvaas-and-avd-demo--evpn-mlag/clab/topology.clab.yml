@@ -9,7 +9,7 @@ topology:
   kinds:
     ceos:
       enforce-startup-config: true
-      image: arista/ceos:4.30.6M
+      image: arista/ceos:4.32.1F
   defaults:
     kind: ceos
     extras:
