@@ -56,7 +56,7 @@ avd_data_validation_mode: error
 
 daemon_terminattr:
   cvaddrs:
-    - "{{ lookup('ansible.builtin.env', 'CVURL', default='apiserver.cv-staging.corp.arista.io') }}:443"
+    - "apiserver.cv-staging.corp.arista.io:443"
   cvauth:
     method: token-secure
     token_file: "/mnt/flash/cv-onboarding-token"

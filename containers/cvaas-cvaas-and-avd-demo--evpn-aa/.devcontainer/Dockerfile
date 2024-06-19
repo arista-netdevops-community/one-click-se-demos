@@ -39,4 +39,4 @@ RUN bash -c "$(curl -sL https://get.containerlab.dev)" -- -v ${CLAB_VERSION} \
     && pip3 install --user yamllint \
     && pip install --user "eos-downloader>=0.10.1" \
     && pip install --user passlib \
-    && pip3 install anta==0.12.0
+    && pip3 install anta==0.13.0
