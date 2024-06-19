@@ -2,7 +2,7 @@
 
 !!! Warning "Lab Documents Not Finished"
 
-    DO NOT ENTER!
+    DO NOT ENTER! :skull_and_crossbones:{ .heartbeat }
 
     ![stay back](assets/img/pexels-danne-555709.jpg)
 
@@ -12,15 +12,15 @@
 
 ## Demo Details
 
-!!! Success "Container Requirements"
+!!! Warning "Container Requirements"
 
-    CPUs: 4  
-    Memory: 16 GB  
-    Storage: 32 GB  
+    CPUs: 8  
+    Memory: 32 GB  
+    Storage: 64 GB  
 
-    :material-checkbox-marked-outline: Works with default Codespaces sizing!
+    :material-alert-circle-outline:{ .heartbeat } Please request high spec Codespace machines from [Github support](https://support.github.com/) first!
 
-[Start "AVD Extended Workshop, Part 1" in Codespace](https://codespaces.new/{{gh.repository}}?quickstart=1&devcontainer_path=.devcontainer%2Favd-avd-extended-workshop--part-1%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
+[Start "AVD Extended Workshop, Part 1" in Codespace](https://codespaces.new/{{gh.repository}}/tree/{{gh.branch}}?quickstart=1&devcontainer_path=.devcontainer%2Favd-avd-extended-workshop--part-1%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
 
 [Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/slides/avd-avd-extended-workshop--part-1.html){ target=_blank }  
 [PDF Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/pdfs/avd-avd-extended-workshop--part-1.pdf){ target=_blank }  
