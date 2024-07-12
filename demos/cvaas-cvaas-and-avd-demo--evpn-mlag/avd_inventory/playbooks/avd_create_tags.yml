@@ -35,6 +35,18 @@
             value: pod0
           - name: topology_hint_rack
             value: rack0
+          - name: DC-Pod
+            value: DC1
+          - name: router_bgp.as
+            value: 65101
+          - name: router_bgp.router_id
+            value: 100.65.255.3
+          - name: mlag_configuration.peer_link
+            value: Port-Channel3
+          - name: NodeId
+            value: 1
+          - name: Vtep
+            value: 'True'
       - device: l02
         device_tags:
           - name: topology_hint_datacenter
@@ -45,6 +57,18 @@
             value: pod0
           - name: topology_hint_rack
             value: rack0
+          - name: DC-Pod
+            value: DC1
+          - name: router_bgp.as
+            value: 65101
+          - name: router_bgp.router_id
+            value: 100.65.255.4
+          - name: mlag_configuration.peer_link
+            value: Port-Channel3
+          - name: NodeId
+            value: 2
+          - name: Vtep
+            value: 'True'
       - device: l03
         device_tags:
           - name: topology_hint_datacenter
@@ -52,9 +76,21 @@
           - name: topology_hint_type
             value: leaf
           - name: topology_hint_pod
-            value: pod1
+            value: pod0
           - name: topology_hint_rack
             value: rack1
+          - name: DC-Pod
+            value: DC1
+          - name: router_bgp.as
+            value: 65102
+          - name: router_bgp.router_id
+            value: 100.65.255.5
+          - name: mlag_configuration.peer_link
+            value: Port-Channel3
+          - name: NodeId
+            value: 3
+          - name: Vtep
+            value: 'True'
       - device: l04
         device_tags:
           - name: topology_hint_datacenter
@@ -62,9 +98,21 @@
           - name: topology_hint_type
             value: leaf
           - name: topology_hint_pod
-            value: pod1
+            value: pod0
           - name: topology_hint_rack
             value: rack1
+          - name: DC-Pod
+            value: DC1
+          - name: router_bgp.as
+            value: 65102
+          - name: router_bgp.router_id
+            value: 100.65.255.6
+          - name: mlag_configuration.peer_link
+            value: Port-Channel3
+          - name: NodeId
+            value: 4
+          - name: Vtep
+            value: 'True'
 
   tasks:
     - name: "create tags"
