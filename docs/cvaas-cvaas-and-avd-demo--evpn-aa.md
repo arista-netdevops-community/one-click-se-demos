@@ -21,7 +21,7 @@
 
 ## Lab Topology
 
-![lab topology](img/small-l3ls-aa.png)
+![lab topology](assets/img/topos/small-l3ls-aa.png)
 
 ## How To Run The Lab on Your Machine
 
