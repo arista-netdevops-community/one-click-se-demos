@@ -1,0 +1,17 @@
+---
+servers:
+
+- name: h01
+  adapters:
+  - mode: trunk
+    switch_ports:
+    - Ethernet10
+    - Ethernet10
+    switches:
+    - l01
+    - l02
+    vlans: 100
+    ethernet_segment:
+      short_esi: dead:beef:0001
+    port_channel:
+      mode: active

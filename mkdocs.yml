@@ -129,8 +129,8 @@ nav:
     - Credits: credits.md
   - CVaaS:
     - Demo:
-      - CVaaS and AVD Demo, EVPN MLAG: cvaas-cvaas-and-avd-demo--evpn-mlag/cvaas-cvaas-and-avd-demo--evpn-mlag.md
-      - CVaaS and AVD Demo, EVPN AA: cvaas-cvaas-and-avd-demo--evpn-aa/cvaas-cvaas-and-avd-demo--evpn-aa.md
+      - CVaaS and AVD Demo, EVPN MLAG: cvaas-cvaas-and-avd-demo--evpn-mlag.md
+      - CVaaS and AVD Demo, EVPN AA: cvaas-cvaas-and-avd-demo--evpn-aa.md
   # - AVD:
   #   - Workshops:
       # - AVD Extended Workshop: avd/workshops/avd-extended-workshop/avd-extended-workshop.md
@@ -140,6 +140,8 @@ nav:
   - cLab:
     - Workshops:
       - Build Containerlab with cEOS: clab-build-containerlab-with-ceos.md
+  - Playground:
+      - Small EVPN MLAG: playground-small-evpn-mlag.md
   - Construction Area:
     - Warning: construction-area.md
     - Single DC L3LS: avd-single-dc-l3ls.md

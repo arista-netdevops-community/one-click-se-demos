@@ -3,16 +3,31 @@ name: build container for {{ cookiecutter.demo_name }}
 
 on:
   push:
-    branches: [main]
+    branches: [ '**' ]
     paths:
       - .github/workflows/{{ cookiecutter.__demo_slug }}.yml
       - .github/workflows/container-build-child-workflow.yml
       - containers/{{ cookiecutter.__demo_slug }}/**
   workflow_dispatch:
-    branches: [main]
+    branches: [ '**' ]
 
 jobs:
+  # build container for original repo on main branch only
   build-demo-container:
+    if: (github.repository == 'arista-netdevops-community/one-click-se-demos') && github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/container-build-child-workflow.yml
+    with:
+      container_name: "{{ cookiecutter.__demo_group }}"
+      image_tags: "{{ cookiecutter.__demo_name }}"
+      from_image: "{{ cookiecutter.from_image }}"
+      from_variant: "{{ cookiecutter.from_variant }}"
+      username: "{{ cookiecutter.container_username }}"
+      clab_version: "{{ cookiecutter.clab_version }}"
+      ceos_lab_version: "{{ cookiecutter.ceos_lab_version }}"
+      git_init: {{ cookiecutter.git_init }}
+  # build container on a forked repo on any branch
+  build-on-fork:
+    if: github.repository != 'arista-netdevops-community/one-click-se-demos'
     uses: ./.github/workflows/container-build-child-workflow.yml
     with:
       container_name: "{{ cookiecutter.__demo_group }}"

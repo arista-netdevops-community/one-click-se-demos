@@ -29,7 +29,7 @@
     :material-alert-circle-outline:{ .heartbeat } Please request high spec Codespace machines from [Github support](https://support.github.com/) first!
 {%- endif %}
 
-[Start "{{ cookiecutter.demo_name }}" in Codespace](https://codespaces.new/{% raw %}'{{gh.repository}}'{%endraw%}?quickstart=1&devcontainer_path=.devcontainer%2F{{ cookiecutter.__demo_slug }}%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
+[Start "{{ cookiecutter.demo_name }}" in Codespace](https://codespaces.new/{% raw %}{{gh.repository}}{%endraw%}/tree/{% raw %}{{gh.branch}}{%endraw%}?quickstart=1&devcontainer_path=.devcontainer%2F{{ cookiecutter.__demo_slug }}%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
 
 [Slides](https://{% raw %}{{gh.org_name}}{%endraw%}.github.io/{% raw %}{{gh.repo_name}}{%endraw%}/slides/{{ cookiecutter.__demo_slug }}.html){ target=_blank }  
 [PDF Slides](https://{% raw %}{{gh.org_name}}{%endraw%}.github.io/{% raw %}{{gh.repo_name}}{%endraw%}/pdfs/{{ cookiecutter.__demo_slug }}.pdf){ target=_blank }  

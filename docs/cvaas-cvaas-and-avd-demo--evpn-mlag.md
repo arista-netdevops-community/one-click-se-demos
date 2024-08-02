@@ -10,18 +10,30 @@
 
     :material-alert-circle-outline:{ .heartbeat } Please request high spec Codespace machines from [Github support](https://support.github.com/) first!
 
-[Start "CVaaS and AVD Demo, EVPN MLAG" in Codespace](https://codespaces.new/{{gh.repository}}?quickstart=1&devcontainer_path=.devcontainer%2Fcvaas-cvaas-and-avd-demo--evpn-mlag%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
+!!! Info
+
+    You can run this demo without CVaaS if you leave CV_API_TOKEN empty.
+
+[Start "CVaaS and AVD Demo, EVPN MLAG" in Codespace](https://codespaces.new/{{gh.repository}}/tree/{{gh.branch}}?quickstart=1&devcontainer_path=.devcontainer%2Fcvaas-cvaas-and-avd-demo--evpn-mlag%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
+
+??? "Running a smaller topology on 4 CPUs"
+
+    You can run a smaller topology if you don't have access to a bigger Codespaces machines.
+
+    ![lab topology](assets/img/topos/min-l3ls-mlag.png)
+
+    [Start "CVaaS and AVD Demo, EVPN MLAG - Small" in Codespace](https://codespaces.new/{{gh.repository}}/tree/{{gh.branch}}?quickstart=1&devcontainer_path=.devcontainer%2Fcvaas-cvaas-and-avd-demo--evpn-mlag-small%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
 
 [Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/slides/cvaas-cvaas-and-avd-demo--evpn-mlag.html){ target=_blank }  
 [PDF Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/pdfs/cvaas-cvaas-and-avd-demo--evpn-mlag.pdf){ target=_blank }  
 
-!!! Info "Last reviewed: 18/06/2024"
+!!! Info "Last reviewed: 02/08/2024"
 
     Demos and labs reviewed over 6 month age may be outdated.
 
 ## Lab Topology
 
-![lab topology](img/small-l3ls-mlag.png)
+![lab topology](assets/img/topos/small-l3ls-mlag.png)
 
 ## How To Run The Lab on Your Machine
 

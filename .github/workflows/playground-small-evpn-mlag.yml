@@ -1,0 +1,40 @@
+---
+name: build container for Small EVPN MLAG
+
+on:
+  push:
+    branches: [ '**' ]
+    paths:
+      - .github/workflows/playground-small-evpn-mlag.yml
+      - .github/workflows/container-build-child-workflow.yml
+      - containers/playground-small-evpn-mlag/**
+  workflow_dispatch:
+    branches: [ '**' ]
+
+jobs:
+  # build container for original repo on main branch only
+  build-demo-container:
+    if: (github.repository == 'arista-netdevops-community/one-click-se-demos') && github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/container-build-child-workflow.yml
+    with:
+      container_name: "playground"
+      image_tags: "small-evpn-mlag"
+      from_image: "ghcr.io/aristanetworks/avd/universal"
+      from_variant: "python3.11-avd-v4.10.0"
+      username: "avd"
+      clab_version: "0.56.0"
+      ceos_lab_version: "4.32.1F"
+      git_init: False
+  # build container on a forked repo on any branch
+  build-on-fork:
+    if: github.repository != 'arista-netdevops-community/one-click-se-demos'
+    uses: ./.github/workflows/container-build-child-workflow.yml
+    with:
+      container_name: "playground"
+      image_tags: "small-evpn-mlag"
+      from_image: "ghcr.io/aristanetworks/avd/universal"
+      from_variant: "python3.11-avd-v4.10.0"
+      username: "avd"
+      clab_version: "0.56.0"
+      ceos_lab_version: "4.32.1F"
+      git_init: False
