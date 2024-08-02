@@ -129,7 +129,7 @@ nav:
     - Credits: credits.md
   - CVaaS:
     - Demo:
-      - CVaaS and AVD Demo, EVPN MLAG: cvaas-cvaas-and-avd-demo--evpn-mlag/cvaas-cvaas-and-avd-demo--evpn-mlag.md
+      - CVaaS and AVD Demo, EVPN MLAG: cvaas-cvaas-and-avd-demo--evpn-mlag.md
       - CVaaS and AVD Demo, EVPN AA: cvaas-cvaas-and-avd-demo--evpn-aa/cvaas-cvaas-and-avd-demo--evpn-aa.md
   # - AVD:
   #   - Workshops:
