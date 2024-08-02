@@ -29,12 +29,6 @@ all:
                   ansible_host: 10.0.2.1
                 l02:
                   ansible_host: 10.0.2.2
-            pod1:
-              hosts:
-                l03:
-                  ansible_host: 10.0.2.3
-                l04:
-                  ansible_host: 10.0.2.4
 
     AVD_FABRIC_ENDPOINTS:
       children:
