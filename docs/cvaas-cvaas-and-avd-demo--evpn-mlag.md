@@ -14,7 +14,7 @@
 
     You can run this demo without CVaaS if you leave CV_API_TOKEN empty.
 
-[Start "CVaaS and AVD Demo, EVPN MLAG" in Codespace](https://codespaces.new/{{gh.repository}}?quickstart=1&devcontainer_path=.devcontainer%2Fcvaas-cvaas-and-avd-demo--evpn-mlag%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
+[Start "CVaaS and AVD Demo, EVPN MLAG" in Codespace](https://codespaces.new/{{gh.repository}}/tree/{{gh.branch}}?quickstart=1&devcontainer_path=.devcontainer%2Fcvaas-cvaas-and-avd-demo--evpn-mlag%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
 
 ??? "Running a smaller topology on 4 CPUs"
 
@@ -22,7 +22,7 @@
 
     ![lab topology](assets/img/topos/min-l3ls-mlag.png)
 
-    [Start "CVaaS and AVD Demo, EVPN MLAG - Small" in Codespace](https://codespaces.new/{{gh.repository}}?quickstart=1&devcontainer_path=.devcontainer%2Fcvaas-cvaas-and-avd-demo--evpn-mlag-small%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
+    [Start "CVaaS and AVD Demo, EVPN MLAG - Small" in Codespace](https://codespaces.new/{{gh.repository}}/tree/{{gh.branch}}?quickstart=1&devcontainer_path=.devcontainer%2Fcvaas-cvaas-and-avd-demo--evpn-mlag-small%2Fdevcontainer.json){ .md-button .md-button--primary target=_blank}
 
 [Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/slides/cvaas-cvaas-and-avd-demo--evpn-mlag.html){ target=_blank }  
 [PDF Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/pdfs/cvaas-cvaas-and-avd-demo--evpn-mlag.pdf){ target=_blank }  
