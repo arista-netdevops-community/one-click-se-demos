@@ -1,4 +1,4 @@
-# CVaaS and AVD Demo, EVPN AA
+# CVaaS and AVD Demo, EVPN AA - Small Size Lab
 
 This lab is tested for:  
 
