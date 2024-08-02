@@ -27,7 +27,7 @@
 [Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/slides/cvaas-cvaas-and-avd-demo--evpn-mlag.html){ target=_blank }  
 [PDF Slides](https://{{gh.org_name}}.github.io/{{gh.repo_name}}/pdfs/cvaas-cvaas-and-avd-demo--evpn-mlag.pdf){ target=_blank }  
 
-!!! Info "Last reviewed: 18/06/2024"
+!!! Info "Last reviewed: 02/08/2024"
 
     Demos and labs reviewed over 6 month age may be outdated.
 
