@@ -1,0 +1,29 @@
+POST https://10.0.1.1/login/
+
+{
+  "username": "arista",
+  "password": "arista"
+}
+
+###
+
+POST https://10.0.1.1/command-api/
+
+{
+  "jsonrpc": "2.0",
+  "method": "runCmds",
+  "params": {
+    "version": 1,
+    "cmds": [
+      "show version"
+    ],
+    "format": "json",
+    "timestamps": false,
+    "autoComplete": false,
+    "expandAliases": false,
+    "stopOnError": true,
+    "streaming": false,
+    "includeErrorDetail": false
+  },
+  "id": "EapiExplorer-1"
+}
