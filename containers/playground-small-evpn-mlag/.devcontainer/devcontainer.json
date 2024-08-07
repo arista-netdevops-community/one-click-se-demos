@@ -29,7 +29,9 @@
                 "DavidAnson.vscode-markdownlint",
                 // various tools
                 "tuxtina.json2yaml",
-                "mutantdino.resourcemonitor"
+                "mutantdino.resourcemonitor",
+                //REST Client
+                "humao.rest-client"
             ]
         }
     }

@@ -19,21 +19,29 @@ topology:
       binds:
         - sn/s01.txt:/mnt/flash/ceos-config:ro
       startup-config: init-configs/s01.cfg
+      ports:
+        - 4011:443/tcp
     s02:
       mgmt-ipv4: 10.0.1.2
       binds:
         - sn/s02.txt:/mnt/flash/ceos-config:ro
       startup-config: init-configs/s02.cfg
+      ports:
+        - 4012:443/tcp
     l01:
       mgmt-ipv4: 10.0.2.1
       binds:
         - sn/l01.txt:/mnt/flash/ceos-config:ro
       startup-config: init-configs/l01.cfg
+      ports:
+        - 4021:443/tcp
     l02:
       mgmt-ipv4: 10.0.2.2
       binds:
         - sn/l02.txt:/mnt/flash/ceos-config:ro
       startup-config: init-configs/l02.cfg
+      ports:
+        - 4022:443/tcp
     h01:
       mgmt-ipv4: 10.0.3.1
       startup-config: init-configs/h01.cfg
