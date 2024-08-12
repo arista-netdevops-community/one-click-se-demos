@@ -15,6 +15,7 @@ stop: ## Destroy ceos lab
 .PHONY: step1
 step1: ## add ansible.cfg and inventory.yml
 	@echo '[defaults]' > ansible.cfg
+	@echo 'forks = 1' >> ansible.cfg
 	@echo 'inventory = inventory.yml' >> ansible.cfg
 	@echo 'jinja2_extensions =  jinja2.ext.loopcontrols,jinja2.ext.do,jinja2.ext.i18n' >> ansible.cfg
 	@echo '---' > inventory.yml
@@ -26,9 +27,9 @@ step1: ## add ansible.cfg and inventory.yml
 	@echo '          vars:' >> inventory.yml
 	@echo '            type: spine' >> inventory.yml
 	@echo '          hosts:' >> inventory.yml
-	@echo '            s02:' >> inventory.yml
-	@echo '              ansible_host: 10.0.1.1' >> inventory.yml
 	@echo '            s01:' >> inventory.yml
+	@echo '              ansible_host: 10.0.1.1' >> inventory.yml
+	@echo '            s02:' >> inventory.yml
 	@echo '              ansible_host: 10.0.1.2' >> inventory.yml
 	@echo '        AVD_FABRIC_LEAFS:' >> inventory.yml
 	@echo '          vars:' >> inventory.yml
